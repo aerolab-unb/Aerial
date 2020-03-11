@@ -7,3 +7,4 @@ Aerial Robots
 
    aerial/airplane
    aerial/hardware
+   aerial/software
