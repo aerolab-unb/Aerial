@@ -3,8 +3,20 @@ Aerial Robots
 
 .. toctree::
    :maxdepth: 1
-   :caption: Robots
+   :caption: Hardware
 
-   aerial/airplane
-   aerial/hardware
-   aerial/software
+   aerial/pixhawk1
+   aerial/pixhawk3
+
+.. toctree::
+   :maxdepth: 1
+   :caption: Software
+
+   aerial/QGroundControl
+
+.. toctree::
+   :maxdepth: 1
+   :caption: Planes
+
+   aerial/Ranger EX Volatex RC 
+   
