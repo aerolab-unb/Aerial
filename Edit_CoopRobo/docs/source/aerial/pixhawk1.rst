@@ -1,2 +1,9 @@
 Piwhawk 1
 =========
+
+.. Colocar a imagem do pixhawk aqui (tirar a foto no lab)
+
+.. O Pixhawk® 1 é um piloto automático que serve como um controlador de vôo de uso geral baseado no projeto de hardware aberto FMUv2 que roda o PX4 no sistema operacional NuttX.
+
+
+Pixhawk® 1 is an autopilot that serves as a general purpose flight controller based on the open hardware design FMUv2 that runs the PX4 on the NuttX operating system.
