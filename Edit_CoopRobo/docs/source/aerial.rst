@@ -1,6 +1,9 @@
 Aerial Robots
 =============
 
+.. image:: /img/Aerial/aerolab_logo2.png
+    :align: center
+
 .. toctree::
    :maxdepth: 1
    :caption: Robots

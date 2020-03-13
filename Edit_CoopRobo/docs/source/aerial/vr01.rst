@@ -1,6 +1,9 @@
 VR-01
 ======
 
+.. image:: /img/Aerial/vr01.png
+    :align: center
+
 .. toctree::
    :maxdepth: 2
    :caption: Modeling
