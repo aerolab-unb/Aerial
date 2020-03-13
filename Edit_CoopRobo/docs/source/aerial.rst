@@ -3,20 +3,10 @@ Aerial Robots
 
 .. toctree::
    :maxdepth: 1
-   :caption: Hardware
+   :caption: Robots
 
-   aerial/pixhawk1
-   aerial/pixhawk3
+   aerial/vr01
 
-.. toctree::
-   :maxdepth: 1
-   :caption: Software
+.. VR-01 é apelido dado ao aeromodelo da marca Volantex e modelo 757-3 Ranger Ex
+	
 
-   aerial/QGroundControl
-
-.. toctree::
-   :maxdepth: 1
-   :caption: Planes
-
-   aerial/Ranger EX Volatex RC 
-   
