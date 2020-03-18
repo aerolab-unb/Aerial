@@ -12,25 +12,27 @@ VR-01
 
 .. toctree::
    :maxdepth: 2
-   :caption: Modeling
+   :caption: Introdução
 
-   vr01/model/Ranger
-
+   vr01/intro
+	
 .. toctree::
    :maxdepth: 2
-   :caption: Hardware
+   :caption: Piloto Automático
 
    vr01/hard/pixhawk1
    vr01/hard/pixhawk3
 	
 .. toctree::
    :maxdepth: 2
-   :caption: Software
+   :caption: Computador Embarcado
 
    vr01/soft/QGroundControl
 
 .. toctree::
    :maxdepth: 2
-   :caption: Tutorials
+   :caption: Modelagem
 
-   vr01/tuto/lab1
+   vr01/model/Ranger
+
+
