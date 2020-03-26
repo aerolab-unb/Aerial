@@ -1,6 +1,7 @@
 Firmware
 =========
 
+<<<<<<< HEAD
 
 A instalação do *firmware* no hardware do controlador de vôo pode ser efetuada de duas formas, pelo uso de um programa de Estação de Controle Terrestre (ECT) ou diretamente pelo uso de ferramentas de desenvolvedor sem o uso de um programa auxiliar. Uma ECT é uma aplicação de *software* que roda em um computador terrestre e se comunica com o veiculo pelo uso de telemetria sem fio.  [*] 
 
@@ -54,3 +55,5 @@ More information
 
 
 
+=======
+>>>>>>> 2f6ad56f32eb2353db7f059e41b35a17bae96c41
