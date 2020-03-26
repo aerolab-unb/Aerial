@@ -10,7 +10,6 @@ VR-01
 
 The complete system consists of four sub-systems: three aircraft and a base station. The communication between such sub-systems is carried out through communication radios. Each subsystem has its own communication modem and has the ability to communicate directly with any other subsystem.
 
-<<<<<<< HEAD
 .. Cada aeronave possui dois componentes principais que merecem destaque. Um deles é o piloto automatico, dispositivo responsavel pela aquisição, condicionamento e proccessamento de sinais provenientes dos sensores da aeronave e pelo controle dos atuadores do avião.  O outro é o computador embarcado. Ele é responsável pelo processamento de dados, controle dos aviões (controle individual de cada avião ou controle cooperativo entre os três aviões) e pela comunicação com os outros sub-sistemas por meio dos rádios de comunicação.
 
 
@@ -21,32 +20,16 @@ The complete system consists of four sub-systems: three aircraft and a base stat
 
    vr01/hard/pilot
    vr01/hard/config_pilot
-=======
-.. toctree::
-   :maxdepth: 2
-   :caption: Introdução
-
-   vr01/intro
-	
-.. toctree::
-   :maxdepth: 2
-   :caption: Piloto Automático
->>>>>>> 2f6ad56f32eb2353db7f059e41b35a17bae96c41
 
 	
 .. toctree::
    :maxdepth: 2
-<<<<<<< HEAD
    :caption: Embedded computer
-=======
-   :caption: Computador Embarcado
->>>>>>> 2f6ad56f32eb2353db7f059e41b35a17bae96c41
 
    vr01/soft/QGroundControl
 
 .. toctree::
    :maxdepth: 2
-<<<<<<< HEAD
    :caption: Model
 
    vr01/model/Ranger
@@ -54,10 +37,5 @@ The complete system consists of four sub-systems: three aircraft and a base stat
 .. toctree::
    :maxdepth: 2
    :caption: Tutorials
-=======
-   :caption: Modelagem
 
-   vr01/model/Ranger
-
->>>>>>> 2f6ad56f32eb2353db7f059e41b35a17bae96c41
-
+   vr01/tuto/lab1
