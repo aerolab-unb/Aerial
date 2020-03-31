@@ -34,8 +34,4 @@ Each aircraft has two main components that are worth mentioning. One of them is 
 
    vr01/model/Ranger
 
-.. toctree::
-   :maxdepth: 2
-   :caption: Tutorials
 
-   vr01/tuto/lab1
