@@ -54,6 +54,7 @@ Installation
     2. Logout and login again to enable the change to user permissions.
 
    -  To install QGroundControl for Ubuntu Linux 16.04 LTS or later:
+
     1. Download `QGroundControl.AppImage <https://s3-us-west-2.amazonaws.com/qgroundcontrol/latest/QGroundControl.AppImage>`_
     2. Install and run Install using the terminal commands:
 
