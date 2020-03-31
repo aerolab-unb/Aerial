@@ -7,7 +7,7 @@ Autopilot
 .. https://docs.px4.io/master/en/getting_started/
 
 .. Note::
-   Este topico consiste em um resumo das informações disponíveis na pagina `Getting Started - PX4`_.
+   This topic consists of a summary of the information available on the page `Getting Started - PX4`_. 
 .. _Getting Started - PX4: https://docs.px4.io/v1.9.0/en/getting_started/px4_basic_concepts.html
 
 Introduction
@@ -74,7 +74,7 @@ PX4 is part of the `Dronecode Plataform`_, a complete platform for drone develop
 
 
 Sensors
-~~~~~~~~~
+~~~~~~~~
 
 .. Os sistemas baseados em PX4 utilizam diversos sensores para determinar o estado do veículo (sendo estes essenciais para a estabilização e para possibilitar o controle autônomo). Os estados do veículo incluem: posição, direção, velocidade, velocidade do ar, orientação (atitude), taxas de rotação em diferentes direções, nível da bateria, etc.
 
