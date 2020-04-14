@@ -181,7 +181,7 @@ PX4Flow is an optical flow smart camera that can track motion, and has as integr
 
 Most of its applications are directed to rotary-wing aircraft.
 
-Pixhawk1 specifications
+Pixhawk Specifications
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 -  **Processor**
