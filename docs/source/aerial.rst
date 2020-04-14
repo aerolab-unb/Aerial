@@ -1,11 +1,11 @@
 Aerial Robots
 =============
 
-.. image:: /img/Aerial/aerolab_logo2.png
-    :align: center
+.. figure:: /img/Aerial/aerolab_logo2.png
+   :align: center
 
 .. toctree::
-   :maxdepth: 1
+   :maxdepth: 2
    :caption: Robots
 
    aerial/vr01

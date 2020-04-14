@@ -2,7 +2,7 @@ Embedded System
 =====================
 
 .. Note::
-   **TESTE com trechos do tg do pita e moura**
+   **TEST with excerpts from tg pita and moura**
 
 
 

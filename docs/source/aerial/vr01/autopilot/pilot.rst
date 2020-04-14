@@ -17,6 +17,11 @@ Introduction
 
 PX4 is the professional open source autopilot, developed by both world-class developers from industry and academia, and supported by the active world wide community. The PX4 can run on multiple flight controll boards. Deserving highlight flight open hardware controllers of the `PixHawk`_ series, running PX4 on `NuttX OS`_ [1]_.  
 
+.. Dadas as opções de placas controladoras de voo disponíveis no mercado, escolheu-se o Pixhawk1 como piloto automático por seu melhor custo beneficio para o projeto.
+
+Given the options available on the market, Pixhawk 1 was chosen as an autopilot for its best cost benefit for the project.
+
+
 .. _Pixhawk: https://pixhawk.org
 .. _NuttX OS: https://nuttx.apache.org/
 

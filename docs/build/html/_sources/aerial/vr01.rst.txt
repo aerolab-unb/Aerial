@@ -42,6 +42,13 @@ Each aircraft has two main components that are worth mentioning. One of them is 
 
    vr01/embedded_system/system
 
+.. toctree::
+   :maxdepth: 2
+   :caption: Modeling
+
+   vr01/model/Ranger
+
+
 References
 ----------
 
