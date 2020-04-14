@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>Orientação do piloto automático &mdash; CoopRobo 1.0.0 documentation</title>
+  <title>Automatic Landing &mdash; CoopRobo 1.0.0 documentation</title>
   
 
   
@@ -36,8 +36,8 @@
   <link rel="stylesheet" href="../../../../_static/pygments.css" type="text/css" />
     <link rel="index" title="Index" href="../../../../genindex.html" />
     <link rel="search" title="Search" href="../../../../search.html" />
-    <link rel="next" title="Mobile Robots" href="../../../../mobile.html" />
-    <link rel="prev" title="Montando o Pixhawk" href="mounting.html" /> 
+    <link rel="next" title="Embedded System" href="../../embedded_system/system.html" />
+    <link rel="prev" title="Mounting the Pixhawk" href="mounting.html" /> 
 </head>
 
 <body class="wy-body-for-nav">
@@ -87,12 +87,16 @@
 <li class="toctree-l2 current"><a class="reference internal" href="../../../vr01.html">VR-01</a><ul class="current">
 <li class="toctree-l3"><a class="reference internal" href="../pilot.html">Autopilot</a></li>
 <li class="toctree-l3 current"><a class="reference internal" href="../config_pilot.html">Autopilot Configuration</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="QGroundControl.html">QGroundControl</a></li>
 <li class="toctree-l4"><a class="reference internal" href="firmware.html">Firmware</a></li>
 <li class="toctree-l4"><a class="reference internal" href="airframe.html">Airframe</a></li>
-<li class="toctree-l4"><a class="reference internal" href="mounting.html">Montando o Pixhawk</a></li>
-<li class="toctree-l4 current"><a class="current reference internal" href="#">Orientação do piloto automático</a></li>
+<li class="toctree-l4"><a class="reference internal" href="connection.html">Connections</a></li>
+<li class="toctree-l4"><a class="reference internal" href="mounting.html">Mounting the Pixhawk</a></li>
+<li class="toctree-l4 current"><a class="current reference internal" href="#">Automatic Landing</a></li>
 </ul>
 </li>
+<li class="toctree-l3"><a class="reference internal" href="../../embedded_system/system.html">Embedded System</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../vr01.html#references">References</a></li>
 </ul>
 </li>
 </ul>
@@ -152,13 +156,13 @@
         
           <li><a href="../config_pilot.html">Autopilot Configuration</a> &raquo;</li>
         
-      <li>Orientação do piloto automático</li>
+      <li>Automatic Landing</li>
     
     
       <li class="wy-breadcrumbs-aside">
         
             
-            <a href="../../../../_sources/aerial/vr01/autopilot/config/orientation.rst.txt" rel="nofollow"> View page source</a>
+            <a href="../../../../_sources/aerial/vr01/autopilot/config/automatic_landing.rst.txt" rel="nofollow"> View page source</a>
           
         
       </li>
@@ -171,49 +175,17 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <div class="section" id="orientacao-do-piloto-automatico">
-<h1>Orientação do piloto automático<a class="headerlink" href="#orientacao-do-piloto-automatico" title="Permalink to this headline">¶</a></h1>
-<p>Por padrão, o controlador de voo e a bússola externa, se houver, devem ser colocados no chassi da aeronave orientados de modo que a seta aponte para a frente do veículo. Se a placa ou a bússola externa estiver em qualquer outra orientação, será necessario ajustar a orientação no firmware.</p>
-<div class="section" id="calculo-de-orientacao">
-<h2>Cálculo de orientação<a class="headerlink" href="#calculo-de-orientacao" title="Permalink to this headline">¶</a></h2>
-<p>As compensações dos angulos de rotação <a class="reference external" href="https://www.youtube.com/watch?v=pQ24NtnaLl8">YAW, PITCH e / ou ROLL</a> são calculados em relação a orientação vertical apontando para a frente (rotação no sentido horário em torno dos eixos Z, Y e X, respectivamente). Esse diagrama é chamado de <em>body frame</em> (diagrama de corpo) e a orientação padrão é dada por <code class="docutils literal notranslate"><span class="pre">ROTATION_NOME</span></code>.</p>
-<img alt="../../../../_images/fc_orientation_1.png" class="align-center" src="../../../../_images/fc_orientation_1.png" />
-<p>Por exemplo, a imagem abaixo apresenta rotações de aeronaves em torno do eixo z (YAW), correspondendo, respectivamente, a: <code class="docutils literal notranslate"><span class="pre">ROTATION_NONE</span></code>, <code class="docutils literal notranslate"><span class="pre">ROTATION_YAW_90</span></code>, <code class="docutils literal notranslate"><span class="pre">ROTATION_YAW_180</span></code>, <code class="docutils literal notranslate"><span class="pre">ROTATION_YAW_270</span></code>.</p>
-<img alt="../../../../_images/yaw_rotation.png" class="align-center" src="../../../../_images/yaw_rotation.png" />
-</div>
-<div class="section" id="definindo-a-orientacao">
-<h2>Definindo a orientação<a class="headerlink" href="#definindo-a-orientacao" title="Permalink to this headline">¶</a></h2>
-<p>Para definir as orientações no firmware:</p>
-<div class="admonition note">
-<p class="first admonition-title">Note</p>
-<p class="last">Antes de definir a orientação, o QGroundControl deve ser iniciado, conectado ao veiculo e o firmware já deve ter sido instalado na placa controladora de voo.</p>
-</div>
-<ol class="arabic simple">
-<li>Selecione o ícone de <strong>engrenagem</strong> (Configuração do veículo) na barra de ferramentas superior e, em seguida, <strong>Sensors</strong> na barra lateral.</li>
-</ol>
-<ol class="arabic simple" start="2">
-<li>Selecione o botão <strong>Set Orientations</strong>.</li>
-</ol>
-<ol class="arabic simple" start="3">
-<li>Selecione a orientação do piloto automatico, conforme calculado.</li>
-</ol>
-<ol class="arabic simple" start="4">
-<li>Selecione a <strong>External Compass Orientation</strong> (Orientação da bússola externa) da mesma maneira (esta opção será exibida apenas se o seu veículo tiver uma bússola externa).</li>
-<li>Pressione <strong>OK</strong>.</li>
-</ol>
-<div class="section" id="mais-informacoes">
-<h3>Mais informações<a class="headerlink" href="#mais-informacoes" title="Permalink to this headline">¶</a></h3>
+  <div class="section" id="automatic-landing">
+<h1>Automatic Landing<a class="headerlink" href="#automatic-landing" title="Permalink to this headline">¶</a></h1>
+<p>After the connection of LIDAR to the system via PWM, some parameters of the autopilot must be changed so that it recognizes the sensor. These parameters can be easily changed using QGroundControl. It's them:</p>
 <ul class="simple">
-<li><a class="reference external" href="https://docs.px4.io/v1.9.0/en/advanced_config/advanced_flight_controller_orientation_leveling.html">Advanced Orientation Tuning</a>.</li>
+<li>RNG_FND = 5, indicates that the connection occurs via PWM.</li>
+<li>RNDFND_MAX_CM = 4000, represents the maximum distance the sensor is reliable.</li>
+<li>RNDFND_STOP_PIN = 55, indicates the pin connected to the Lidar activation signal. Allows the device to reset the sensor if it stops providing data.</li>
+<li>The parameters RNDFND_SCALING and RNDFND_OFFSET must be adjusted in order to calibrate the sensor (they are usually approximately 0 and 1, respectively).</li>
 </ul>
-<ul class="simple">
-<li><a class="reference external" href="https://docs.px4.io/v1.9.0/en/config/flight_controller_orientation.html">PX4 user guide &gt; Sensor Orientation</a>.</li>
-</ul>
-<ul class="simple">
-<li><a class="reference external" href="https://docs.qgroundcontrol.com/en/SetupView/sensors_px4.html#flight_controller_orientation">QGroundControl user guide &gt; Sensors</a>.</li>
-</ul>
-</div>
-</div>
+<p>The sensor can be tested by QGroundControl, where readings can be observed in <strong>Sonar Range</strong> tab. After setting up the sensor, the autopilot will be able to land the aircraft much more quickly and accurately. The landing takes place by sending the command <strong>Land</strong> to the controller, but for it to occur correctly, the landing strip position must be defined and the landing parameters must be adjusted, such as the speed at which the airplane must land .</p>
+<p>Detailed documentation on automatic landings can be found at <a class="reference external" href=".http://ardupilot.org/plane/docs/automatic-landing.html.">Automatic Landing</a>.</p>
 </div>
 
 
@@ -224,10 +196,10 @@
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="../../../../mobile.html" class="btn btn-neutral float-right" title="Mobile Robots" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="../../embedded_system/system.html" class="btn btn-neutral float-right" title="Embedded System" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="mounting.html" class="btn btn-neutral float-left" title="Montando o Pixhawk" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="mounting.html" class="btn btn-neutral float-left" title="Mounting the Pixhawk" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   

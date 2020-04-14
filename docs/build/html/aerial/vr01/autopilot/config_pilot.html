@@ -36,7 +36,7 @@
   <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
     <link rel="index" title="Index" href="../../../genindex.html" />
     <link rel="search" title="Search" href="../../../search.html" />
-    <link rel="next" title="Firmware" href="config/firmware.html" />
+    <link rel="next" title="QGroundControl" href="config/QGroundControl.html" />
     <link rel="prev" title="Autopilot" href="pilot.html" /> 
 </head>
 
@@ -87,12 +87,16 @@
 <li class="toctree-l2 current"><a class="reference internal" href="../../vr01.html">VR-01</a><ul class="current">
 <li class="toctree-l3"><a class="reference internal" href="pilot.html">Autopilot</a></li>
 <li class="toctree-l3 current"><a class="current reference internal" href="#">Autopilot Configuration</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="config/QGroundControl.html">QGroundControl</a></li>
 <li class="toctree-l4"><a class="reference internal" href="config/firmware.html">Firmware</a></li>
 <li class="toctree-l4"><a class="reference internal" href="config/airframe.html">Airframe</a></li>
-<li class="toctree-l4"><a class="reference internal" href="config/mounting.html">Montando o Pixhawk</a></li>
-<li class="toctree-l4"><a class="reference internal" href="config/orientation.html">Orientação do piloto automático</a></li>
+<li class="toctree-l4"><a class="reference internal" href="config/connection.html">Connections</a></li>
+<li class="toctree-l4"><a class="reference internal" href="config/mounting.html">Mounting the Pixhawk</a></li>
+<li class="toctree-l4"><a class="reference internal" href="config/automatic_landing.html">Automatic Landing</a></li>
 </ul>
 </li>
+<li class="toctree-l3"><a class="reference internal" href="../embedded_system/system.html">Embedded System</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../vr01.html#references">References</a></li>
 </ul>
 </li>
 </ul>
@@ -175,6 +179,11 @@
 <p>This section contains essential configuration topics:</p>
 <div class="toctree-wrapper compound">
 <ul>
+<li class="toctree-l1"><a class="reference internal" href="config/QGroundControl.html">QGroundControl</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="config/QGroundControl.html#system-requirements">System Requirements</a></li>
+<li class="toctree-l2"><a class="reference internal" href="config/QGroundControl.html#installation">Installation</a></li>
+</ul>
+</li>
 <li class="toctree-l1"><a class="reference internal" href="config/firmware.html">Firmware</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="config/firmware.html#instalacao-estavel">Instalação estável</a></li>
 </ul>
@@ -183,16 +192,23 @@
 <li class="toctree-l2"><a class="reference internal" href="config/airframe.html#set-the-airframe">Set the Airframe</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="config/mounting.html">Montando o Pixhawk</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="config/mounting.html#orientacao">Orientação</a></li>
-<li class="toctree-l2"><a class="reference internal" href="config/mounting.html#isolamento-de-vibracoes">Isolamento de vibrações</a></li>
+<li class="toctree-l1"><a class="reference internal" href="config/connection.html">Connections</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="config/connection.html#buzzer-and-safety-switch">Buzzer and Safety Switch</a></li>
+<li class="toctree-l2"><a class="reference internal" href="config/connection.html#slitter-i2c">Slitter I2C</a></li>
+<li class="toctree-l2"><a class="reference internal" href="config/connection.html#airspeed-sensor">Airspeed Sensor</a></li>
+<li class="toctree-l2"><a class="reference internal" href="config/connection.html#gps-compass">GPS + Compass</a></li>
+<li class="toctree-l2"><a class="reference internal" href="config/connection.html#radio-control-rc">Radio Control (RC)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="config/connection.html#telemetry">Telemetry</a></li>
+<li class="toctree-l2"><a class="reference internal" href="config/connection.html#power-module">Power Module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="config/connection.html#distance-sensor">Distance Sensor</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="config/orientation.html">Orientação do piloto automático</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="config/orientation.html#calculo-de-orientacao">Cálculo de orientação</a></li>
-<li class="toctree-l2"><a class="reference internal" href="config/orientation.html#definindo-a-orientacao">Definindo a orientação</a></li>
+<li class="toctree-l1"><a class="reference internal" href="config/mounting.html">Mounting the Pixhawk</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="config/mounting.html#autopilot-orientation">Autopilot Orientation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="config/mounting.html#vibration-isolation">Vibration Isolation</a></li>
 </ul>
 </li>
+<li class="toctree-l1"><a class="reference internal" href="config/automatic_landing.html">Automatic Landing</a></li>
 </ul>
 </div>
 </div>
@@ -205,7 +221,7 @@
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="config/firmware.html" class="btn btn-neutral float-right" title="Firmware" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="config/QGroundControl.html" class="btn btn-neutral float-right" title="QGroundControl" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
         <a href="pilot.html" class="btn btn-neutral float-left" title="Autopilot" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
