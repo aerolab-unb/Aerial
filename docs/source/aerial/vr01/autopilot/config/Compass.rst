@@ -12,9 +12,7 @@ Calibration Steps:
   2. Select the **Gear** icon (Vehicle Setup) in the top toolbar and then **Sensors** in the sidebar.
   3. Click the **Compass** sensor button.
   4. Click **OK** to start the calibration.
-  5. 
-Place the vehicle in the indicated position of any of the images shown in red (not calibrated) 
-let it stand and wait a moment in the chosen position. Once prompted (the orientation-image turns yellow) rotate the vehicle around the specified axis in either/both directions. Once the calibration is complete for the current orientation the associated image on the screen will turn green.
+  5. Place the vehicle in the indicated position of any of the images shown in red (not calibrated) let it stand and wait a moment in the chosen position. Once prompted (the orientation-image turns yellow) rotate the vehicle around the specified axis in either/both directions. Once the calibration is complete for the current orientation the associated image on the screen will turn green.
   6. Repeat the calibration process for all vehicle orientations.
 
 
