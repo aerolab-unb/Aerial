@@ -21,5 +21,7 @@ This section contains essential configuration topics:
    config/airframe
    config/connection 
    config/mounting
+   config/Compass
    config/automatic_landing
+
 
