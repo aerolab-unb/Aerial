@@ -5,7 +5,7 @@ All internal and external magnetometers that are connected to the Pixhawk will b
 
 .. Todos os magnetômetros internos e externos conectados ao Pixhawk serão configurados no processo de calibração da bússola
 
-Calibration Steps:
+Calibration Steps
 ~~~~~~~~~~~~~~~~~~
 
   1. Open the app QGroundControl and connect the vehicle by the wire to the computer's usb.
