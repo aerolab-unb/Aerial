@@ -23,7 +23,10 @@ This section contains essential configuration topics:
    config/mounting
    config/Compass
    config/gyroscope
+<<<<<<< HEAD
    config/accelerometer
+=======
+>>>>>>> bc529f62388d092893fa660f6b9e9647a75a5437
    config/automatic_landing
 
 

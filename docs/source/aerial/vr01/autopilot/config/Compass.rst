@@ -19,6 +19,7 @@ Futher Information
 ------------------
 * `PX4 user guide > Compass`_.
 
+<<<<<<< HEAD
 .. _PX4 user guide > Compass: https://docs.px4.io/v1.9.0/en/config/compass.html
 
 * `QGroundControl user guide > Sensors`_.
@@ -28,4 +29,14 @@ Futher Information
 * `PX4 Setup Video`_ (Youtube)
 
 .. _PX4 Setup Video: https://www.youtube.com/watch?v=91VGmdSlbo4&feature=youtu.be&t=2m38s
+=======
+* `PX4 user guide > Firmware`_.
 
+* `QGroundControl user guide > Sensors`_.
+
+* `PX4 Setup Video`_ (Youtube)
+>>>>>>> bc529f62388d092893fa660f6b9e9647a75a5437
+
+.. _PX4 user guide > Firmware: https://docs.px4.io/v1.9.0/en/config/compass.html
+.. _QGroundControl user guide > Sensors: https://docs.qgroundcontrol.com/en/SetupView/sensors_px4.html
+.. _PX4 Setup Video: https://www.youtube.com/watch?v=91VGmdSlbo4&feature=youtu.be&t=2m38s

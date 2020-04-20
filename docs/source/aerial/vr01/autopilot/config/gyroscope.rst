@@ -5,7 +5,6 @@ Gyroscope calibration
 
 Through the QGroundControl application you will be guided to position the vehicle in a location with a flat surface and keep it immobile in the determined position.
 
-
 Calibration steps
 ~~~~~~~~~~~~~~~~~
 
@@ -23,6 +22,7 @@ More information
 ----------------
  
 * `QGroundControl user guide > Gyroscope`_.
+
 .. _QGroundControl user guide > Gyroscope: https://docs.qgroundcontrol.com/en/SetupView/sensors_px4.html#gyroscope
 
 
