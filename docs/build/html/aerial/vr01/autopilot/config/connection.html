@@ -1,0 +1,361 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en,pt-BR" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en,pt-BR" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Connections &mdash; CoopRobo 1.0.0 documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="../../../../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../../../../" src="../../../../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../../../../_static/jquery.js"></script>
+        <script type="text/javascript" src="../../../../_static/underscore.js"></script>
+        <script type="text/javascript" src="../../../../_static/doctools.js"></script>
+        <script type="text/javascript" src="../../../../_static/language_data.js"></script>
+        <script async="async" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    
+    <script type="text/javascript" src="../../../../_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="../../../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../../../_static/pygments.css" type="text/css" />
+    <link rel="index" title="Index" href="../../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../../search.html" />
+    <link rel="next" title="Mounting the Pixhawk" href="mounting.html" />
+    <link rel="prev" title="Airframe" href="airframe.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../../../../index.html" class="icon icon-home"> CoopRobo
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Robots</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="../../../../aerial.html">Aerial Robots</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="../../../vr01.html">VR-01</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="../pilot.html">Autopilot</a></li>
+<li class="toctree-l3 current"><a class="reference internal" href="../config_pilot.html">Autopilot Configuration</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="QGroundControl.html">QGroundControl</a></li>
+<li class="toctree-l4"><a class="reference internal" href="firmware.html">Firmware</a></li>
+<li class="toctree-l4"><a class="reference internal" href="airframe.html">Airframe</a></li>
+<li class="toctree-l4 current"><a class="current reference internal" href="#">Connections</a></li>
+<li class="toctree-l4"><a class="reference internal" href="mounting.html">Mounting the Pixhawk</a></li>
+<li class="toctree-l4"><a class="reference internal" href="Compass.html">Compass Calibration</a></li>
+<li class="toctree-l4"><a class="reference internal" href="gyroscope.html">Gyroscope calibration</a></li>
+<li class="toctree-l4"><a class="reference internal" href="automatic_landing.html">Automatic Landing</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../embedded_system/system.html">Embedded System</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../model/Ranger.html">Ranger EX Volatex RC</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../vr01.html#references">References</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../mobile.html">Mobile Robots</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../manipulators.html">Manipulators</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../docs-ref.html">Documentation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../camera.html">Camera</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../../index.html">CoopRobo</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../../../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="../../../../aerial.html">Aerial Robots</a> &raquo;</li>
+        
+          <li><a href="../../../vr01.html">VR-01</a> &raquo;</li>
+        
+          <li><a href="../config_pilot.html">Autopilot Configuration</a> &raquo;</li>
+        
+      <li>Connections</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../../../../_sources/aerial/vr01/autopilot/config/connection.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="connections">
+<h1>Connections<a class="headerlink" href="#connections" title="Permalink to this headline">¶</a></h1>
+<p>The image below shows the connections of the sensors and other items included in the Pixhawk. Each part will be analyzed in more detail in the following sections.</p>
+<div class="section" id="buzzer-and-safety-switch">
+<h2>Buzzer and Safety Switch<a class="headerlink" href="#buzzer-and-safety-switch" title="Permalink to this headline">¶</a></h2>
+<p>The buzzer provides audible signals that indicate the situation of the UAV. While the switch operates in the safety of the aircraft, locking and unlocking the engines.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">The safety switch is activated by default and when activated, it does not allow flight, blocking the engines. To disable safe mode, press and hold the switch for 1 second. You can activate safe mode again by pressing the switch.</p>
+</div>
+<p>To connect the buzzer and the safety switch (required items), simply connect them to the Pixhawk as shown below.</p>
+<img alt="../../../../_images/px1_buzzer_and_safety_switch.jpg" class="align-center" src="../../../../_images/px1_buzzer_and_safety_switch.jpg" />
+</div>
+<div class="section" id="slitter-i2c">
+<h2>Slitter I2C<a class="headerlink" href="#slitter-i2c" title="Permalink to this headline">¶</a></h2>
+<p>The I2C slitter expands the number of I2C ports allowing the connection of up to four peripherals to the Piwhawk. Use a 4-wire cable to connect the I2C slitter and to power an external compass, an LED display, a digital air speed sensor and/or any other peripheral compatible to the vehicle.</p>
+</div>
+<div class="section" id="airspeed-sensor">
+<h2>Airspeed Sensor<a class="headerlink" href="#airspeed-sensor" title="Permalink to this headline">¶</a></h2>
+<p>Em edição...</p>
+</div>
+<div class="section" id="gps-compass">
+<h2>GPS + Compass<a class="headerlink" href="#gps-compass" title="Permalink to this headline">¶</a></h2>
+<p>The GPS, another indispensable device, must be connected to the GPS port (6-pin) using the 6-wire cable provided in the kit.  The compass connection is optional, but strongly recommend its use. To connect it, connect a 4-wire cable to an I2C port on the I2C slitter, as shown below.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">The GPS/Compass should be mounted on the aircraft's chassis as far away from other electronic components as possible, with the indicator arrow facing forward and as aligned as possible with the Pixhawk.</p>
+</div>
+</div>
+<div class="section" id="radio-control-rc">
+<h2>Radio Control (RC)<a class="headerlink" href="#radio-control-rc" title="Permalink to this headline">¶</a></h2>
+<p>The radio control (RC) system is necessary if you want to manually control your vehicle, as the Pixhawk does not require a radio system for autonomous flight modes.</p>
+<p>To connect the radio control system, is necessary need to select a compatible transmitter/receiver and then link it up so that they can communicate.</p>
+<div class="admonition tip">
+<p class="first admonition-title">Tip</p>
+<p class="last">Read the instructions that came with your transmitter/receiver.</p>
+</div>
+<p>The following instructions show how to connect the different types of receivers to the Pixhawk:</p>
+<ul class="simple">
+<li>Spektrum and DSM receivers connect to the SPKT/DSM input.</li>
+</ul>
+<img alt="../../../../_images/pixhawk_3dr_receiver_spektrum.jpg" src="../../../../_images/pixhawk_3dr_receiver_spektrum.jpg" />
+<ul class="simple">
+<li>PPM-SUM and S.BUS receivers connect to ground, power and RC signal pins, as shown.</li>
+</ul>
+<img alt="../../../../_images/pixhawk_3dr_receiver_ppm_sbus.jpg" src="../../../../_images/pixhawk_3dr_receiver_ppm_sbus.jpg" />
+<ul class="simple">
+<li>The PPM and PWM receivers that have an individual wire for each channel must connect to the RC port via a PPM encoder (PPM-Sum receivers use a single signal wire for all channels).</li>
+</ul>
+<p>For more information on selecting a radio system, receiver compatibility, and connecting your transmitter and receiver pair, see: <a class="reference external" href="https://docs.px4.io/v1.9.0/en/getting_started/rc_transmitter_receiver.html">Remote control transmitters and receivers</a>.</p>
+</div>
+<div class="section" id="telemetry">
+<h2>Telemetry<a class="headerlink" href="#telemetry" title="Permalink to this headline">¶</a></h2>
+<p>Telemetry modems can be used to communicate and control a vehicle in flight from an ground station (for example, you can direct the UAV to a specific position or load a new mission). A modem must be connected to your vehicle, as shown below. Another modem must be connected to the ground station computer or mobile device (usually via a USB port).</p>
+<img alt="../../../../_images/pixhawk_3dr_telemetry_radio.jpg" src="../../../../_images/pixhawk_3dr_telemetry_radio.jpg" />
+</div>
+<div class="section" id="power-module">
+<h2>Power Module<a class="headerlink" href="#power-module" title="Permalink to this headline">¶</a></h2>
+<p>The <strong>Power module</strong> (PM) supplies power to the battery flight controller and also sends information about the analog current and voltage supplied by the module (including power to the flight controller and motors, etc.).</p>
+<p>The output of the power module (PM) must be connected to the Pixhawk ** POWER ** port using a 6-wire cable, as shown in the image. The input module must be connected to a battery Po, while the main output will be responsible for supplying power to the ESCs and the aircraft engine (possibly through a power distribution board, depending on the aircraft).</p>
+<img alt="../../../../_images/pixhawk_3dr_power_module.jpg" src="../../../../_images/pixhawk_3dr_power_module.jpg" />
+</div>
+<div class="section" id="distance-sensor">
+<h2>Distance Sensor<a class="headerlink" href="#distance-sensor" title="Permalink to this headline">¶</a></h2>
+<p>Pixhawk supports several different distance sensors, including Lidars (which use lasers or infrared rays for distance measurements) and Sonars (which use ultrasonic waves), and also include the Maxbotix Sonar and Pulsed Light LED range finders. Therefore, the installation varies from device to device. More information about the sensor configuration can be seen in <a class="reference external" href="https://ardupilot.org/copter/docs/common-rangefinder-landingpage.html#rangefinders-landing-page">Rangefinders</a>.</p>
+<div class="figure align-center" id="id2">
+<img alt="../../../../_images/RangeFinder_LandingPageImage_4.jpg" src="../../../../_images/RangeFinder_LandingPageImage_4.jpg" />
+<p class="caption"><span class="caption-text">Example of some compatible distance sensors</span></p>
+</div>
+<p>To implement the project, the Lidar sensor was chosen to enable the automatic landing function due to its greater accuracy compared to the others. Lidar sensor can be connected to the Pixhawk in two ways, via the I2C protocol on the I2C port (or I2C slitter) or by pulse-width-modulation (PWM) on the PWM track.</p>
+<p>According to the Pixhawk documentation, the Lidar used presents interference problems with other devices when connected to the I2C port. Thus, the PWM connection was chosen. A connection diagram can be seen in the table below and the assembly diagram can be seen in the following figure, where the value of the resistor can vary between 200Ω and 1kΩ [1] _.</p>
+<table border="1" class="docutils" id="id3">
+<caption><span class="caption-text">Connection diagram between Lidar and Pixhawk</span><a class="headerlink" href="#id3" title="Permalink to this table">¶</a></caption>
+<colgroup>
+<col width="33%" />
+<col width="67%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Sinal LIDAR-Lite</th>
+<th class="head">Sinal Pixhawk</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>J1</td>
+<td>CH6 Out - V+</td>
+</tr>
+<tr class="row-odd"><td>J2</td>
+<td>CH6 Out - Signal (sinal interno 55)</td>
+</tr>
+<tr class="row-even"><td>J3</td>
+<td>CH5 Out - Signal (sinal interno 54)</td>
+</tr>
+<tr class="row-odd"><td>J4</td>
+<td>&#160;</td>
+</tr>
+<tr class="row-even"><td>J5</td>
+<td>&#160;</td>
+</tr>
+<tr class="row-odd"><td>J6</td>
+<td>Ch6 Out - Ground</td>
+</tr>
+</tbody>
+</table>
+<div class="figure align-center">
+<img alt="../../../../_images/pixhawk_lidar_connection.png" src="../../../../_images/pixhawk_lidar_connection.png" />
+</div>
+<p>More details about the connection can be found in <a class="reference external" href="https://ardupilot.org/copter/docs/common-rangefinder-lidarlite.html?highlight=lidar#lidar-lite-rangefinder">LIDAR-Lite Rangefinder</a>.</p>
+<div class="section" id="more-information">
+<h3>More information<a class="headerlink" href="#more-information" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><a class="reference external" href="https://docs.px4.io/v1.9.0/en/assembly/quick_start_pixhawk.html">Pixhawk Wiring Quick Start - PX4 User Guide</a></li>
+</ul>
+<ul class="simple">
+<li><a class="reference external" href="https://docs.px4.io/v1.9.0/en/assembly/">Basic Assembly - PX4 User Guide</a></li>
+</ul>
+<ul class="simple">
+<li><a class="reference external" href="https://docs.px4.io/v1.9.0/en/flight_controller/pixhawk_series.html">Pixhawk Series - PX4 User Guide</a></li>
+</ul>
+<ul class="simple">
+<li><a class="reference external" href="https://ardupilot.org/copter/docs/common-optional-hardware.html">Peripheral Hardware - Ardupilot Docs</a></li>
+</ul>
+<table class="docutils footnote" frame="void" id="id1" rules="none">
+<colgroup><col class="label" /><col /></colgroup>
+<tbody valign="top">
+<tr><td class="label">[1]</td><td>Eduardo Moura Cirilo Rocha. 2017. Desenvolvimento de um sistema com veículos aéreos não-tripulados autônomos, Universidade de Brasília, Brasil</td></tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="mounting.html" class="btn btn-neutral float-right" title="Mounting the Pixhawk" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="airframe.html" class="btn btn-neutral float-left" title="Airframe" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2019, Gabriel Araujo
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

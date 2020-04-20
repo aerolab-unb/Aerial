@@ -1,0 +1,380 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en,pt-BR" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en,pt-BR" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Autopilot &mdash; CoopRobo 1.0.0 documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="../../../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../../../" src="../../../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../../../_static/jquery.js"></script>
+        <script type="text/javascript" src="../../../_static/underscore.js"></script>
+        <script type="text/javascript" src="../../../_static/doctools.js"></script>
+        <script type="text/javascript" src="../../../_static/language_data.js"></script>
+        <script async="async" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    
+    <script type="text/javascript" src="../../../_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="../../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" />
+    <link rel="next" title="Autopilot Configuration" href="config_pilot.html" />
+    <link rel="prev" title="VR-01" href="../../vr01.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../../../index.html" class="icon icon-home"> CoopRobo
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Robots</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="../../../aerial.html">Aerial Robots</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="../../vr01.html">VR-01</a><ul class="current">
+<li class="toctree-l3 current"><a class="current reference internal" href="#">Autopilot</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#introduction">Introduction</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#basic-concepts">Basic Concepts</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#sensors">Sensors</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pixhawk-specifications">Pixhawk Specifications</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="config_pilot.html">Autopilot Configuration</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../embedded_system/system.html">Embedded System</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../model/Ranger.html">Ranger EX Volatex RC</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../vr01.html#references">References</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../mobile.html">Mobile Robots</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../manipulators.html">Manipulators</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../docs-ref.html">Documentation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../camera.html">Camera</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../index.html">CoopRobo</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="../../../aerial.html">Aerial Robots</a> &raquo;</li>
+        
+          <li><a href="../../vr01.html">VR-01</a> &raquo;</li>
+        
+      <li>Autopilot</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../../../_sources/aerial/vr01/autopilot/pilot.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="autopilot">
+<h1>Autopilot<a class="headerlink" href="#autopilot" title="Permalink to this headline">¶</a></h1>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">This topic consists of a summary of the information available on the page <a class="reference external" href="https://docs.px4.io/v1.9.0/en/getting_started/px4_basic_concepts.html">Getting Started - PX4</a>.</p>
+</div>
+<div class="section" id="introduction">
+<h2>Introduction<a class="headerlink" href="#introduction" title="Permalink to this headline">¶</a></h2>
+<p>PX4 is the professional open source autopilot, developed by both world-class developers from industry and academia, and supported by the active world wide community. The PX4 can run on multiple flight controll boards. Deserving highlight flight open hardware controllers of the <a class="reference external" href="https://pixhawk.org">PixHawk</a> series, running PX4 on <a class="reference external" href="https://nuttx.apache.org/">NuttX OS</a> <a class="footnote-reference" href="#id6" id="id1">[1]</a>.</p>
+<p>Given the options available on the market, Pixhawk 1 was chosen as an autopilot for its best cost benefit for the project.</p>
+<p>The Pixhawk operate in several types of vehicle, from racing drones and cargo to land and submersible vehicles. In this article we will focus on aircraft application, where the Pixhawk operate as a general use flight controller, responsible for the acquisition, conditioning and processing of signals from the aircraft's sensors and for controlling the aircraft's actuators.</p>
+<p>Pixhawk offers a development environment compatible with Unix and Linux systems, favoring the development of software applications. The Pixhawk system has <a class="reference external" href="https://en.wikipedia.org/wiki/Multithreading_(computer_architecture)">multithreading</a> capabilities, that is, it can perform several tasks simultaneously without interfering with the other through the sharing of process resources. Moreover, it has integrated autopilot functions with detailed logs missions and flight behavior <a class="footnote-reference" href="#id7" id="id2">[2]</a>.</p>
+<p>Given the options available on the market, Pixhawk 1 was chosen as an autopilot for its best cost benefit for the project.</p>
+</div>
+<div class="section" id="basic-concepts">
+<h2>Basic Concepts<a class="headerlink" href="#basic-concepts" title="Permalink to this headline">¶</a></h2>
+<p>This topic introduces some basics concepts about unmanned aerial vehicles (UAV) and the use of PX4 platform.</p>
+<div class="section" id="unmanned-aerial-vehicle-uav-or-drone">
+<h3>Unmanned Aerial Vehicle (UAV or drone)<a class="headerlink" href="#unmanned-aerial-vehicle-uav-or-drone" title="Permalink to this headline">¶</a></h3>
+<p>A UAV is any types of aircraft that can be controlled on the 3 axes of freedom and do not need a pilot on board to be guided, being able to be controlled remotely or autonomously.</p>
+<p>The &quot;brain&quot; of a drone is called autopilot, an instrument responsible for controlling the aircraft's flight path. Referring to UAVs, the autopilot consists of flight control software running on specific hardware for the same function.</p>
+</div>
+<div class="section" id="ground-control-station-gcs">
+<h3>Ground Control Station (GCS)<a class="headerlink" href="#ground-control-station-gcs" title="Permalink to this headline">¶</a></h3>
+<p>A Ground Control Station (GCS) is a control platform, usually a software application running on a computer on the ground, which communicates with UAVs for wireless telemetry and provides human operators control of the aircraft.</p>
+<p>The ground station delivers to the controller several data in real time on the performance and position of UAVs and can even serve as a &quot;virtual cockpit&quot;, providing many of the same instruments that a pilot would have if he were flying an airplane. However, Ground Control  software is normally used for planning, uploading flight missions and defining flight parameters.</p>
+<p>There are more than ten different ground control stations. In the area of UAV control, the main controllers are Mission Planner, APM Planner 2, MAVProxy, QGroundControl e UgCS. For Tablet / Smartphone, there is Tower (DroidPlanner 3), MAVPilot, AndroPilot e SidePilot. <a class="footnote-reference" href="#id9" id="id3">[4]</a></p>
+</div>
+<div class="section" id="dronecode-platform">
+<h3>Dronecode Platform<a class="headerlink" href="#dronecode-platform" title="Permalink to this headline">¶</a></h3>
+<p>PX4 is part of the <a class="reference external" href="https://www.dronecode.org/">Dronecode Plataform</a>, a complete platform for drone development, under an open source license the community. It includes, among other things, the <a class="reference external" href="https://px4.io/">PX4</a> flight stack, <a class="reference external" href="http://qgroundcontrol.com/">QGroundControl</a> ground control station, the <a class="reference external" href="https://www.dronecode.org/sdk/">Dronecode SDK</a> and the <a class="reference external" href="https://camera-manager.dronecode.org/en/">Dronecode Camera Manager</a>. <a class="footnote-reference" href="#id8" id="id4">[3]</a></p>
+</div>
+</div>
+<div class="section" id="sensors">
+<h2>Sensors<a class="headerlink" href="#sensors" title="Permalink to this headline">¶</a></h2>
+<p>The PX4 based system uses several sensors to determine vehicle state (these being essential for stabilization and to enable autonomous control). The vehicle states include: position, heading, speed, airspeed, orientation (attitude), rates of rotation in different directions, battery level, etc.</p>
+<p>The system minimally requires a gyroscope, accelerometer, magnetometer (compass), barometer and an airspeed sensor for the case of fixed wing (project case). A GPS or other positioning system is also required to activate all automatic modes and some assisted modes.</p>
+<p>Pixhawk series flight controllers come with a minimum set of sensors incorporated. Additional/external sensors can be connected to the controller.</p>
+<div class="section" id="gps-compass">
+<h3>GPS &amp; Compass<a class="headerlink" href="#gps-compass" title="Permalink to this headline">¶</a></h3>
+<p>The PX4 supports several receivers and compasses (magnetometers) of the Global Navigation Satellite System (GNSS). It also supports Real Time Kinematic (RTK) GPS Receivers, optimizing GPS systems to centimeter level accuracy.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">Pixhawk series controllers include an <em>internal</em> compass, but we recommend using an external Compass + GPS module, which is mounted as far as possible from power supply lines to reduce electromagnetic interference.</p>
+</div>
+<p>The PX4 supports the connection of up to 4 internal or external magnetometers, although only one will actually be used as a heading source. The system automatically chooses the best available compass based on their internal priority (external magnetometers have a higher priority). If the primary compass fails in-flight, it will failover to the next one. If it fails before flight, arming will be denied.</p>
+<p>More information and the list of supported GPS/Compass can be found at <a class="reference external" href="https://docs.px4.io/v1.9.0/en/gps_compass/">GPS/Compass</a>.</p>
+</div>
+<div class="section" id="airspeed">
+<h3>Airspeed<a class="headerlink" href="#airspeed" title="Permalink to this headline">¶</a></h3>
+<div class="admonition tip">
+<p class="first admonition-title">Tip</p>
+<p class="last">Airspeed sensors are highly recommended for the safe operation of a fixed wing UAV or VTOL (Vertical Take-Off and Landing).</p>
+</div>
+<p>The flight of a fixed wing UAV depends on the airspeed, since this guarantees its support in flight and not  the speed in relation to the ground. The autopilot has no other means to detect stall (loss of lift of the aircraft), for this reason air speed sensors are highly recommended.</p>
+<p>More information and the list of supported Airspeed sensors can be found at <a class="reference external" href="https://docs.px4.io/v1.9.0/en/sensor/airspeed.html">Airspeed sensors</a>.</p>
+</div>
+<div class="section" id="distance-telemeter">
+<h3>Distance (telemeter)<a class="headerlink" href="#distance-telemeter" title="Permalink to this headline">¶</a></h3>
+<p>Distance sensors provide real-time distance measurement. It can be optical, when based on a focusing mechanism, or ultrasonic (ecotelemeter or acoustic rangefinder), when using sound reflections. They are used for improved landing behaviour, terrain following, collision prevention, warning of regulatory height limits, etc.</p>
+<p>The PX4 supports a wide variety of distance sensors, using different technologies and supporting different features. More information and the list of supported distance sensors can be found at More information and the list of supported distance sensors can be found at <a class="reference external" href="https://docs.px4.io/v1.9.0/en/sensor/rangefinders.html">Distance sensors</a>.</p>
+</div>
+<div class="section" id="optica-flow">
+<h3>Optica Flow<a class="headerlink" href="#optica-flow" title="Permalink to this headline">¶</a></h3>
+<p>PX4Flow is an optical flow smart camera that can track motion, and has as integrated sonar sensor. PX4 blends the sensor output with information from other position sources (e.g. GPS) to provide a more accurate position lock. This sensor can be used indoors, when no GPS signal is available.</p>
+<p>Most of its applications are directed to rotary-wing aircraft.</p>
+</div>
+</div>
+<div class="section" id="pixhawk-specifications">
+<h2>Pixhawk Specifications<a class="headerlink" href="#pixhawk-specifications" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><strong>Processor</strong><ul>
+<li>32-bit ARM Cortex M4 core with FPU</li>
+<li>168 Mhz/256 KB RAM/2 MB Flash</li>
+<li>32-bit failsafe co-processor</li>
+</ul>
+</li>
+<li><strong>Sensors</strong><ul>
+<li>MPU6000 as main accel and gyro</li>
+<li>ST Micro 16-bit gyroscope</li>
+<li>ST Micro 14-bit accelerometer/compass (magnetometer)</li>
+<li>MEAS barometer</li>
+</ul>
+</li>
+<li><strong>Power</strong><ul>
+<li>Ideal diode controller with automatic failover</li>
+<li>Servo rail high-power (7 V) and high-current ready</li>
+<li>All peripheral outputs over-current protected, all inputs ESD
+protected</li>
+</ul>
+</li>
+<li><strong>Interface</strong><ul>
+<li>5x UART serial ports, 1 high-power capable, 2 with HW flow
+control</li>
+<li>Spektrum DSM/DSM2/DSM-X Satellite input</li>
+<li>Futaba S.BUS input (output not yet implemented)</li>
+<li>PPM sum signal</li>
+<li>RSSI (PWM or voltage) input</li>
+<li>I2C, SPI, 2x CAN, USB</li>
+<li>3.3V and 6.6V ADC inputs</li>
+</ul>
+</li>
+<li><strong>Dimensions</strong><ul>
+<li>Weight 38 g (1.3 oz)</li>
+<li>Width 50 mm (2.0”)</li>
+<li>Height 15.5 mm (.6”)</li>
+<li>Length 81.5 mm (3.2”)</li>
+</ul>
+</li>
+<li><strong>Included items</strong><ul>
+<li>1 x SanDisk Ultra micro SD Card (8GB)</li>
+<li>1 x MRC0225- Cable [3-Pins DF-13] to Switch+LED</li>
+<li>1 x MRC0224- Cable [2-Pins DF-13] to Buzzer</li>
+<li>1 x I2C Splitter</li>
+<li>2 x MRC0213- Cable [6-Pins JST-GH] to [6-Pins DF-13], (Telemetry Radio, Power module and Extra)</li>
+<li>1 x MRC0216- Cable [6-Pins DF-13] to [6-Pins DF-13], (For legacy products)</li>
+<li>4 x Damping Foams</li>
+<li>3 x Decals &quot;APM Rover&quot;, &quot;APM Copter&quot; and &quot;APM Plane&quot;</li>
+</ul>
+</li>
+</ul>
+<blockquote>
+<div></div></blockquote>
+<table class="docutils footnote" frame="void" id="id6" rules="none">
+<colgroup><col class="label" /><col /></colgroup>
+<tbody valign="top">
+<tr><td class="label"><a class="fn-backref" href="#id1">[1]</a></td><td><a class="reference external" href="https://docs.px4.io/v1.9.0/en/">PX4 Autopilot User Guide</a>. docs.px4.io</td></tr>
+</tbody>
+</table>
+<table class="docutils footnote" frame="void" id="id7" rules="none">
+<colgroup><col class="label" /><col /></colgroup>
+<tbody valign="top">
+<tr><td class="label"><a class="fn-backref" href="#id2">[2]</a></td><td>Para mais informações a respeito de <a class="reference external" href="https://pt.wikipedia.org/wiki/Multitarefa">Multithreading (arquitetura computacional)</a>.</td></tr>
+</tbody>
+</table>
+<table class="docutils footnote" frame="void" id="id8" rules="none">
+<colgroup><col class="label" /><col /></colgroup>
+<tbody valign="top">
+<tr><td class="label"><a class="fn-backref" href="#id4">[3]</a></td><td>Eduardo Moura Cirilo Rocha. 2017. Desenvolvimento de um sistema com veículos aéreos não-tripulados autônomos, Universidade de Brasília, Brasil.</td></tr>
+</tbody>
+</table>
+<table class="docutils footnote" frame="void" id="id9" rules="none">
+<colgroup><col class="label" /><col /></colgroup>
+<tbody valign="top">
+<tr><td class="label"><a class="fn-backref" href="#id3">[4]</a></td><td><a class="reference external" href="https://ardupilot.org/copter/docs/common-choosing-a-ground-station.html#choosing-a-ground-station">Choosing a Ground Station - Conter documentation</a>. ardupilot.org</td></tr>
+</tbody>
+</table>
+<table class="docutils footnote" frame="void" id="id10" rules="none">
+<colgroup><col class="label" /><col /></colgroup>
+<tbody valign="top">
+<tr><td class="label">[5]</td><td><a class="reference external" href="https://docs.px4.io/v1.9.0/en/getting_started/px4_basic_concepts.html#dronecode">Dronecode Platform, Basic Concepts, PX4 Autopilot User Guide</a>. docs.px4.io</td></tr>
+</tbody>
+</table>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="config_pilot.html" class="btn btn-neutral float-right" title="Autopilot Configuration" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="../../vr01.html" class="btn btn-neutral float-left" title="VR-01" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2019, Gabriel Araujo
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>
