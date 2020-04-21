@@ -27,20 +27,12 @@ The complete system is constituted by four sub-systems: three aircraft and a bas
 
 Each aircraft has two main components that are worth mentioning. One of them is the autopilot, a device responsible for the acquisition, conditioning and processing of signals from the aircraft's sensors and for controlling the aircraft's actuators. The other is the embedded computer, responsible for data processing, control of the planes (individual control of each plane or cooperative control between the three planes) and for communication with the others sub-systems through the communication radios.
 
-<<<<<<< HEAD
-	
-=======
->>>>>>> bc529f62388d092893fa660f6b9e9647a75a5437
 .. toctree::
    :maxdepth: 2
    :caption: Autopilot
 
    vr01/autopilot/pilot
    vr01/autopilot/config_pilot
-<<<<<<< HEAD
-
-=======
->>>>>>> bc529f62388d092893fa660f6b9e9647a75a5437
 	
 .. toctree::
    :maxdepth: 2
@@ -54,34 +46,15 @@ Each aircraft has two main components that are worth mentioning. One of them is 
 
    vr01/model/Ranger
 
-<<<<<<< HEAD
-
 References
-----------
-
-	- Eduardo Moura Cirilo Rocha. 2017. Desenvolvimento de um sistema com veículos aéreos não-tripulados autônomos, Universidade de Brasília, Brasil.
-
-	* ROCHA, E. M. C. Desenvolvimento de um sistema com veículos aéreos não-tripulados autônomos. Faculdade de Tecnologia, Universidade de Brasília, 2017.
-=======
-References
-------------
+-----------
 
 	* ROCHA, E. M. C. Desenvolvimento de um sistema com veículos aéreos não-tripulados autônomos. Faculdade de Tecnologia, Universidade de Brasília, 2017. 
->>>>>>> bc529f62388d092893fa660f6b9e9647a75a5437
 
 	- CORDEIRO, T. F. K. Desenvolvimento de um sistema com veículos aéreos não-tripulados autônomos. Faculdade de Tecnologia, Universidade de Brasília, 2018.
 
 	* PITA, H. C. Desenvolvimento de sistema de comunicação multiplataforma para veículos aéreos de asa fixa. Faculdade de Tecnologia, Universidade de Brasília, 2018.
 
-<<<<<<< HEAD
-	- `PX4 Autopilot User Guide`_ - docs.px4.io
-.. _PX4 Autopilot User Guide: https://docs.px4.io/master/en/index.html
-
-	* `QGroundControl User Guide`_ - qgroundcontrol.com
-.. _QGroundControl User Guide: https://docs.qgroundcontrol.com/en/
-
-	- `Ardupilot Docs`_ - ardupilot.org
-=======
 	- `PX4 Autopilot User Guide`_ - docs.px4.io  
 
 	* `QGroundControl User Guide`_ - qgroundcontrol.com
@@ -90,7 +63,6 @@ References
 
 .. _PX4 Autopilot User Guide: https://docs.px4.io/master/en/index.html
 .. _QGroundControl User Guide: https://docs.qgroundcontrol.com/en/
->>>>>>> bc529f62388d092893fa660f6b9e9647a75a5437
 .. _Ardupilot Docs: https://ardupilot.org/copter/index.html
 
 
