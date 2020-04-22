@@ -21,9 +21,7 @@ This section contains essential configuration topics:
    config/airframe
    config/connection 
    config/mounting
-   config/Compass
-   config/gyroscope
-   config/accelerometer
+   config/AutoPilotCalibration
    config/automatic_landing
 
 
