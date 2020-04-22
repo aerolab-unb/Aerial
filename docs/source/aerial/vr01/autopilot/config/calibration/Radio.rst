@@ -31,6 +31,9 @@ In the calibration process it will be indicated that the handles are moved in a 
  7. When prompted, move all other switches and dials through their full range (you will be able to observe them moving on the Channel Monitor).
  8. Press Next to save the settings.
 
+More Information
+----------------
+
 * `Radio Setup Video`_ (Youtube)
 
 .. _Radio Setup Video : https://www.youtube.com/watch?v=91VGmdSlbo4&feature=youtu.be&t=4m30s
