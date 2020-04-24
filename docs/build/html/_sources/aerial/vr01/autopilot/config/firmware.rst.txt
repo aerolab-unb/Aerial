@@ -25,7 +25,7 @@ The main GCS's available are Mission Planner, APM Planner 2, MAVProxy, QGroundCo
 
 .. _QGroundControl: https://docs.qgroundcontrol.com/en/
 
-Stable installation
+Stable Installation
 ~~~~~~~~~~~~~~~~~~~
 
 .. Recomenda-se a instalação da versão mais recente do PX4, a fim de obter as correções de bug e as melhores e mais recentes funções.
@@ -70,7 +70,7 @@ The firmware will then proceed a several number of upgraee steps (download the n
 
 Once the firmware has completed loading, the device will reboot and reconnect.
  
-More information
+More Information
 ----------------
 
 * `PX4 user guide > Firmware`_.

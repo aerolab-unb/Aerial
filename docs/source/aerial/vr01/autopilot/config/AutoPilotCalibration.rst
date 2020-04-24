@@ -1,6 +1,7 @@
 Auto Pilot Calibration
 ======================
 
+This section contains the main autopilot calibration topics:
 
 .. toctree::
    :maxdepth: 2

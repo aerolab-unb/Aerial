@@ -29,7 +29,7 @@ Set the Airframe
 .. Adicionar imagem
  
  
-Mais informações
+More Information
 ----------------
 
 * `PX4 user guide > Airframe`_.

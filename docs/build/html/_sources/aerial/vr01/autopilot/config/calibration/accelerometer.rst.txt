@@ -1,4 +1,4 @@
-Accelerometer calibration
+Accelerometer Calibration
 =========================
 
 .. O aplicativo QGroundControl mostrará todos os passos para colocar e segurar o veículo em diversas orientações.

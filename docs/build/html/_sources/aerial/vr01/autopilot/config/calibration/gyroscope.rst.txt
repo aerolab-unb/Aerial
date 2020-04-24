@@ -1,11 +1,11 @@
-Gyroscope calibration
+Gyroscope Calibration
 =====================
 
 .. Pelo aplicativo QGroundControl será orientado a posicionar o veículo em uma local com uma superfície plana e mantê-lo imóvel na posiçao determinada.
 
 Through the QGroundControl application you will be guided to position the vehicle in a location with a flat surface and keep it immobile in the determined position.
 
-Calibration steps
+Calibration Steps
 ~~~~~~~~~~~~~~~~~
 
   1. Click the **Gyroscope** sensor button.
@@ -18,7 +18,7 @@ Calibration steps
   If there is any movement in the vehicle, the QGroundControl application will automatically restart the gyroscope calibration process.
 
 
-More information
+More Information
 ----------------
  
 * `QGroundControl user guide > Gyroscope`_.
