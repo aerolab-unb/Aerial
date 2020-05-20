@@ -21,11 +21,11 @@
   
     
       <script type="text/javascript" id="documentation_options" data-url_root="../../../../" src="../../../../_static/documentation_options.js"></script>
-        <script type="text/javascript" src="../../../../_static/jquery.js"></script>
-        <script type="text/javascript" src="../../../../_static/underscore.js"></script>
-        <script type="text/javascript" src="../../../../_static/doctools.js"></script>
-        <script type="text/javascript" src="../../../../_static/language_data.js"></script>
-        <script async="async" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+        <script src="../../../../_static/jquery.js"></script>
+        <script src="../../../../_static/underscore.js"></script>
+        <script src="../../../../_static/doctools.js"></script>
+        <script src="../../../../_static/language_data.js"></script>
+        <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
     
     <script type="text/javascript" src="../../../../_static/js/theme.js"></script>
 
@@ -179,50 +179,49 @@
             
   <div class="section" id="firmware">
 <h1>Firmware<a class="headerlink" href="#firmware" title="Permalink to this headline">¶</a></h1>
-<p>The installation of the firmware on the flight controller hardware can be done in two ways, by using an Ground Control Station (GCS) program or directly by using developer tools without using an auxiliary program. An GCS is a software application that runs on a ground computer and communicates with the vehicle through the use of wireless telemetry <a class="footnote-reference" href="#id2" id="id1">[1]</a>.</p>
+<p>The installation of the firmware on the flight controller hardware can be done in two ways, by using an Ground Control Station (GCS) program or directly by using developer tools without using an auxiliary program. An GCS is a software application that runs on a ground computer and communicates with the vehicle through the use of wireless telemetry <a class="footnote-reference brackets" href="#id2" id="id1">1</a>.</p>
 <p>The main GCS's available are Mission Planner, APM Planner 2, MAVProxy, QGroundControl and UgCS. To implement this project, QGroundControl was chosen because it provides easy and direct use for beginners, good documentation, a more stable program in relation to the others and also offers advanced features for experienced users.</p>
 <div class="admonition tip">
-<p class="first admonition-title">Tip</p>
-<p class="last">Before starting this section, it is recommended to download and install QGroundControl on your computer.</p>
+<p class="admonition-title">Tip</p>
+<p>Before starting this section, it is recommended to download and install QGroundControl on your computer.</p>
 </div>
 <div class="admonition note">
-<p class="first admonition-title">Note</p>
-<p class="last">The official QGroundControl documentation is available at <a class="reference external" href="https://docs.qgroundcontrol.com/en/">QGroundControl</a>.</p>
+<p class="admonition-title">Note</p>
+<p>The official QGroundControl documentation is available at <a class="reference external" href="https://docs.qgroundcontrol.com/en/">QGroundControl</a>.</p>
 </div>
 <div class="section" id="stable-installation">
 <h2>Stable Installation<a class="headerlink" href="#stable-installation" title="Permalink to this headline">¶</a></h2>
 <p>We recommend using the latest version of PX4 in order to benefit from bug fixes and get the best and latest features.</p>
 <div class="admonition note">
-<p class="first admonition-title">Note</p>
-<p class="last">Before installing the firmware, all USB connections of the vehicle must be disconnected and the vehicle must not be powered by a battery.</p>
+<p class="admonition-title">Note</p>
+<p>Before installing the firmware, all USB connections of the vehicle must be disconnected and the vehicle must not be powered by a battery.</p>
 </div>
 <ol class="arabic simple">
-<li>Select the <em>Gear</em> icon (<strong>Vehicle Setup</strong>) on the top toolbar, then select <strong>Firmware</strong> on the sidebar.</li>
+<li><p>Select the <em>Gear</em> icon (<strong>Vehicle Setup</strong>) on the top toolbar, then select <strong>Firmware</strong> on the sidebar.</p></li>
 </ol>
 <ol class="arabic simple" start="2">
-<li>Connect the flight controller directly to your computer via USB (do not connect through a USB hub).</li>
+<li><p>Connect the flight controller directly to your computer via USB (do not connect through a USB hub).</p></li>
 </ol>
 <ol class="arabic simple" start="3">
-<li>Select the PX4 Flight Stack X.x.x Release option to install the latest stable version of PX4 for your hardware (autodetected).</li>
+<li><p>Select the PX4 Flight Stack X.x.x Release option to install the latest stable version of PX4 for your hardware (autodetected).</p></li>
 </ol>
 <ol class="arabic simple" start="4">
-<li>Click <strong>OK</strong> to start the installation.</li>
+<li><p>Click <strong>OK</strong> to start the installation.</p></li>
 </ol>
 <p>The firmware will then proceed a several number of upgraee steps (download the new firmware, erasing old firmware version, etc.). The overall progress is displayed in a progress bar.</p>
 <p>Once the firmware has completed loading, the device will reboot and reconnect.</p>
 <div class="section" id="more-information">
 <h3>More Information<a class="headerlink" href="#more-information" title="Permalink to this headline">¶</a></h3>
 <ul class="simple">
-<li><a class="reference external" href="https://docs.px4.io/v1.9.0/en/config/firmware.html">PX4 user guide &gt; Firmware</a>.</li>
-<li><a class="reference external" href="https://docs.qgroundcontrol.com/en/SetupView/Firmware.html">QGroundControl user guide &gt; Firmware</a>.</li>
-<li><a class="reference external" href="https://www.youtube.com/watch?v=91VGmdSlbo4&amp;feature=youtu.be">PX4 Setup Video</a> (Youtube)</li>
+<li><p><a class="reference external" href="https://docs.px4.io/v1.9.0/en/config/firmware.html">PX4 user guide &gt; Firmware</a>.</p></li>
+<li><p><a class="reference external" href="https://docs.qgroundcontrol.com/en/SetupView/Firmware.html">QGroundControl user guide &gt; Firmware</a>.</p></li>
+<li><p><a class="reference external" href="https://www.youtube.com/watch?v=91VGmdSlbo4&amp;feature=youtu.be">PX4 Setup Video</a> (Youtube)</p></li>
 </ul>
-<table class="docutils footnote" frame="void" id="id2" rules="none">
-<colgroup><col class="label" /><col /></colgroup>
-<tbody valign="top">
-<tr><td class="label"><a class="fn-backref" href="#id1">[1]</a></td><td>Eduardo Moura Cirilo Rocha. 2017. Desenvolvimento de um sistema com veículos aéreos não-tripulados autônomos, Universidade de Brasília, Brasil.</td></tr>
-</tbody>
-</table>
+<dl class="footnote brackets">
+<dt class="label" id="id2"><span class="brackets"><a class="fn-backref" href="#id1">1</a></span></dt>
+<dd><p>Eduardo Moura Cirilo Rocha. 2017. Desenvolvimento de um sistema com veículos aéreos não-tripulados autônomos, Universidade de Brasília, Brasil.</p>
+</dd>
+</dl>
 </div>
 </div>
 </div>

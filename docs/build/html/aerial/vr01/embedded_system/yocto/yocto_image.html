@@ -1,0 +1,446 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en,pt-BR" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en,pt-BR" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Obtaining images from the Yocto Project &mdash; CoopRobo 1.0.0 documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="../../../../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../../../../" src="../../../../_static/documentation_options.js"></script>
+        <script src="../../../../_static/jquery.js"></script>
+        <script src="../../../../_static/underscore.js"></script>
+        <script src="../../../../_static/doctools.js"></script>
+        <script src="../../../../_static/language_data.js"></script>
+        <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    
+    <script type="text/javascript" src="../../../../_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="../../../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../../../_static/pygments.css" type="text/css" />
+    <link rel="index" title="Index" href="../../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../../search.html" />
+    <link rel="next" title="Partitioning the SD Card" href="../SD_card.html" />
+    <link rel="prev" title="Installing the Operating System" href="../SO_install.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../../../../index.html" class="icon icon-home"> CoopRobo
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Robots</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="../../../../aerial.html">Aerial Robots</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="../../../vr01.html">VR-01</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="../../autopilot/pilot.html">Autopilot</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../autopilot/config_pilot.html">Autopilot Configuration</a></li>
+<li class="toctree-l3 current"><a class="reference internal" href="../system.html">Embedded System</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="../embedded_hardware.html">Embedded Computer</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../embedded_software.html">Operational System</a></li>
+<li class="toctree-l4 current"><a class="reference internal" href="../SO_install.html">Installing the Operating System</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../model/Ranger.html">Ranger EX Volatex RC</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../vr01.html#references">References</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../mobile.html">Mobile Robots</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../manipulators.html">Manipulators</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../docs-ref.html">Documentation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../camera.html">Camera</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../../index.html">CoopRobo</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../../../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="../../../../aerial.html">Aerial Robots</a> &raquo;</li>
+        
+          <li><a href="../../../vr01.html">VR-01</a> &raquo;</li>
+        
+          <li><a href="../system.html">Embedded System</a> &raquo;</li>
+        
+          <li><a href="../SO_install.html">Installing the Operating System</a> &raquo;</li>
+        
+      <li>Obtaining images from the Yocto Project</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../../../../_sources/aerial/vr01/embedded_system/yocto/yocto_image.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="obtaining-images-from-the-yocto-project">
+<h1>Obtaining images from the Yocto Project<a class="headerlink" href="#obtaining-images-from-the-yocto-project" title="Permalink to this headline">¶</a></h1>
+<p>In order to perform the Yocto Project operating system initiation process on the Gumstix embedded computer, we need three specific files, they are the first stage of the initiation system, the MLO (<em>Minimal Loader</em>) file, the second stage of the initiation system, the file <em>u-boot.img</em> (the acronym comes from <em>Universal Bootloader</em>), and the image of the system, which in our case will be Yocto 1.8.2 with Linux kernel.</p>
+<div class="figure align-center">
+<img alt="../../../../_images/yocto_exemple.png" src="../../../../_images/yocto_exemple.png" />
+</div>
+<p>The figure shows an example of the files described in the previous paragraph, note that, in this case, there is also a compressed folder that contains the root files of the operating system. The simplest way found to obtain these files and the operating system image is by following the steps in the <a class="reference external" href="https://github.com/gumstix/yocto-manifest/blob/warrior/README.md">README.md</a> file of the` Yocto project repository for Gumstix products`_. The advantage of using this method instead of simply obtaining the ready image of the operating system is that if necessary, we can modify it.</p>
+<p>This tutorial explains how to manually build the image of the Yocto system and perform all procedures through command lines of the Linux terminal, with an emphasis on <strong>Ubuntu 14.04 (LTS)</strong>. However, to perform this step it is highly recommended to comply with the requirements indicated by the Yocto project.</p>
+<div class="section" id="system-requirements">
+<h2>System Requirements<a class="headerlink" href="#system-requirements" title="Permalink to this headline">¶</a></h2>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>For more information regarding system requirements, see <a class="reference external" href="https://www.yoctoproject.org/docs/1.7/ref-manual/ref-manual.html#intro-requirements">System Requirements - Yocto Project Reference Manual</a>.</p>
+</div>
+<p>The development of projects in the Yocto Project environment requires that some requirements are met, they are:</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>A system with a minimum of 25 GB of free disk space running a supported Linux distribution. If the host system supports multiple cores and threads, you can configure the Yocto Project build system to significantly decrease the time required to build images.</p></li>
+<li><p>Appropriate packages installed on the system used to perform the builds.</p></li>
+<li><p>A distribution of the Yocto Project.</p></li>
+</ul>
+</div></blockquote>
+<p>Project Yocto is currently supported on the following Linux distributions.</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>Ubuntu 12.04 (LTS)</p></li>
+<li><p>Ubuntu 13.10</p></li>
+<li><p>Ubuntu 14.04 (LTS)</p></li>
+<li><p>Fedora release 19 (Schrödinger's Cat)</p></li>
+<li><p>Fedora release 20 (Heisenbug)</p></li>
+<li><p>CentOS release 6.4</p></li>
+<li><p>CentOS release 6.5</p></li>
+<li><p>Debian GNU/Linux 7.0 (Wheezy)</p></li>
+<li><p>Debian GNU/Linux 7.1 (Wheezy)</p></li>
+<li><p>Debian GNU/Linux 7.2 (Wheezy)</p></li>
+<li><p>Debian GNU/Linux 7.3 (Wheezy)</p></li>
+<li><p>Debian GNU/Linux 7.4 (Wheezy)</p></li>
+<li><p>Debian GNU/Linux 7.5 (Wheezy)</p></li>
+<li><p>Debian GNU/Linux 7.6 (Wheezy)</p></li>
+<li><p>openSUSE 12.2</p></li>
+<li><p>openSUSE 12.3</p></li>
+<li><p>openSUSE 13.1</p></li>
+</ul>
+</div></blockquote>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>For a more detailed list of distributions that support the Yocto Project, see the <a class="reference external" href="http://www.yoctoproject.org/docs/1.7/ref-manual/ref-manual.html#detailed-supported-distros">Supported Linux Distributions</a> section in the Yocto Project Reference Manual.</p>
+</div>
+<p>To build the operating system image, the build system must have the following versions of <em>software</em> Git, tar and Python.</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>Git 1.8.3.1 ou posterior</p></li>
+<li><p>tar 1.27 ou posterior</p></li>
+<li><p>Python 3.4.0  ou posterior</p></li>
+</ul>
+</div></blockquote>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>See the <a class="reference external" href="http://www.yoctoproject.org/docs/1.7/ref-manual/ref-manual.html#required-git-tar-and-python-versions">Required Git, tar, and Python Versions</a> section in the Yocto Project Reference Manual for information.</p>
+</div>
+<p>In addition, it is recommended to update the Linux repositories. To do so, in the case of Ubuntu distribution, just run the following command:</p>
+<blockquote>
+<div><div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ sudo apt-get update &amp;&amp; sudo apt-get upgrade
+</pre></div>
+</div>
+</div></blockquote>
+<p>It is also necessary to install the essential host packages to build the image. The following command installs host packages based on systems with Ubuntu distribution.</p>
+<blockquote>
+<div><div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ sudo apt-get install gawk wget git-core diffstat unzip texinfo gcc-multilib build-essential chrpath socat libsdl1.2-dev xterm curl
+</pre></div>
+</div>
+</div></blockquote>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>To install host packages on other supported Linux distributions, see the <a class="reference external" href="http://www.yoctoproject.org/docs/3.0.1/ref-manual/ref-manual.html#required-packages-for-the-build-host">Required Packages for the Build Host</a> section in Yocto Project Reference Manual.</p>
+</div>
+</div>
+<div class="section" id="configuring-the-image">
+<h2>Configuring the Image<a class="headerlink" href="#configuring-the-image" title="Permalink to this headline">¶</a></h2>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The operating system used to test the commands was Ubuntu 14.04 (LTS).</p>
+</div>
+<p>Linhas de comando Linux para obtenção e montagem da imagem.</p>
+<ol class="arabic simple">
+<li><p><strong>Installing the repository</strong></p></li>
+</ol>
+<p>To download Yocto images, we first need to install the <strong>repo</strong> command. In summary, the repo is basically a git wrapper, which provides a simple way to group several different git repositories into a single project. If you are interested in more information about the <strong>repo</strong> command, go to <a class="reference external" href="https://gerrit.googlesource.com/git-repo/+/refs/heads/master/README.md">repo - gerrit.googlesource.com</a>.</p>
+<p>Download the scripts from the repository</p>
+<blockquote>
+<div><div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ curl http://commondatastorage.googleapis.com/git-repo-downloads/repo &gt; repo
+</pre></div>
+</div>
+</div></blockquote>
+<p>Make files executable</p>
+<blockquote>
+<div><div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ chmod a+x repo
+</pre></div>
+</div>
+</div></blockquote>
+<p>Move files to the system path</p>
+<blockquote>
+<div><div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ sudo mv repo /usr/local/bin/
+</pre></div>
+</div>
+</div></blockquote>
+<p>If everything goes well, a message similar to the image should appear when executing the following command. This command is not mandatory.</p>
+<blockquote>
+<div><div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ repo --help
+</pre></div>
+</div>
+</div></blockquote>
+<div class="figure align-center">
+<img alt="../../../../_images/yocto_repo.png" src="../../../../_images/yocto_repo.png" />
+</div>
+<ol class="arabic simple" start="2">
+<li><p><strong>Creating a local repository</strong></p></li>
+</ol>
+<p>Create a directory for the files and change the execution directory for the new repository.</p>
+<blockquote>
+<div><div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ mkdir yocto
+$ cd yocto
+</pre></div>
+</div>
+</div></blockquote>
+<p>Now with the repository already installed, we will download all the Yocto settings for our project. The <strong>init</strong> command can take some time, as it downloads all the git repositories associated with the project. The command <strong>-b</strong> specifies the branch to be used and the command <strong>fido</strong> selects the most stable branch of the repository.</p>
+<blockquote>
+<div><div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ repo init -u git://github.com/gumstix/yocto-manifest.git -b fido
+</pre></div>
+</div>
+</div></blockquote>
+<p>A successful initialization will end with a message stating that <strong>.repo</strong> has been initialized in your working directory. Your directory should now contain a * .repo * folder where the repository control files are stored, but there is no need to open the directory.</p>
+<div class="figure align-center">
+<img alt="../../../../_images/yocto_init.png" src="../../../../_images/yocto_init.png" />
+</div>
+<ol class="arabic simple" start="3">
+<li><p><strong>Downloading the files</strong></p></li>
+</ol>
+<p>The following command is used to ensure that all of your repositories are up to date and is useful for updating your Yocto settings if you do a build later.</p>
+<blockquote>
+<div><div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ repo sync
+</pre></div>
+</div>
+</div></blockquote>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>This step can take more than 20 minutes, depending on your internet connection.</p>
+</div>
+<p>Force all temporary files to be written to permanent devices using the command:</p>
+<blockquote>
+<div><div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ sync
+</pre></div>
+</div>
+</div></blockquote>
+<ol class="arabic simple" start="4">
+<li><p><strong>Starting the Yocto Project Build Environment</strong></p></li>
+</ol>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>If, for any reason, you cancel the activity before completing the Yocto compilation, you will need to execute this command each time before proceeding to the next steps. Keep in mind that this also applies to future builds.</p>
+</div>
+<p>Now that we have our basic Yocto settings, we will enter our build environment. Using the following command, we will copy the default configuration information into the <strong>poky/build/conf</strong> directory and set some environment variables for the image assembly system.</p>
+<blockquote>
+<div><div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ export TEMPLATECONF=meta-gumstix-extras/conf
+$ source ./poky/oe-init-build-env
+</pre></div>
+</div>
+</div></blockquote>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>This configuration directory is not under revision control, so you can edit these configuration files for your specific installation.</p>
+</div>
+<ol class="arabic simple" start="5">
+<li><p><strong>Creating the image</strong></p></li>
+</ol>
+<p>The Yocto project uses bitbake to compile the Yocto Linux image. Bitbake basically compiles only the OS, kernel, modules and all packages included in the target Linux OS.</p>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>(<strong>OPCIONAL</strong>)
+If you are familiar with compiling via make, you can speed up the compilation process by telling bitbake to compile with more threads. This step is not necessary, but if you are compiling on a system with a high-end CPU with many cores, it will speed up the compilation time. For example:</p>
+<p><code class="docutils literal notranslate"><span class="pre">$</span> <span class="pre">export</span> <span class="pre">PARALLEL_MAKE=&quot;-j</span> <span class="pre">8&quot;</span></code></p>
+<p>The number &quot;8&quot; indicates the number of nuclei to be used in the matching.
+<strong>It is worth mentioning that you should not specify a value -j greater than the amount of CPU cores present in your construction machine</strong>.</p>
+</div>
+<p>So, to download the source codes and compile the system images, run:</p>
+<blockquote>
+<div><div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ bitbake gumstix-console-image
+</pre></div>
+</div>
+</div></blockquote>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>This process downloads several gigabytes of code and then makes a huge build. So make sure you have at least 25GB of free space. This step may take a day or more to create the image, depending on your internet connection. Don't worry, it's just the first build that takes a while.</p>
+</div>
+<p>After completing the execution of all commands, it is recommended to check the folder <strong>yocto/build/tmp/deploy/images/overo</strong>, this folder must contain binary kernel files and bootloaders and root directory files in the format .tar.</p>
+<p>The figure below shows an example of the contents of the described folder, this folder must be similar to the one obtained after performing the previous procedures.</p>
+<div class="figure align-center">
+<img alt="../../../../_images/yocto_image.png" src="../../../../_images/yocto_image.png" />
+</div>
+<p>In the figure we can find both the necessary bootloaders described previously and the binary (.ubi) and files in the root directory of some versions of the Yocto project.</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>Possible causes of failures are probably related to missing or outdated software, unsupported operating system or lack of free space.</p>
+</div>
+<div class="section" id="references">
+<h3>References<a class="headerlink" href="#references" title="Permalink to this headline">¶</a></h3>
+<blockquote>
+<div><ul class="simple">
+<li><p>PITA, H. C. Desenvolvimento de sistema de comunicação multiplataforma para veículos aéreos de asa fixa. Faculdade de Tecnologia, Universidade de Brasília, 2018.</p></li>
+<li><p><a class="reference external" href="https://github.com/gumstix/yocto-manifest">Gumstix Repo Manifests for the Yocto Project Build System</a> - github.com</p></li>
+<li><p><a class="reference external" href="https://www.yoctoproject.org/docs/1.7/yocto-project-qs/yocto-project-qs.html">Yocto Project Quick Start</a> - yoctoproject.org</p></li>
+<li><p><a class="reference external" href="https://www.yoctoproject.org/docs/1.7/ref-manual/ref-manual.html">Yocto Project Reference Manual</a> - yoctoproject.org</p></li>
+<li><p><a class="reference external" href="http://www.hackgnar.com/2015/03/building-yocto-linux-images-for-gumstix.html">Building Yocto Linux Images for the Gumstix Overo</a> - hackgnar.com</p></li>
+</ul>
+</div></blockquote>
+</div>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../SD_card.html" class="btn btn-neutral float-right" title="Partitioning the SD Card" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="../SO_install.html" class="btn btn-neutral float-left" title="Installing the Operating System" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2019, Gabriel Araujo
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

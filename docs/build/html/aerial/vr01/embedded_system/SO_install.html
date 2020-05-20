@@ -1,0 +1,286 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en,pt-BR" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en,pt-BR" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Installing the Operating System &mdash; CoopRobo 1.0.0 documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="../../../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../../../" src="../../../_static/documentation_options.js"></script>
+        <script src="../../../_static/jquery.js"></script>
+        <script src="../../../_static/underscore.js"></script>
+        <script src="../../../_static/doctools.js"></script>
+        <script src="../../../_static/language_data.js"></script>
+        <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    
+    <script type="text/javascript" src="../../../_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="../../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" />
+    <link rel="next" title="Obtaining images from the Yocto Project" href="yocto/yocto_image.html" />
+    <link rel="prev" title="Operational System" href="embedded_software.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../../../index.html" class="icon icon-home"> CoopRobo
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Robots</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="../../../aerial.html">Aerial Robots</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="../../vr01.html">VR-01</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="../autopilot/pilot.html">Autopilot</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../autopilot/config_pilot.html">Autopilot Configuration</a></li>
+<li class="toctree-l3 current"><a class="reference internal" href="system.html">Embedded System</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="embedded_hardware.html">Embedded Computer</a></li>
+<li class="toctree-l4"><a class="reference internal" href="embedded_software.html">Operational System</a></li>
+<li class="toctree-l4 current"><a class="current reference internal" href="#">Installing the Operating System</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../model/Ranger.html">Ranger EX Volatex RC</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../vr01.html#references">References</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../mobile.html">Mobile Robots</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../manipulators.html">Manipulators</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../docs-ref.html">Documentation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../camera.html">Camera</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../index.html">CoopRobo</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="../../../aerial.html">Aerial Robots</a> &raquo;</li>
+        
+          <li><a href="../../vr01.html">VR-01</a> &raquo;</li>
+        
+          <li><a href="system.html">Embedded System</a> &raquo;</li>
+        
+      <li>Installing the Operating System</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../../../_sources/aerial/vr01/embedded_system/SO_install.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="installing-the-operating-system">
+<h1>Installing the Operating System<a class="headerlink" href="#installing-the-operating-system" title="Permalink to this headline">¶</a></h1>
+<p>The installation of the operating system is not a trivial task, in addition there is a shortage of detailed and complete documentation explaining how to install the operating system on the embedded computer, soon the procedures necessary for installing an operating system will be documented in this section. In the current phase of the work, we installed both systems, so that we can decide later which of the two systems will be best for our application.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Official tutorials can be found on the <a class="reference external" href="https://www.gumstix.com/">Gumstix</a> website and on the GitHub repositories of the <a class="reference external" href="https://github.com/gumstix/yocto-manifest">Yocto</a> and <a class="reference external" href="https://github.com/gumstix/live-build">Ubuntu</a> project for Gumstix products.</p>
+</div>
+<div class="section" id="obtaining-os-images">
+<h2>Obtaining OS images<a class="headerlink" href="#obtaining-os-images" title="Permalink to this headline">¶</a></h2>
+<p>Essentially, the device only needs to run a small program, usually located in a non-volatile memory of the type * Read-Only Memory * (ROM), to access another non-volatile memory device that stores the operating system, and load the operating system on volatile quick access memory or <em>Random Access Memory</em> (RAM) where it can be executed. In more robust systems, there is, in fact, a chain of these small programs, called <em>bootloaders</em>, where a first stage executes a second stage that loads more complex programs and, in turn, executes a third stage and so on until the operating system is fully loaded and ready to run on its own.</p>
+<p>There are two methods for obtaining the operating systems for Gumstix Overo. The first method is to download a precompiled image directly from Gumstix. The second method is to build the image on your computer yourself. Creating the operating system image manually has additional benefits, such as customizing or adding additional binary packages to your base image. The possibility of personalization will be very important in the development of the project.</p>
+<blockquote>
+<div><div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="yocto/yocto_image.html">Obtaining images from the Yocto Project</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="yocto/yocto_image.html#system-requirements">System Requirements</a></li>
+<li class="toctree-l2"><a class="reference internal" href="yocto/yocto_image.html#configuring-the-image">Configuring the Image</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</div></blockquote>
+</div>
+<div class="section" id="preparing-the-memory-card">
+<h2>Preparing the Memory Card<a class="headerlink" href="#preparing-the-memory-card" title="Permalink to this headline">¶</a></h2>
+<p>Once the image of the operating system is obtained, we can transfer the files to the embedded computer in order to connect it. This task will be performed using an SD card that will act as the hard disk of the embedded computer. Therefore, the SD card will contain both the programs needed for boot, which will be used only when starting the computer, and the other programs can be used at any time and will make constant changes to the SD card. So the best way to deal with this division is to partition the SD card into two partitions that will be called boot and rootfs.</p>
+<p>The file management system defines the method that the operating system will use to store files and their information, or file metadata, in memory spaces, such as name, occupied memory space, dates of changes and last accesses. There is a wide variety of file management systems with the most diverse complexities. But what we may need in this work and in future works is the &quot;FAT&quot; system, an old system generally used in media and, usually, universal. &quot;Ext&quot; is a system designed specifically for Linux and it is not possible to access it from another operating system without a program for this purpose.</p>
+<p>This is a very common procedure and there are numerous ways to do it, however, here we will use Linux's own disk manager to perform partitioning, as it is a simple, intuitive tool and allows for future changes without major difficulties. It is worth mentioning that this is not the method indicated by the manufacturer, since the procedures recommended by them on the page <a class="reference external" href="https://www.gumstix.com/support/getting-started/create-bootable-microsd-card">Create Bootable MicroSD Card</a> presented the most diverse errors, however, the results obtained using the procedures of the topic below are the same.</p>
+<blockquote>
+<div><div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="SD_card.html">Partitioning the SD Card</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="SD_card.html#procedures">Procedures</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</div></blockquote>
+</div>
+<div class="section" id="writing-the-image-on-the-microsd-card">
+<h2>Writing the image on the MicroSD Card<a class="headerlink" href="#writing-the-image-on-the-microsd-card" title="Permalink to this headline">¶</a></h2>
+<p>After dividing the SD card, we can proceed with the installation of the system by mounting its partitions and copying the files obtained previously, the two bootloaders files, to the folder where the boot partition was mounted and extracting the system directories to the folder where the rootfs partition has been mounted.</p>
+<p>After that, the procedure for mounting a memory partition is an activity of the operating system to ensure that the transfer of information will be done correctly, basically the connected device is read in its entirety to identify the files stored in it and where new information can be written to without overlapping data. However more important than mounting the partition is to unmount the partition before disconnecting the peripheral, as it ensures that no write activity on the partition is taking place at the time the device is removed. This procedure also ensures that all requested changes have been made on the peripheral and are not saved in temporary files or system buffers.</p>
+<p>The procedure described below is based on the manufacturer's recommendations and is specific for installing the Yocto Project system on Gumstix Overo devices.</p>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>Remember to unmount the partitions before removing the SD card.</p>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="SD_card_sistema.html">Procedure</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="SD_card_sistema.html#mounting-the-partitions">Mounting the Partitions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="SD_card_sistema.html#copy-and-extraction-files">Copy and Extraction Files</a></li>
+<li class="toctree-l2"><a class="reference internal" href="SD_card_sistema.html#result-on-the-memory-card">Result on the Memory Card</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="yocto/yocto_image.html" class="btn btn-neutral float-right" title="Obtaining images from the Yocto Project" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="embedded_software.html" class="btn btn-neutral float-left" title="Operational System" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2019, Gabriel Araujo
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

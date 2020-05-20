@@ -21,11 +21,11 @@
   
     
       <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
-        <script type="text/javascript" src="../_static/jquery.js"></script>
-        <script type="text/javascript" src="../_static/underscore.js"></script>
-        <script type="text/javascript" src="../_static/doctools.js"></script>
-        <script type="text/javascript" src="../_static/language_data.js"></script>
-        <script async="async" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="../_static/language_data.js"></script>
+        <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
     
     <script type="text/javascript" src="../_static/js/theme.js"></script>
 
@@ -168,7 +168,7 @@
 <h1>VR-01<a class="headerlink" href="#vr-01" title="Permalink to this headline">¶</a></h1>
 <div class="figure align-center" id="id1">
 <a class="reference internal image-reference" href="../_images/vr01.png"><img alt="../_images/vr01.png" src="../_images/vr01.png" style="width: 450px;" /></a>
-<p class="caption"><span class="caption-text">Aircraft Ranger EX Volatex RC</span></p>
+<p class="caption"><span class="caption-text">Aircraft Ranger EX Volatex RC</span><a class="headerlink" href="#id1" title="Permalink to this image">¶</a></p>
 </div>
 <p>This work seeks the study, documentation and development of cooperative control techniques for unmanned aerial vehicles in order to enable three fixed-wing aircraft to fly, autonomously, in squadron formation.</p>
 <p>The use of multiple unmanned aerial vehicles in missions such as surveillance, monitoring and searches can make them faster and more likely to succeed. For this, it is necessary that the UAVs communicate with each other and have a control strategy that determines what each one should do. This project includes three fixed-wing UAVs available at the Laboratory of Aerial Robotics at the University of Brasilia, which should be studied and implemented cooperative control techniques in the embedded hardware and software.</p>
@@ -190,9 +190,7 @@
 <li class="toctree-l2"><a class="reference internal" href="vr01/autopilot/config/airframe.html">Airframe</a></li>
 <li class="toctree-l2"><a class="reference internal" href="vr01/autopilot/config/connection.html">Connections</a></li>
 <li class="toctree-l2"><a class="reference internal" href="vr01/autopilot/config/mounting.html">Mounting the Pixhawk</a></li>
-<li class="toctree-l2"><a class="reference internal" href="vr01/autopilot/config/calibration/Compass.html">Compass Calibration</a></li>
-<li class="toctree-l2"><a class="reference internal" href="vr01/autopilot/config/calibration/gyroscope.html">Gyroscope calibration</a></li>
-<li class="toctree-l2"><a class="reference internal" href="vr01/autopilot/config/calibration/accelerometer.html">Accelerometer calibration</a></li>
+<li class="toctree-l2"><a class="reference internal" href="vr01/autopilot/config/AutoPilotCalibration.html">Auto Pilot Calibration</a></li>
 <li class="toctree-l2"><a class="reference internal" href="vr01/autopilot/config/automatic_landing.html">Automatic Landing</a></li>
 </ul>
 </li>
@@ -202,7 +200,9 @@
 <p class="caption"><span class="caption-text">Embedded computer</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="vr01/embedded_system/system.html">Embedded System</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="vr01/embedded_system/system.html#overo-waterstorm">Overo WaterStorm</a></li>
+<li class="toctree-l2"><a class="reference internal" href="vr01/embedded_system/embedded_hardware.html">Embedded Computer</a></li>
+<li class="toctree-l2"><a class="reference internal" href="vr01/embedded_system/embedded_software.html">Operational System</a></li>
+<li class="toctree-l2"><a class="reference internal" href="vr01/embedded_system/SO_install.html">Installing the Operating System</a></li>
 </ul>
 </li>
 </ul>
@@ -217,22 +217,22 @@
 <h2>References<a class="headerlink" href="#references" title="Permalink to this headline">¶</a></h2>
 <blockquote>
 <div><ul class="simple">
-<li>ROCHA, E. M. C. Desenvolvimento de um sistema com veículos aéreos não-tripulados autônomos. Faculdade de Tecnologia, Universidade de Brasília, 2017.</li>
+<li><p>ROCHA, E. M. C. Desenvolvimento de um sistema com veículos aéreos não-tripulados autônomos. Faculdade de Tecnologia, Universidade de Brasília, 2017.</p></li>
 </ul>
 <ul class="simple">
-<li>CORDEIRO, T. F. K. Desenvolvimento de um sistema com veículos aéreos não-tripulados autônomos. Faculdade de Tecnologia, Universidade de Brasília, 2018.</li>
+<li><p>CORDEIRO, T. F. K. Desenvolvimento de um sistema com veículos aéreos não-tripulados autônomos. Faculdade de Tecnologia, Universidade de Brasília, 2018.</p></li>
 </ul>
 <ul class="simple">
-<li>PITA, H. C. Desenvolvimento de sistema de comunicação multiplataforma para veículos aéreos de asa fixa. Faculdade de Tecnologia, Universidade de Brasília, 2018.</li>
+<li><p>PITA, H. C. Desenvolvimento de sistema de comunicação multiplataforma para veículos aéreos de asa fixa. Faculdade de Tecnologia, Universidade de Brasília, 2018.</p></li>
 </ul>
 <ul class="simple">
-<li><a class="reference external" href="https://docs.px4.io/master/en/index.html">PX4 Autopilot User Guide</a> - docs.px4.io</li>
+<li><p><a class="reference external" href="https://docs.px4.io/master/en/index.html">PX4 Autopilot User Guide</a> - docs.px4.io</p></li>
 </ul>
 <ul class="simple">
-<li><a class="reference external" href="https://docs.qgroundcontrol.com/en/">QGroundControl User Guide</a> - qgroundcontrol.com</li>
+<li><p><a class="reference external" href="https://docs.qgroundcontrol.com/en/">QGroundControl User Guide</a> - qgroundcontrol.com</p></li>
 </ul>
 <ul class="simple">
-<li><a class="reference external" href="https://ardupilot.org/copter/index.html">Ardupilot Docs</a> - ardupilot.org</li>
+<li><p><a class="reference external" href="https://ardupilot.org/copter/index.html">Ardupilot Docs</a> - ardupilot.org</p></li>
 </ul>
 </div></blockquote>
 </div>

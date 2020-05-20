@@ -21,11 +21,11 @@
   
     
       <script type="text/javascript" id="documentation_options" data-url_root="../../../" src="../../../_static/documentation_options.js"></script>
-        <script type="text/javascript" src="../../../_static/jquery.js"></script>
-        <script type="text/javascript" src="../../../_static/underscore.js"></script>
-        <script type="text/javascript" src="../../../_static/doctools.js"></script>
-        <script type="text/javascript" src="../../../_static/language_data.js"></script>
-        <script async="async" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+        <script src="../../../_static/jquery.js"></script>
+        <script src="../../../_static/underscore.js"></script>
+        <script src="../../../_static/doctools.js"></script>
+        <script src="../../../_static/language_data.js"></script>
+        <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
     
     <script type="text/javascript" src="../../../_static/js/theme.js"></script>
 
@@ -175,15 +175,15 @@
   <div class="section" id="autopilot">
 <h1>Autopilot<a class="headerlink" href="#autopilot" title="Permalink to this headline">¶</a></h1>
 <div class="admonition note">
-<p class="first admonition-title">Note</p>
-<p class="last">This topic consists of a summary of the information available on the page <a class="reference external" href="https://docs.px4.io/v1.9.0/en/getting_started/px4_basic_concepts.html">Getting Started - PX4</a>.</p>
+<p class="admonition-title">Note</p>
+<p>This topic consists of a summary of the information available on the page <a class="reference external" href="https://docs.px4.io/v1.9.0/en/getting_started/px4_basic_concepts.html">Getting Started - PX4</a>.</p>
 </div>
 <div class="section" id="introduction">
 <h2>Introduction<a class="headerlink" href="#introduction" title="Permalink to this headline">¶</a></h2>
-<p>PX4 is the professional open source autopilot, developed by both world-class developers from industry and academia, and supported by the active world wide community. The PX4 can run on multiple flight controll boards. Deserving highlight flight open hardware controllers of the <a class="reference external" href="https://pixhawk.org">PixHawk</a> series, running PX4 on <a class="reference external" href="https://nuttx.apache.org/">NuttX OS</a> <a class="footnote-reference" href="#id6" id="id1">[1]</a>.</p>
+<p>PX4 is the professional open source autopilot, developed by both world-class developers from industry and academia, and supported by the active world wide community. The PX4 can run on multiple flight controll boards. Deserving highlight flight open hardware controllers of the <a class="reference external" href="https://pixhawk.org">PixHawk</a> series, running PX4 on <a class="reference external" href="https://nuttx.apache.org/">NuttX OS</a> <a class="footnote-reference brackets" href="#id6" id="id1">1</a>.</p>
 <p>Given the options available on the market, Pixhawk 1 was chosen as an autopilot for its best cost benefit for the project.</p>
 <p>The Pixhawk operate in several types of vehicle, from racing drones and cargo to land and submersible vehicles. In this article we will focus on aircraft application, where the Pixhawk operate as a general use flight controller, responsible for the acquisition, conditioning and processing of signals from the aircraft's sensors and for controlling the aircraft's actuators.</p>
-<p>Pixhawk offers a development environment compatible with Unix and Linux systems, favoring the development of software applications. The Pixhawk system has <a class="reference external" href="https://en.wikipedia.org/wiki/Multithreading_(computer_architecture)">multithreading</a> capabilities, that is, it can perform several tasks simultaneously without interfering with the other through the sharing of process resources. Moreover, it has integrated autopilot functions with detailed logs missions and flight behavior <a class="footnote-reference" href="#id7" id="id2">[2]</a>.</p>
+<p>Pixhawk offers a development environment compatible with Unix and Linux systems, favoring the development of software applications. The Pixhawk system has <a class="reference external" href="https://en.wikipedia.org/wiki/Multithreading_(computer_architecture)">multithreading</a> capabilities, that is, it can perform several tasks simultaneously without interfering with the other through the sharing of process resources. Moreover, it has integrated autopilot functions with detailed logs missions and flight behavior <a class="footnote-reference brackets" href="#id7" id="id2">2</a>.</p>
 <p>Given the options available on the market, Pixhawk 1 was chosen as an autopilot for its best cost benefit for the project.</p>
 </div>
 <div class="section" id="basic-concepts">
@@ -198,11 +198,11 @@
 <h3>Ground Control Station (GCS)<a class="headerlink" href="#ground-control-station-gcs" title="Permalink to this headline">¶</a></h3>
 <p>A Ground Control Station (GCS) is a control platform, usually a software application running on a computer on the ground, which communicates with UAVs for wireless telemetry and provides human operators control of the aircraft.</p>
 <p>The ground station delivers to the controller several data in real time on the performance and position of UAVs and can even serve as a &quot;virtual cockpit&quot;, providing many of the same instruments that a pilot would have if he were flying an airplane. However, Ground Control  software is normally used for planning, uploading flight missions and defining flight parameters.</p>
-<p>There are more than ten different ground control stations. In the area of UAV control, the main controllers are Mission Planner, APM Planner 2, MAVProxy, QGroundControl e UgCS. For Tablet / Smartphone, there is Tower (DroidPlanner 3), MAVPilot, AndroPilot e SidePilot. <a class="footnote-reference" href="#id9" id="id3">[4]</a></p>
+<p>There are more than ten different ground control stations. In the area of UAV control, the main controllers are Mission Planner, APM Planner 2, MAVProxy, QGroundControl e UgCS. For Tablet / Smartphone, there is Tower (DroidPlanner 3), MAVPilot, AndroPilot e SidePilot. <a class="footnote-reference brackets" href="#id9" id="id3">4</a></p>
 </div>
 <div class="section" id="dronecode-platform">
 <h3>Dronecode Platform<a class="headerlink" href="#dronecode-platform" title="Permalink to this headline">¶</a></h3>
-<p>PX4 is part of the <a class="reference external" href="https://www.dronecode.org/">Dronecode Plataform</a>, a complete platform for drone development, under an open source license the community. It includes, among other things, the <a class="reference external" href="https://px4.io/">PX4</a> flight stack, <a class="reference external" href="http://qgroundcontrol.com/">QGroundControl</a> ground control station, the <a class="reference external" href="https://www.dronecode.org/sdk/">Dronecode SDK</a> and the <a class="reference external" href="https://camera-manager.dronecode.org/en/">Dronecode Camera Manager</a>. <a class="footnote-reference" href="#id8" id="id4">[3]</a></p>
+<p>PX4 is part of the <a class="reference external" href="https://www.dronecode.org/">Dronecode Plataform</a>, a complete platform for drone development, under an open source license the community. It includes, among other things, the <a class="reference external" href="https://px4.io/">PX4</a> flight stack, <a class="reference external" href="http://qgroundcontrol.com/">QGroundControl</a> ground control station, the <a class="reference external" href="https://www.dronecode.org/sdk/">Dronecode SDK</a> and the <a class="reference external" href="https://camera-manager.dronecode.org/en/">Dronecode Camera Manager</a>. <a class="footnote-reference brackets" href="#id8" id="id4">3</a></p>
 </div>
 </div>
 <div class="section" id="sensors">
@@ -214,8 +214,8 @@
 <h3>GPS &amp; Compass<a class="headerlink" href="#gps-compass" title="Permalink to this headline">¶</a></h3>
 <p>The PX4 supports several receivers and compasses (magnetometers) of the Global Navigation Satellite System (GNSS). It also supports Real Time Kinematic (RTK) GPS Receivers, optimizing GPS systems to centimeter level accuracy.</p>
 <div class="admonition note">
-<p class="first admonition-title">Note</p>
-<p class="last">Pixhawk series controllers include an <em>internal</em> compass, but we recommend using an external Compass + GPS module, which is mounted as far as possible from power supply lines to reduce electromagnetic interference.</p>
+<p class="admonition-title">Note</p>
+<p>Pixhawk series controllers include an <em>internal</em> compass, but we recommend using an external Compass + GPS module, which is mounted as far as possible from power supply lines to reduce electromagnetic interference.</p>
 </div>
 <p>The PX4 supports the connection of up to 4 internal or external magnetometers, although only one will actually be used as a heading source. The system automatically chooses the best available compass based on their internal priority (external magnetometers have a higher priority). If the primary compass fails in-flight, it will failover to the next one. If it fails before flight, arming will be denied.</p>
 <p>More information and the list of supported GPS/Compass can be found at <a class="reference external" href="https://docs.px4.io/v1.9.0/en/gps_compass/">GPS/Compass</a>.</p>
@@ -223,8 +223,8 @@
 <div class="section" id="airspeed">
 <h3>Airspeed<a class="headerlink" href="#airspeed" title="Permalink to this headline">¶</a></h3>
 <div class="admonition tip">
-<p class="first admonition-title">Tip</p>
-<p class="last">Airspeed sensors are highly recommended for the safe operation of a fixed wing UAV or VTOL (Vertical Take-Off and Landing).</p>
+<p class="admonition-title">Tip</p>
+<p>Airspeed sensors are highly recommended for the safe operation of a fixed wing UAV or VTOL (Vertical Take-Off and Landing).</p>
 </div>
 <p>The flight of a fixed wing UAV depends on the airspeed, since this guarantees its support in flight and not  the speed in relation to the ground. The autopilot has no other means to detect stall (loss of lift of the aircraft), for this reason air speed sensors are highly recommended.</p>
 <p>More information and the list of supported Airspeed sensors can be found at <a class="reference external" href="https://docs.px4.io/v1.9.0/en/sensor/airspeed.html">Airspeed sensors</a>.</p>
@@ -243,87 +243,83 @@
 <div class="section" id="pixhawk-specifications">
 <h2>Pixhawk Specifications<a class="headerlink" href="#pixhawk-specifications" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
-<li><strong>Processor</strong><ul>
-<li>32-bit ARM Cortex M4 core with FPU</li>
-<li>168 Mhz/256 KB RAM/2 MB Flash</li>
-<li>32-bit failsafe co-processor</li>
+<li><p><strong>Processor</strong></p>
+<ul>
+<li><p>32-bit ARM Cortex M4 core with FPU</p></li>
+<li><p>168 Mhz/256 KB RAM/2 MB Flash</p></li>
+<li><p>32-bit failsafe co-processor</p></li>
 </ul>
 </li>
-<li><strong>Sensors</strong><ul>
-<li>MPU6000 as main accel and gyro</li>
-<li>ST Micro 16-bit gyroscope</li>
-<li>ST Micro 14-bit accelerometer/compass (magnetometer)</li>
-<li>MEAS barometer</li>
+<li><p><strong>Sensors</strong></p>
+<ul>
+<li><p>MPU6000 as main accel and gyro</p></li>
+<li><p>ST Micro 16-bit gyroscope</p></li>
+<li><p>ST Micro 14-bit accelerometer/compass (magnetometer)</p></li>
+<li><p>MEAS barometer</p></li>
 </ul>
 </li>
-<li><strong>Power</strong><ul>
-<li>Ideal diode controller with automatic failover</li>
-<li>Servo rail high-power (7 V) and high-current ready</li>
-<li>All peripheral outputs over-current protected, all inputs ESD
-protected</li>
+<li><p><strong>Power</strong></p>
+<ul>
+<li><p>Ideal diode controller with automatic failover</p></li>
+<li><p>Servo rail high-power (7 V) and high-current ready</p></li>
+<li><p>All peripheral outputs over-current protected, all inputs ESD
+protected</p></li>
 </ul>
 </li>
-<li><strong>Interface</strong><ul>
-<li>5x UART serial ports, 1 high-power capable, 2 with HW flow
-control</li>
-<li>Spektrum DSM/DSM2/DSM-X Satellite input</li>
-<li>Futaba S.BUS input (output not yet implemented)</li>
-<li>PPM sum signal</li>
-<li>RSSI (PWM or voltage) input</li>
-<li>I2C, SPI, 2x CAN, USB</li>
-<li>3.3V and 6.6V ADC inputs</li>
+<li><p><strong>Interface</strong></p>
+<ul>
+<li><p>5x UART serial ports, 1 high-power capable, 2 with HW flow
+control</p></li>
+<li><p>Spektrum DSM/DSM2/DSM-X Satellite input</p></li>
+<li><p>Futaba S.BUS input (output not yet implemented)</p></li>
+<li><p>PPM sum signal</p></li>
+<li><p>RSSI (PWM or voltage) input</p></li>
+<li><p>I2C, SPI, 2x CAN, USB</p></li>
+<li><p>3.3V and 6.6V ADC inputs</p></li>
 </ul>
 </li>
-<li><strong>Dimensions</strong><ul>
-<li>Weight 38 g (1.3 oz)</li>
-<li>Width 50 mm (2.0”)</li>
-<li>Height 15.5 mm (.6”)</li>
-<li>Length 81.5 mm (3.2”)</li>
+<li><p><strong>Dimensions</strong></p>
+<ul>
+<li><p>Weight 38 g (1.3 oz)</p></li>
+<li><p>Width 50 mm (2.0”)</p></li>
+<li><p>Height 15.5 mm (.6”)</p></li>
+<li><p>Length 81.5 mm (3.2”)</p></li>
 </ul>
 </li>
-<li><strong>Included items</strong><ul>
-<li>1 x SanDisk Ultra micro SD Card (8GB)</li>
-<li>1 x MRC0225- Cable [3-Pins DF-13] to Switch+LED</li>
-<li>1 x MRC0224- Cable [2-Pins DF-13] to Buzzer</li>
-<li>1 x I2C Splitter</li>
-<li>2 x MRC0213- Cable [6-Pins JST-GH] to [6-Pins DF-13], (Telemetry Radio, Power module and Extra)</li>
-<li>1 x MRC0216- Cable [6-Pins DF-13] to [6-Pins DF-13], (For legacy products)</li>
-<li>4 x Damping Foams</li>
-<li>3 x Decals &quot;APM Rover&quot;, &quot;APM Copter&quot; and &quot;APM Plane&quot;</li>
+<li><p><strong>Included items</strong></p>
+<ul>
+<li><p>1 x SanDisk Ultra micro SD Card (8GB)</p></li>
+<li><p>1 x MRC0225- Cable [3-Pins DF-13] to Switch+LED</p></li>
+<li><p>1 x MRC0224- Cable [2-Pins DF-13] to Buzzer</p></li>
+<li><p>1 x I2C Splitter</p></li>
+<li><p>2 x MRC0213- Cable [6-Pins JST-GH] to [6-Pins DF-13], (Telemetry Radio, Power module and Extra)</p></li>
+<li><p>1 x MRC0216- Cable [6-Pins DF-13] to [6-Pins DF-13], (For legacy products)</p></li>
+<li><p>4 x Damping Foams</p></li>
+<li><p>3 x Decals &quot;APM Rover&quot;, &quot;APM Copter&quot; and &quot;APM Plane&quot;</p></li>
 </ul>
 </li>
 </ul>
 <div class="section" id="more-information">
 <h3>More information<a class="headerlink" href="#more-information" title="Permalink to this headline">¶</a></h3>
 <ul class="simple">
-<li><a class="reference external" href="https://docs.px4.io/v1.9.0/en/getting_started/px4_basic_concepts.html#dronecode">Dronecode Platform, Basic Concepts, PX4 Autopilot User Guide</a>. docs.px4.io</li>
+<li><p><a class="reference external" href="https://docs.px4.io/v1.9.0/en/getting_started/px4_basic_concepts.html#dronecode">Dronecode Platform, Basic Concepts, PX4 Autopilot User Guide</a>. docs.px4.io</p></li>
 </ul>
 <blockquote>
 <div></div></blockquote>
-<table class="docutils footnote" frame="void" id="id6" rules="none">
-<colgroup><col class="label" /><col /></colgroup>
-<tbody valign="top">
-<tr><td class="label"><a class="fn-backref" href="#id1">[1]</a></td><td><a class="reference external" href="https://docs.px4.io/v1.9.0/en/">PX4 Autopilot User Guide</a>. docs.px4.io</td></tr>
-</tbody>
-</table>
-<table class="docutils footnote" frame="void" id="id7" rules="none">
-<colgroup><col class="label" /><col /></colgroup>
-<tbody valign="top">
-<tr><td class="label"><a class="fn-backref" href="#id2">[2]</a></td><td>Para mais informações a respeito de <a class="reference external" href="https://pt.wikipedia.org/wiki/Multitarefa">Multithreading (arquitetura computacional)</a>.</td></tr>
-</tbody>
-</table>
-<table class="docutils footnote" frame="void" id="id8" rules="none">
-<colgroup><col class="label" /><col /></colgroup>
-<tbody valign="top">
-<tr><td class="label"><a class="fn-backref" href="#id4">[3]</a></td><td>Eduardo Moura Cirilo Rocha. 2017. Desenvolvimento de um sistema com veículos aéreos não-tripulados autônomos, Universidade de Brasília, Brasil.</td></tr>
-</tbody>
-</table>
-<table class="docutils footnote" frame="void" id="id9" rules="none">
-<colgroup><col class="label" /><col /></colgroup>
-<tbody valign="top">
-<tr><td class="label"><a class="fn-backref" href="#id3">[4]</a></td><td><a class="reference external" href="https://ardupilot.org/copter/docs/common-choosing-a-ground-station.html#choosing-a-ground-station">Choosing a Ground Station - Conter documentation</a>. ardupilot.org</td></tr>
-</tbody>
-</table>
+<dl class="footnote brackets">
+<dt class="label" id="id6"><span class="brackets"><a class="fn-backref" href="#id1">1</a></span></dt>
+<dd><p><a class="reference external" href="https://docs.px4.io/v1.9.0/en/">PX4 Autopilot User Guide</a>. docs.px4.io</p>
+</dd>
+<dt class="label" id="id7"><span class="brackets"><a class="fn-backref" href="#id2">2</a></span></dt>
+<dd><p>Para mais informações a respeito de <a class="reference external" href="https://pt.wikipedia.org/wiki/Multitarefa">Multithreading (arquitetura computacional)</a>.</p>
+</dd>
+<dt class="label" id="id8"><span class="brackets"><a class="fn-backref" href="#id4">3</a></span></dt>
+<dd><p>Eduardo Moura Cirilo Rocha. 2017. Desenvolvimento de um sistema com veículos aéreos não-tripulados autônomos, Universidade de Brasília, Brasil.</p>
+</dd>
+<dt class="label" id="id9"><span class="brackets"><a class="fn-backref" href="#id3">4</a></span></dt>
+<dd><p><a class="reference external" href="https://ardupilot.org/copter/docs/common-choosing-a-ground-station.html#choosing-a-ground-station">Choosing a Ground Station - Conter documentation</a>. ardupilot.org</p>
+</dd>
+</dl>
 </div>
 </div>
 </div>

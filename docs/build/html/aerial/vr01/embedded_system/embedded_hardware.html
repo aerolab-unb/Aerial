@@ -1,0 +1,273 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en,pt-BR" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en,pt-BR" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Embedded Computer &mdash; CoopRobo 1.0.0 documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="../../../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../../../" src="../../../_static/documentation_options.js"></script>
+        <script src="../../../_static/jquery.js"></script>
+        <script src="../../../_static/underscore.js"></script>
+        <script src="../../../_static/doctools.js"></script>
+        <script src="../../../_static/language_data.js"></script>
+        <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    
+    <script type="text/javascript" src="../../../_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="../../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" />
+    <link rel="next" title="Operational System" href="embedded_software.html" />
+    <link rel="prev" title="Embedded System" href="system.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../../../index.html" class="icon icon-home"> CoopRobo
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Robots</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="../../../aerial.html">Aerial Robots</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="../../vr01.html">VR-01</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="../autopilot/pilot.html">Autopilot</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../autopilot/config_pilot.html">Autopilot Configuration</a></li>
+<li class="toctree-l3 current"><a class="reference internal" href="system.html">Embedded System</a><ul class="current">
+<li class="toctree-l4 current"><a class="current reference internal" href="#">Embedded Computer</a></li>
+<li class="toctree-l4"><a class="reference internal" href="embedded_software.html">Operational System</a></li>
+<li class="toctree-l4"><a class="reference internal" href="SO_install.html">Installing the Operating System</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../model/Ranger.html">Ranger EX Volatex RC</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../vr01.html#references">References</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../mobile.html">Mobile Robots</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../manipulators.html">Manipulators</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../docs-ref.html">Documentation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../camera.html">Camera</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../index.html">CoopRobo</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="../../../aerial.html">Aerial Robots</a> &raquo;</li>
+        
+          <li><a href="../../vr01.html">VR-01</a> &raquo;</li>
+        
+          <li><a href="system.html">Embedded System</a> &raquo;</li>
+        
+      <li>Embedded Computer</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../../../_sources/aerial/vr01/embedded_system/embedded_hardware.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="embedded-computer">
+<h1>Embedded Computer<a class="headerlink" href="#embedded-computer" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="overo-waterstorm">
+<h2>Overo WaterStorm<a class="headerlink" href="#overo-waterstorm" title="Permalink to this headline">¶</a></h2>
+<p>After considering the most specific applications to be performed, the embedded computer chosen was the Overo WaterStorm Computer-On-Module (COM), this embedded system features a DM3730 processor with ARM Cortex-A8 architecture and a processor base clock of up to 1 GHz In addition, this computer is attached to a Tobi expansion card that adds DVI display, Ethernet, USB Host, USB OTG, USB console, stereo console and a segment with 40 pin-headers that can be used to the embedded computer. for the most diverse functions, such as PWM modulation, GPIO, power, analog digital conversion and serial communication.</p>
+<div class="figure align-center" id="id1">
+<img alt="../../../_images/System_Gumstix.png" src="../../../_images/System_Gumstix.png" />
+<p class="caption"><span class="caption-text">Gumstix system with Overo WaterSTORM computer, Tobi expansion card and Caspa VL camera</span><a class="headerlink" href="#id1" title="Permalink to this image">¶</a></p>
+</div>
+<p>A Caspa VL camera, capable of capturing color images with dimensions of 752 x 480 pixels at a frequency of 60 images per second, was also attached to the system. These three components are produced by the company Gumstix, a manufacturer of hardware specialized in small computers of the type computer-in-module (COM - computer-on-module), widely used for embedded systems.</p>
+<p>Despite its small size, the combination of Overo COM with the TOBI extension card has the same performance as a full-size full-size Linux computer, larger than other systems of this type found on the market, such as the Raspberry Pi computer .</p>
+</div>
+<div class="section" id="specifications">
+<h2>Specifications<a class="headerlink" href="#specifications" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><p><strong>Camera</strong>
+-   Camera Connector: 27-Pin (OMAP ISP)</p></li>
+<li><p><strong>Mechanical</strong>
+-   Length: 58 mm
+-   Width: 17 mm</p></li>
+<li><p><strong>Memory</strong>
+-   Flash Memory (NAND): 512</p></li>
+<li><p><strong>Processor</strong>
+-   Graphics Acceleration: PowerVR SGX530 with OpenGL
+-   Digital Signal Processor: C64x+
+-   Processor: Texas Instruments OMAP3730
+-   Processor Architecture: ARM Cortex-A8
+-   Processor Base Clock: 800 MHz
+-   Processor Max Clock: 1 GHz</p></li>
+<li><p><strong>Power</strong>
+-   Power Management: Texas Instruments TPS65950</p></li>
+<li><p><strong>Storage</strong>
+-   Storage Expansion via microSD Card Slot</p></li>
+</ul>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The complete specifications for the computer, extension card and camera are available in the technical data sheets below.</p>
+<blockquote>
+<div><ul class="simple">
+<li><p><a class="reference download internal" download="" href="../../../_downloads/fd78fa001764b645ece107e15d5e8708/GUM3703WB-1729092.pdf"><code class="xref download docutils literal notranslate"><span class="pre">Overo</span> <span class="pre">Waterstorm</span> <span class="pre">COM</span></code></a></p></li>
+<li><p><a class="reference download internal" download="" href="../../../_downloads/1fc4948d9e796b0431e7ec48afdaf18b/PKG30002.pdf"><code class="xref download docutils literal notranslate"><span class="pre">Placa</span> <span class="pre">de</span> <span class="pre">extensão</span> <span class="pre">TOBI</span></code></a></p></li>
+<li><p><a class="reference download internal" download="" href="../../../_downloads/63063a867a20d0e93210a2222b98bad6/PKG30009C.pdf"><code class="xref download docutils literal notranslate"><span class="pre">Câmera</span> <span class="pre">Caspa</span> <span class="pre">VL</span></code></a></p></li>
+</ul>
+</div></blockquote>
+</div>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="embedded_software.html" class="btn btn-neutral float-right" title="Operational System" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="system.html" class="btn btn-neutral float-left" title="Embedded System" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2019, Gabriel Araujo
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>
