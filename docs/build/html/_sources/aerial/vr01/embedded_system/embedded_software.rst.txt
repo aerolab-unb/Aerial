@@ -3,15 +3,15 @@ Operational System
 
 .. Um computador digital com determinada complexidade que exige o gerenciamento dos recursos do sistema e tais funções primárias necessitam de um sistema operacional. O núcleo ou kernel é a parte mais importante e de nível mais baixo de um sistema operacional, ele tem a função de definir qual programa recebe atenção do processador, gerenciar memória, criar um sistema de arquivos, gerenciar o sistema de comunicação, etc.
 
-A digital computer with a certain complexity that requires the management of system resources and such primary functions require an operating system. The kernel or kernel is the most important and lowest level part of an operating system, it has the function of defining which program receives attention from the processor, managing memory, creating a file system, managing the communication system, etc.
+A digital computer with a certain complexity that requires the management of system resources and such primary functions require an operating system. The kernel is the most important and lowest level part of an operating system, it has the function of defining which program receives attention from the processor, managing memory, creating a file system, managing the communication system, etc.
 
 .. O primeiro passo para a utilização desse computador, é a criação e configuração de uma imagem de sistema operacional que atende aos requisitos do projeto. São eles: compatibilidade com o computador utilizado, *Overo WaterStorm COM*, e suporte para aplicações em tempo real.
 
-The first step in using this computer is to create and configure an operating system image that meets the requirements of the project. They are: compatibility with the computer used, * Overo WaterStorm COM *, and support for real-time applications.
+The first step in using this computer is to create and configure an operating system image that meets the requirements of the project. They are: compatibility with the computer used, *Overo WaterStorm COM*, and support for real-time applications.
 
 .. Um Sistema Operacional de Tempo Real ou RTOS (*Real Time Operating Systems*) é um sistema operacional destinado à execução de múltiplas tarefas com tempo de resposta a um evento (externo ou interno) pré-definido. Existem duas abordagens para a execução de aplicações de tempo real em Linux, uso de ferramentas que implementam um kernel duplo ou o uso de RTL (Real-time Linux). 
 
-An Operating System of Real Time or RTOS (* Real Time Operating Systems *) is an operating system destined to the execution of multiple tasks with response time to a pre-defined event (external or internal). There are two approaches to running real-time applications on Linux, using tools that implement a dual kernel or using RTL (Real-time Linux).
+An eal Time Operating Systems (**RTOS**) is an operating system destined to the execution of multiple tasks with response time to a pre-defined event (external or internal). There are two approaches to running real-time applications on Linux, using tools that implement a dual kernel or using RTL (Real-time Linux).
 
 RT-Mag
 ~~~~~~
@@ -22,7 +22,7 @@ Initially, it was decided to use the RT-MaG tool as an operating system for the 
 
 .. O projeto RT-MaG (*Real-Time - Marseille Grenoble Project*) é um projeto desenvolvido pelo Gipsa-Lab (Grenoble, França) e o Institute of Mouvement Sciences (ISM, Marseille, França). O objetivo deste projeto é fornecer ferramentas eficientes para a prototipagem rápida de robôs para pesquisa e aplicações acadêmicas. O RT-MaG fornece uma caixa de ferramentas para Matlab e Simulink para programar sistemas Linux-COM. Com a ferramenta, pode-se facilmente gerar um aplicativo autônomo em tempo real a partir de um modelo Simulink para um robô usando um sistema Linux.
 
-The RT-MaG project (* Real-Time - Marseille Grenoble Project *) is a project developed by Gipsa-Lab (Grenoble, France) and the Institute of Mouvement Sciences (ISM, Marseille, France). The aim of this project is to provide efficient tools for rapid prototyping of robots for research and academic applications. RT-MaG provides a toolbox for Matlab and Simulink to program Linux-COM systems. With the tool, you can easily generate a standalone application in real time from a Simulink model for a robot using a Linux system.
+The RT-MaG project (*Real-Time - Marseille Grenoble Project*) is a project developed by Gipsa-Lab (Grenoble, France) and the Institute of Mouvement Sciences (ISM, Marseille, France). The aim of this project is to provide efficient tools for rapid prototyping of robots for research and academic applications. RT-MaG provides a toolbox for Matlab and Simulink to program Linux-COM systems. With the tool, you can easily generate a standalone application in real time from a Simulink model for a robot using a Linux system.
 
 .. figure:: /img/Aerial/FlyingRobot_small.jpg
    :align: right
@@ -38,7 +38,7 @@ These tools consist of a set of simulink blocks that provide direct access to th
 
 .. Entretanto, a ferramenta RT-MaG toma para si muitas das operações necessárias para a operação do nosso sistema, o que impossibilita utiliza-lo da maneira que ele foi idealizado, em consequência disto a demasiada simplificação da etapa poderia prejudicar aplicações futuras. Com essa ferramenta seria inviável utilizar o protocolo de comunicação *MAVLink* do piloto automático para comunicação entre os dispositivos ou aeronaves, por exemplo.
 
-However, the RT-MaG tool takes on many of the operations necessary for the operation of our system, which makes it impossible to use it in the way it was designed, as a result, too much simplification of the stage could harm future applications. With this tool, it would be impracticable to use the autopilot * MAVLink * communication protocol for communication between devices or aircraft, for example.
+However, the RT-MaG tool takes on many of the operations necessary for the operation of our system, which makes it impossible to use it in the way it was designed, as a result, too much simplification of the stage could harm future applications. With this tool, it would be impracticable to use the autopilot *MAVLink* communication protocol for communication between devices or aircraft, for example.
 
 .. Destaca-se ainda a documentação desatualizada, que dificultou a instalação dos componentes da ferramenta como a toolbox do Matlab, que nunca chegou a funcionar, e o sistema operacional do computador embarcado. A complexidade na utilização do sistema aumentava a cada etapa enquanto mesmo as etapas iniciais mais simples ainda não funcionavam adequadamente.
 
@@ -61,7 +61,8 @@ Linux
 
 .. O Linux é um sistema operacional popularmente utilizado em sistemas embarcados. Além de fornecer suporte para mais arquiteturas computacionais que qualquer outro sistema, ele ainda é leve e possui código aberto, minimizando os custos de implementação. Dos diferentes sistemas operacionais suportados pelas placas Gumstix Overo, destacam-se os sistemas baseados em Linux. Sendo o **Ubuntu** e o **Yocto Project** os principais, além de serem recomendados pelo próprio fabricante.
 
-Linux is an operating system popularly used in embedded systems. In addition to providing support for more computational architectures than any other system, it is still lightweight and open source, minimizing implementation costs. Of the different operating systems supported by Gumstix Overo cards, Linux-based systems stand out. Being ** Ubuntu ** and ** Yocto Project ** the main ones, besides being recommended by the manufacturer itself.
+Linux is an operating system popularly used in embedded systems. In addition to providing support for more computational architectures than any other system, it is still lightweight and open source, minimizing implementation costs. Of the different operating systems supported by Gumstix Overo cards, Linux-based systems stand out. Being **Ubuntu** and **Yocto Project** the main ones, besides being recommended by the manufacturer itself.
+
 
 Projeto Yocto
 -------------
@@ -75,7 +76,7 @@ Projeto Yocto
 
 .. O projeto Yocto é um projeto de colaboração open source da `Linux Foundation`_, cujo objetivo é produzir e fornecer metadados, ferramentas e processos para ajudar seus usuários a criar distribuições baseadas em Linux para *softwares* embarcados, independentemente da arquitetura do sistema. 
 
-The Yocto project is an open source collaboration project from the `Linux Foundation`_, whose goal is to produce and provide metadata, tools and processes to help its users create Linux-based distributions for embedded * software *, regardless of the system architecture.
+The Yocto project is an open source collaboration project from the `Linux Foundation`_, whose goal is to produce and provide metadata, tools and processes to help its users create Linux-based distributions for embedded software, regardless of the system architecture.
 
 .. _Linux Foundation: https://www.linuxfoundation.org/
 
@@ -89,7 +90,7 @@ Another important tool of the Yocto Project is the Poky reference build system. 
 
 .. Infelizmente, com a ampla versatilidade do Projeto Yocto, a complexidade do processo de criação de uma distribuição personalizada também está aumentando.
 
-Infelizmente, com a ampla versatilidade do Projeto Yocto, a complexidade do processo de criação de uma distribuição personalizada também está aumentando.
+Unfortunately, with the wide versatility of the Yocto Project, the complexity of the process of creating a customized distribution is also increasing.
 
 .. _OpenEmbedded: https://www.openembedded.org/wiki/Main_Page
 

@@ -15,10 +15,10 @@ To do this, open the terminal and enter the commands below:
 ::
       
     # Comando para montar a partição boot 
-    $ sudo mount −t vfat /dev/<mmcblk0p>1/  media/<Nome_de_Usuário>/boot
+    $ sudo mount −t vfat /dev/<mmcblk0p>1/  media/<UserName>/boot
 
     # Comando para montar a partição rootfs 
-    $ sudo mount -t ext4 /dev/<mmcblk0p>2/  media/<Nome_de_Usuário>/rootfs
+    $ sudo mount -t ext4 /dev/<mmcblk0p>2/  media/<UserName>/rootfs
 
 .. Note::
    The two names in <> must be changed. About *UserName* should be changed to the login name of the machine in use and about *mmcblk0p* should be changed to the name of the file that the system automatically creates when it recognizes the card for the first time and that file will be present in /dev with name similar to *mmcblk0p*. To display the media devices connected to your computer, run the command ``df -hT``.
@@ -61,8 +61,8 @@ After the previous steps, enter the following commands:
 
   ::
   
-   $ sudo cp MLO /media/<Nome_de_Usuário>/boot/
-   $ sudo cp u-boot.img /media/<Nome_de_Usuário>/boot
+   $ sudo cp MLO /media/<UserName>/boot/
+   $ sudo cp u-boot.img /media/<UserName>/boot
    
 Extraction
 ----------
@@ -73,7 +73,7 @@ With the terminal still in the folder ``/yocto/build/tmp/deploy/images/overo``, 
 
 ::
 
-  $ sudo tar -xjvf gumstix-console-image-overo.tar.bz2 -C /media/<Nome_de_Usuário>/rootfs 
+  $ sudo tar -xjvf gumstix-console-image-overo.tar.bz2 -C /media/<UserName>/rootfs 
   
 
 Result on the Memory Card

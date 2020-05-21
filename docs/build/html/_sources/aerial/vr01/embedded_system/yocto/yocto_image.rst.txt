@@ -12,11 +12,11 @@ In order to perform the Yocto Project operating system initiation process on the
 
 .. A figura mostra um exemplo dos arquivos descritos no parágrafo anterior, observe que, neste caso, há também uma pasta compactada que contém os arquivos raiz do sistema operacional. O modo mais simples encontrado para se obter esses arquivos e a imagem do sistema operacional é seguindo os passos do arquivo `README.md`_ do `repositório do projeto Yocto para produtos Gumstix`_. A vantagem de se utilizar esse método ao invés de simplesmente obter a imagem pronta do sistema operacional é que caso seja necessário poderemos modifica-la.
 
-The figure shows an example of the files described in the previous paragraph, note that, in this case, there is also a compressed folder that contains the root files of the operating system. The simplest way found to obtain these files and the operating system image is by following the steps in the `README.md`_ file of the` Yocto project repository for Gumstix products`_. The advantage of using this method instead of simply obtaining the ready image of the operating system is that if necessary, we can modify it.
-
+The figure shows an example of the files described in the previous paragraph, note that, in this case, there is also a compressed folder that contains the root files of the operating system. The simplest way found to obtain these files and the operating system image is by following the steps in the `README.md`_ file of the `Yocto project repository for Gumstix products`_. The advantage of using this method instead of simply obtaining the ready image of the operating system is that if necessary, we can modify it.
 
 .. _README.md: https://github.com/gumstix/yocto-manifest/blob/warrior/README.md
-.. _repositório do projeto Yocto para produtos Gumstix: https://github.com/gumstix/yocto-manifest
+
+.. _Yocto project repository for Gumstix products: https://github.com/gumstix/yocto-manifest
 
 .. Esse tutorial explica como construir manualmente a imagem do sistema Yocto e realizar todos os procedimentos através de linhas de comando do terminal do Linux, com enfase no **Ubuntu 14.04 (LTS)**. Porém, para executar essa etapa é altamente recomendado o cumprimento dos requisitos indicadas pelo projeto Yocto.
 

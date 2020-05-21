@@ -182,10 +182,10 @@
 <p>The procedure for mounting a memory partition is an activity of the operating system to ensure that the transfer of information will be done correctly, basically the connected device is read in its entirety to identify the files stored in it and where new information can be written to without overlapping data.</p>
 <p>To do this, open the terminal and enter the commands below:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span># Comando para montar a partição boot
-$ sudo mount −t vfat /dev/&lt;mmcblk0p&gt;1/  media/&lt;Nome_de_Usuário&gt;/boot
+$ sudo mount −t vfat /dev/&lt;mmcblk0p&gt;1/  media/&lt;UserName&gt;/boot
 
 # Comando para montar a partição rootfs
-$ sudo mount -t ext4 /dev/&lt;mmcblk0p&gt;2/  media/&lt;Nome_de_Usuário&gt;/rootfs
+$ sudo mount -t ext4 /dev/&lt;mmcblk0p&gt;2/  media/&lt;UserName&gt;/rootfs
 </pre></div>
 </div>
 <div class="admonition note">
@@ -214,8 +214,8 @@ $ sudo mount -t ext4 /dev/&lt;mmcblk0p&gt;2/  media/&lt;Nome_de_Usuário&gt;/roo
 </div>
 <p>After the previous steps, enter the following commands:</p>
 <blockquote>
-<div><div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ sudo cp MLO /media/&lt;Nome_de_Usuário&gt;/boot/
-$ sudo cp u-boot.img /media/&lt;Nome_de_Usuário&gt;/boot
+<div><div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ sudo cp MLO /media/&lt;UserName&gt;/boot/
+$ sudo cp u-boot.img /media/&lt;UserName&gt;/boot
 </pre></div>
 </div>
 </div></blockquote>
@@ -223,7 +223,7 @@ $ sudo cp u-boot.img /media/&lt;Nome_de_Usuário&gt;/boot
 <div class="section" id="extraction">
 <h3>Extraction<a class="headerlink" href="#extraction" title="Permalink to this headline">¶</a></h3>
 <p>With the terminal still in the folder <code class="docutils literal notranslate"><span class="pre">/yocto/build/tmp/deploy/images/overo</span></code>, the same where the file copy procedure was performed, enter the following command to extract the system directory:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ sudo tar -xjvf gumstix-console-image-overo.tar.bz2 -C /media/&lt;Nome_de_Usuário&gt;/rootfs
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ sudo tar -xjvf gumstix-console-image-overo.tar.bz2 -C /media/&lt;UserName&gt;/rootfs
 </pre></div>
 </div>
 </div>
