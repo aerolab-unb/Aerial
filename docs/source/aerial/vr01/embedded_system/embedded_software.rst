@@ -11,7 +11,7 @@ The first step in using this computer is to create and configure an operating sy
 
 .. Um Sistema Operacional de Tempo Real ou RTOS (*Real Time Operating Systems*) é um sistema operacional destinado à execução de múltiplas tarefas com tempo de resposta a um evento (externo ou interno) pré-definido. Existem duas abordagens para a execução de aplicações de tempo real em Linux, uso de ferramentas que implementam um kernel duplo ou o uso de RTL (Real-time Linux). 
 
-An eal Time Operating Systems (**RTOS**) is an operating system destined to the execution of multiple tasks with response time to a pre-defined event (external or internal). There are two approaches to running real-time applications on Linux, using tools that implement a dual kernel or using RTL (Real-time Linux).
+An Real Time Operating Systems (**RTOS**) is an operating system destined to the execution of multiple tasks with response time to a pre-defined event (external or internal). There are two approaches to running real-time applications on Linux, using tools that implement a dual kernel or using RTL (Real-time Linux).
 
 RT-Mag
 ~~~~~~
