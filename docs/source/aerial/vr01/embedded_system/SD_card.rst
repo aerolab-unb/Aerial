@@ -15,7 +15,7 @@ Usually, the microSD card is configured in a single partition formatted in the W
 
 .. A figura abaixo apresenta um exemplo de cartão de memória com as partições já definidas, montadas e contendo o sistema operacional do computador embarcado. No exemplo o cartão SD possui um total de 4 GB, porém, para o projeto Yocto, um cartão de memória de 2 GB deve ser suficiente.
 
-The figure below shows an example of a memory card with the partitions already defined, mounted and containing the operating system of the embedded computer. In the example the SD card has a total of 4 GB, however, for the Yocto project, a 2 GB memory card should be sufficient.
+The figure below shows an example of a memory card with the partitions already defined, mounted and containing the operating system of the embedded computer. In the example the SD card has a total of 4 GB, however, for the Yocto project, a 2 GB memory card should be enough.
 
 
 
