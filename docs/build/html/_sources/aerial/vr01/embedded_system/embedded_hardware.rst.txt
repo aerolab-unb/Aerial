@@ -15,11 +15,11 @@ After considering the most specific applications to be performed, the embedded c
 
 .. Acoplou-se também ao sistema uma câmera Caspa VL, capaz de capturar imagens coloridas com dimensão de 752 x 480 pixels em uma frequência de 60 imagens por segundo. Esses três componentes são produzidos pela empresa Gumstix, fabricante de hardware especializada em computadores pequenos do tipo computador-em-módulo (COM - computer-on-module), muito utilizados para sistemas embarcados.
 
-A Caspa VL camera, capable of capturing color images with dimensions of 752 x 480 pixels at a frequency of 60 images per second, was also attached to the system. These three components are produced by the company Gumstix, a manufacturer of hardware specialized in small computers of the type computer-in-module (COM - computer-on-module), widely used for embedded systems.
+A Caspa VL camera, capable of capturing color images with dimensions of 752 x 480 pixels at a frequency of 60 images per second, was also attached to the system. These three components are produced by the company Gumstix, a manufacturer of hardware specialized in small computers of the type computer-in-module (COM - Computer-On-Module), widely used for embedded systems.
 
 .. Apesar do tamanho pequeno, a combinação da Overo COM com a placa de extensão TOBI possui o mesmo desempenho do que um computador Linux completo de tamanho normal, maior do que outros sistemas desse tipo encontrados no mercado, como, por exemplo, o computador Raspberry Pi.
 
-Despite its small size, the combination of Overo COM with the TOBI extension card has the same performance as a full-size full-size Linux computer, larger than other systems of this type found on the market, such as the Raspberry Pi computer .
+Despite its small size, the combination of Overo COM with the TOBI extension card has the same performance as a full-size Linux computer, larger than other systems of this type found on the market, such as the Raspberry Pi computer.
 
 Specifications
 --------------

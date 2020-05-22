@@ -71,11 +71,11 @@ Project Yocto is currently supported on the following Linux distributions.
 
 To build the operating system image, the build system must have the following versions of *software* Git, tar and Python.
 
-	* Git 1.8.3.1 ou posterior
+	* Git 1.8.3.1 or greater
 
-	* tar 1.27 ou posterior
+	* tar 1.27 or greater
 
-	* Python 3.4.0  ou posterior
+	* Python 3.4.0  or greater
 
 .. Note::
    See the `Required Git, tar, and Python Versions`_ section in the Yocto Project Reference Manual for information.
@@ -236,7 +236,7 @@ So, to download the source codes and compile the system images, run:
 		$ bitbake gumstix-console-image
 
 .. Note::
-   This process downloads several gigabytes of code and then makes a huge build. So make sure you have at least 25GB of free space. This step may take a day or more to create the image, depending on your internet connection. Don't worry, it's just the first build that takes a while.
+   This process downloads several gigabytes of code and then makes a huge build. So, make sure you have at least 25GB of free space. This step may take a day or more to create the image, depending on your internet connection. Don't worry, it's just the first build that takes a while.
 
 .. Após a finalização da execução de todos os comandos, recomenda-se verificar a pasta **/yocto/build/tmp/deploy/images/overo**, essa pasta deve conter arquivos binários de kernel e bootloaders e arquivos de diretório raiz no formato .tar. 
 
@@ -244,7 +244,7 @@ After completing the execution of all commands, it is recommended to check the f
 
 .. A figura abaixo apresenta um exemplo do conteúdo da pasta descrita, essa pasta deve ser semelhante ao obtido após a execução dos procedimentos anteriores.
 
-The figure below shows an example of the contents of the described folder, this folder must be similar to the one obtained after performing the previous procedures.
+The figure below shows an example of the contents of the described folder, this folder must be like the one obtained after performing the previous procedures.
 
 .. figure:: /img/Aerial/yocto_image.png
    :align: center

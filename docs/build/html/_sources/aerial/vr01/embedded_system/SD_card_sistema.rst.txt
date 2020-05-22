@@ -24,7 +24,7 @@ To do this, open the terminal and enter the commands below:
    The two names in <> must be changed. About *UserName* should be changed to the login name of the machine in use and about *mmcblk0p* should be changed to the name of the file that the system automatically creates when it recognizes the card for the first time and that file will be present in /dev with name similar to *mmcblk0p*. To display the media devices connected to your computer, run the command ``df -hT``.
 
 .. Tip::
-  **Alternatively**, it is possible to carry out the process of assembling the microSD card partitions following the **procedure 8** of the topic `Procedures - Partitioning the SD Card`_. The expected result is exactly the same.
+  **Alternatively**, it is possible to carry out the process of assembling the microSD card partitions following the **procedure 8** of the topic `Procedures - Partitioning the SD Card`_. The expected result is the same.
 
 .. _Procedures - Partitioning the SD Card: SD_card.html#procedimentos
 

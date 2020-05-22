@@ -179,7 +179,7 @@
 <h1>Partitioning the SD Card<a class="headerlink" href="#partitioning-the-sd-card" title="Permalink to this headline">¶</a></h1>
 <p>This guide describes the partitioning process, using a Linux system, of a microSD card in two parts, called <strong>boot</strong> and <strong>rootfs</strong> in order to generate a bootable SD card. The procedure described below is performed using the disk manager of Ubuntu itself, it is not necessary to install new <em>software</em>.</p>
 <p>Usually, the microSD card is configured in a single partition formatted in the Windows FAT standard, a typical configuration found in cards purchased at retail. However, here we will partition the microSD card into two parts, which will be called <strong>boot</strong> and <strong>rootfs</strong>, with the file management system of the <strong>boot</strong> partition &quot;VFAT&quot; and the <strong>rootfs</strong> partition &quot;ext4&quot;.</p>
-<p>The figure below shows an example of a memory card with the partitions already defined, mounted and containing the operating system of the embedded computer. In the example the SD card has a total of 4 GB, however, for the Yocto project, a 2 GB memory card should be sufficient.</p>
+<p>The figure below shows an example of a memory card with the partitions already defined, mounted and containing the operating system of the embedded computer. In the example the SD card has a total of 4 GB, however, for the Yocto project, a 2 GB memory card should be enough.</p>
 <div class="figure align-center">
 <a class="reference internal image-reference" href="../../../_images/SD_parted.png"><img alt="../../../_images/SD_parted.png" src="../../../_images/SD_parted.png" style="width: 450px;" /></a>
 </div>
