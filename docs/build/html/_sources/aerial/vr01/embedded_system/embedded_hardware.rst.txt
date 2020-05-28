@@ -45,7 +45,7 @@ Specifications
 
 
 .. Note:: 
-   The complete specifications for the computer, extension card and camera are available in the technical data sheets below.
+   The complete specifications for the computer, extension card and camera are available in the datasheets below.
 
 	* :download:`Overo Waterstorm COM <docs/GUM3703WB-1729092.pdf>` 
 	* :download:`Placa de extensão TOBI <docs/PKG30002.pdf>` 
