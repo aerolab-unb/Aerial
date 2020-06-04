@@ -24,4 +24,5 @@ This chapter will explain the first steps and procedures that had to be performe
    embedded_hardware
    embedded_software
    SO_install
+   connect_gumstix
 

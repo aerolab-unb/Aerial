@@ -28,7 +28,7 @@ There are two methods for obtaining the operating systems for Gumstix Overo. The
 	.. toctree::
 	   :maxdepth: 2
 
-	   yocto/yocto_image
+	   yocto_image
 
 .. ubuntu/ubuntu_image
 
@@ -75,5 +75,10 @@ The procedure described below is based on the manufacturer's recommendations and
 .. toctree::
 	   :maxdepth: 2
 
-	   SD_card_sistema	
+	   SD_card_sistema
+
+References
+----------
+
+	* PITA, H. C. Desenvolvimento de sistema de comunicação multiplataforma para veículos aéreos de asa fixa. Faculdade de Tecnologia, Universidade de Brasília, 2018.
 
