@@ -1,7 +1,6 @@
 Getting started with Gumstix Overo
 ==================================
 
-
 Mounting Gumstix COM on the Tobi Expansion Board  
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
@@ -69,7 +68,7 @@ In this work, we will choose to connect it to a Linux computer and establish a s
 Establishing a serial connection via console
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-.. Para ligar o computador embarcado ao computador conecte um cabo USB ao computador e ao USB console da placa de expansão tobi. Feito isso, uma luz verde deve se acender indicando a conexão correta. Em seguida verifique em qual porta de comunicação serial a gumstix foi conectada, no Windows isso pode ser verificado acessando o **Gerenciador de Dispositivos** e, em seguida, **Portas(COM e LPT)**. No Linux basta executar o comando:
+.. Para ligar o computador embarcado ao computador conecte um cabo USB ao computador e ao USB console da placa de expansão Tobi. Feito isso, uma luz verde deve se acender indicando a conexão correta. Em seguida verifique em qual porta de comunicação serial a Gumstix foi conectada, no Windows isso pode ser verificado acessando o **Gerenciador de Dispositivos** e, em seguida, **Portas(COM e LPT)**. No Linux basta executar o comando:
 
 To connect the embedded computer to the host computer, connect a USB cable to the computer and to the USB console of the Tobi expansion board. Once this is done, a green light should come on indicating the correct connection. Then check which serial communication port Gumstix COM is connected to, in Windows this can be checked by accessing **Device Manager** and then **Ports (COM and LPT)**. On Linux, just run the command:
 
@@ -82,7 +81,7 @@ To connect the embedded computer to the host computer, connect a USB cable to th
 .. Note::
 	The ``dmesg`` command is a command that prints the core messages which, in most cases, are messages from the device drivers. When we add `` grep tty``we are performing a search on the outputs of the `` dmesg`` function for the term ``tty`` and restricting its output to those messages that contain this term.
 
-.. A placa Gumstix deve ser a última entrada a aparecer. Por exemplo:
+.. A placa Gumstix deve ser a última entrada a aparecer, por exemplo:
 
 The Gumstix card should be the last entry to appear. For example:
 
@@ -105,9 +104,9 @@ To start communication by terminal with Gumstix Overo, just run the following co
 
 	$ sudo screen /dev/<USB Device Name> 115200
 
-.. No caso da linha de comando do exemplo apresentada anteriormente, o termo ``ttyUSB0`` foi a porta encontrada ao utilizar o comando "dmesg" e "115200" é a velocidade de comunicação em *baud*. Nesse momento a comunicação entre a gumstix e o computador deve ser estabelecida e assim que a gumstix for ligada os caracteres devem começar a ser impressos na tela do computador.
+.. No caso da linha de comando do exemplo apresentada anteriormente, o termo ``ttyUSB0`` foi a porta encontrada ao utilizar o comando "dmesg" e "115200" é a velocidade de comunicação em *baud*. Nesse momento a comunicação entre a Gumstix e o computador deve ser estabelecida e assim que a gumstix for ligada os caracteres devem começar a ser impressos na tela do computador.
 
-In the case of the command line in the example presented above, the term ``ttyUSB0`` was the port found when using the command ``dmesg`` and "115200" is the communication speed in *baud*. At this point, communication between gumstix and the computer must be established and as soon as the gumstix is turned on, the characters must begin to be printed on the computer screen.
+In the case of the command line in the example presented above, the term ``ttyUSB0`` was the port found when using the command ``dmesg`` and "115200" is the communication speed in *baud*. At this point, communication between Gumstix and the computer must be established and as soon as the Gumstix is turned on, the characters must begin to be printed on the computer screen.
 
 Booting the Overo COM
 ~~~~~~~~~~~~~~~~~~~~~~~
@@ -116,7 +115,7 @@ Booting the Overo COM
 
 Once connected to the console, Overo COM will be ready to be turned on. To boot the system, simply connect the 5 Volt power supply to your expansion card. The LED indicators on the COM should light up in blue and green. The boot process will be displayed on your host machine's terminal.
 
-.. Porém, antes de ligá-la, é importante comentar que o fabricante recomenda a limpeza de variáveis da memória flash sempre que iniciar uma **nova versão do sistema operacional no computador embarcado pela primeira vez**. Para fazê-lo, basta interromper o processo de boot apertando qualquer tecla antes de seu início no momento em que aparece a mensagem "**Hit any key to stop autoboot**" e uma contagem regressiva na tela. O processo tipico de inicialização será similar ao seguinte:
+.. Porém, antes de ligá-la, é importante comentar que o fabricante recomenda a limpeza de variáveis da memória flash sempre que iniciar uma **nova versão do sistema operacional no computador embarcado pela primeira vez**. Para fazê-lo, basta interromper o processo de boot apertando qualquer tecla antes de seu início quando aparece a mensagem "**Hit any key to stop autoboot**" e uma contagem regressiva na tela. O processo tipico de inicialização será similar ao seguinte:
 
 However, before turning it on, it is important to comment that the manufacturer recommends cleaning variables from flash memory whenever starting a new version of the operating system on the embedded computer for the first time. To do this, simply interrupt the boot process by pressing any key before it starts at the moment when the message "**Hit any key to stop autoboot**" and a countdown on the screen appears. The typical startup process will be similar to the following:
 
@@ -164,13 +163,13 @@ Once the system boot is interrupted, just execute the command ``nand erase 24000
 
 .. A figura a seguir ilustra este procedimento. Os caracteres são impressos rapidamente e a contagem de tempo é de apenas 1 segundo para os núcleos do projeto Yocto, portanto é necessário ficar atento para interromper o processo.
 
-The following figure illustrates this procedure. The characters are printed quickly and the time count is only 1 second for the cores of the Yocto project, so it is necessary to be attentive to interrupt the process.
+The following figure illustrates this procedure. The characters are printed quickly, and the time count is only 1 second for the cores of the Yocto project, so it is necessary to be attentive to interrupt the process.
 
 .. adicionar imagem
 
-.. Feito isso o processo de boot deve iniciar e diversas mensagens irão aparecer na tela. É importante verificar, na primeira vez que se inicia o sistema operacional, se nenhuma mensagem de erro aparece e, se tudo ocorrer bem, ao final do processo será exigido uma senha, se o computador embarcado chegou a esse ponto provavelmente tudo está em ordem. A senha de acesso ao sistema Yocto é "root" e para o sistema Ubuntu gumstix, caso necessário, a senha é igual ao usuário.
+.. Feito isso o processo de boot deve iniciar e diversas mensagens irão aparecer na tela. É importante verificar, na primeira vez que se inicia o sistema operacional, se nenhuma mensagem de erro aparece e, se tudo ocorrer bem, ao final do processo será exigido uma senha, se o computador embarcado chegou a esse ponto provavelmente tudo está em ordem. A senha de acesso ao sistema Yocto é "root" e para o sistema Ubuntu Gumstix, caso necessário, a senha é igual ao usuário.
 
-Once this is done, the boot process should start and several messages will appear on the screen. It is important to check, the first time the operating system is started, that no error message appears and, if all goes well, a password will be required at the end of the process; if the embedded computer has reached this point, everything is probably in order. The password to access the Yocto system is "**root**" and for the Ubuntu gumstix system, if necessary, the password is the same as the user.
+Once this is done, the boot process should start, and several messages will appear on the screen. It is important to check, the first time the operating system is started, that no error message appears and, if all goes well, a password will be required at the end of the process; if the embedded computer has reached this point, everything is probably in order. The password to access the Yocto system is "**root**" and for the Ubuntu Gumstix system, if necessary, the password is the same as the user.
 
 Saving the OS image to flash memory
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
