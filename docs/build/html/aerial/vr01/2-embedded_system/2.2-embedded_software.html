@@ -1,0 +1,302 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en,pt-BR" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en,pt-BR" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Operational System &mdash; CoopRobo 1.0.0 documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="../../../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../../../" src="../../../_static/documentation_options.js"></script>
+        <script src="../../../_static/jquery.js"></script>
+        <script src="../../../_static/underscore.js"></script>
+        <script src="../../../_static/doctools.js"></script>
+        <script src="../../../_static/language_data.js"></script>
+        <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    
+    <script type="text/javascript" src="../../../_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="../../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" />
+    <link rel="next" title="Installing the Operating System" href="2.3-SO_install.html" />
+    <link rel="prev" title="Embedded Computer" href="2.1-embedded_hardware.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../../../index.html" class="icon icon-home"> CoopRobo
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Robots</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="../../../aerial.html">Aerial Robots</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="../../vr01.html">VR-01</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="../1-autopilot/1.0-pilot.html">Autopilot</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../1-autopilot/1.1-config_pilot.html">Autopilot Configuration</a></li>
+<li class="toctree-l3 current"><a class="reference internal" href="2.0-embedded_system.html">Embedded System</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="2.1-embedded_hardware.html">Embedded Computer</a></li>
+<li class="toctree-l4 current"><a class="current reference internal" href="#">Operational System</a></li>
+<li class="toctree-l4"><a class="reference internal" href="2.3-SO_install.html">Installing the Operating System</a></li>
+<li class="toctree-l4"><a class="reference internal" href="2.4-connect_gumstix.html">Getting started with Gumstix Overo</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../3-gumstix/3.0-intro.html">Using the embedded computer</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../vr01.html#references">References</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../mobile.html">Mobile Robots</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../manipulators.html">Manipulators</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../docs-ref.html">Documentation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../camera.html">Camera</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../index.html">CoopRobo</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="../../../aerial.html">Aerial Robots</a> &raquo;</li>
+        
+          <li><a href="../../vr01.html">VR-01</a> &raquo;</li>
+        
+          <li><a href="2.0-embedded_system.html">Embedded System</a> &raquo;</li>
+        
+      <li>Operational System</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../../../_sources/aerial/vr01/2-embedded_system/2.2-embedded_software.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="operational-system">
+<h1>Operational System<a class="headerlink" href="#operational-system" title="Permalink to this headline">¶</a></h1>
+<p>A digital computer with a certain complexity that requires the management of system resources and such primary functions require an operating system. The kernel is the most important and lowest level part of an operating system, it has the function of defining which program receives attention from the processor, managing memory, creating a file system, managing the communication system, etc.</p>
+<p>The first step in using this computer is to create and configure an operating system image that meets the requirements of the project. They are: compatibility with the computer used, <em>Overo WaterStorm COM</em>, and support for real-time applications.</p>
+<p>An Real Time Operating Systems (<strong>RTOS</strong>) is an operating system destined to the execution of multiple tasks with response time to a pre-defined event (external or internal). There are two approaches to running real-time applications on Linux, using tools that implement a dual kernel or using RTL (Real-time Linux).</p>
+<div class="section" id="rt-mag">
+<h2>RT-Mag<a class="headerlink" href="#rt-mag" title="Permalink to this headline">¶</a></h2>
+<p>Initially, it was decided to use the RT-MaG tool as an operating system for the embedded system.</p>
+<p>The RT-MaG project (<em>Real-Time - Marseille Grenoble Project</em>) is a project developed by Gipsa-Lab (Grenoble, France) and the Institute of Mouvement Sciences (ISM, Marseille, France). The aim of this project is to provide efficient tools for rapid prototyping of robots for research and academic applications. RT-MaG provides a toolbox for Matlab and Simulink to program Linux-COM systems. With the tool, you can easily generate a standalone application in real time from a Simulink model for a robot using a Linux system.</p>
+<div class="figure align-right" id="id1" style="width: 300px">
+<a class="reference internal image-reference" href="../../../_images/FlyingRobot_small.jpg"><img alt="RT X4-MaG, primeiro robô desenvolvido utilizando o sistema RT-Mag" src="../../../_images/FlyingRobot_small.jpg" style="width: 280px;" /></a>
+<p class="caption"><span class="caption-text">RT X4-MaG, first robot developed using the RT-Mag system</span><a class="headerlink" href="#id1" title="Permalink to this image">¶</a></p>
+</div>
+<p>These tools consist of a set of simulink blocks that provide direct access to the computer's inputs and outputs. Simulink models are automatically converted into real-time applications. The use of these tools is completely free. In addition, Gumstix Overo COM is currently fully compatible with the RT-MaG system.</p>
+<p>However, the RT-MaG tool takes on many of the operations necessary for the operation of our system, which makes it impossible to use it in the way it was designed, as a result, too much simplification of the stage could harm future applications. With this tool, it would be impracticable to use the autopilot <em>MAVLink</em> communication protocol for communication between devices or aircraft, for example.</p>
+<p>Also noteworthy is the outdated documentation, which made it difficult to install the tool's components, such as the Matlab toolbox, which never worked, and the operating system of the embedded computer. The complexity in using the system increased with each step while even the simplest initial steps still did not work properly.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>More details of the RT-MaG project can be found at <a class="reference external" href="http://www.gipsa-lab.fr/projet/RT-MaG/#">Projet RT-MaG</a>.</p>
+</div>
+</div>
+<div class="section" id="linux">
+<h2>Linux<a class="headerlink" href="#linux" title="Permalink to this headline">¶</a></h2>
+<div class="figure align-right" id="id2">
+<a class="reference internal image-reference" href="../../../_images/linux.png"><img alt="Tux, a mascote do Linux" src="../../../_images/linux.png" style="width: 160px;" /></a>
+<p class="caption"><span class="caption-text">Tux, the mascot of Linux</span><a class="headerlink" href="#id2" title="Permalink to this image">¶</a></p>
+</div>
+<p>Linux is an operating system popularly used in embedded systems. In addition to providing support for more computational architectures than any other system, it is still lightweight and open source, minimizing implementation costs. Of the different operating systems supported by Gumstix Overo cards, Linux-based systems stand out. Being <strong>Ubuntu</strong> and <strong>Yocto Project</strong> the main ones, besides being recommended by the manufacturer itself.</p>
+<div class="section" id="projeto-yocto">
+<h3>Projeto Yocto<a class="headerlink" href="#projeto-yocto" title="Permalink to this headline">¶</a></h3>
+<div class="figure align-left" style="width: 220px">
+<a class="reference internal image-reference" href="../../../_images/yocto.png"><img alt="../../../_images/yocto.png" src="../../../_images/yocto.png" style="width: 200px;" /></a>
+</div>
+<p>The Yocto project is an open source collaboration project from the <a class="reference external" href="https://www.linuxfoundation.org/">Linux Foundation</a>, whose goal is to produce and provide metadata, tools and processes to help its users create Linux-based distributions for embedded software, regardless of the system architecture.</p>
+<p>One element to be highlighted among the components of the Yocto Project is the build system based on the <a class="reference external" href="https://www.openembedded.org/wiki/Main_Page">OpenEmbedded</a> architecture, which allows developers to create their own Linux distributions specific to their environment, according to their own needs. These Project Yocto configurations provided by hardware vendors generally include kernel configurations, kernel modules, kernel firmware and base system packages.</p>
+<p>Another important tool of the Yocto Project is the Poky reference build system. It contains the BitBake tool, which allows cross-compilation regardless of the platform. In addition, BitBake manages all configuration files and data, and tries to reduce compilation time using all available processing resources.</p>
+<p>Unfortunately, with the wide versatility of the Yocto Project, the complexity of the process of creating a customized distribution is also increasing.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>More details of the Yocto project can be found at <a class="reference external" href="https://www.yoctoproject.org/">yoctoproject.org</a>.</p>
+</div>
+</div>
+<div class="section" id="ubuntu">
+<h3>Ubuntu<a class="headerlink" href="#ubuntu" title="Permalink to this headline">¶</a></h3>
+<div class="figure align-left" style="width: 220px">
+<a class="reference internal image-reference" href="../../../_images/ubuntu.jpg"><img alt="../../../_images/ubuntu.jpg" src="../../../_images/ubuntu.jpg" style="width: 200px;" /></a>
+</div>
+<p>Ubuntu is an open source operating system, developed from the Linux kernel, based on Debian. Ubuntu is developed by <a class="reference external" href="https://canonical.com/">Canonical</a> and the community in a model of meritocratic governance. Canonical provides free security updates and support for each version of Ubuntu. All versions are available at no cost.</p>
+<p>The advantage of using the Ubuntu system is that it is an operating system from the very popular Linux core that already contains several software that may be useful for some future applications, it contains, for example, a compiler which facilitates the creation and execution of simple codes for rapid tests.</p>
+<p>The disadvantage of using this operating system is that many unnecessary parallel tasks can be performed that decrease the specificity and performance of the embedded computer.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>More details about Ubuntu can be found at <a class="reference external" href="https://ubuntu.com/">ubuntu.com</a>.</p>
+</div>
+</div>
+</div>
+<div class="section" id="chosen-system">
+<h2>Chosen System<a class="headerlink" href="#chosen-system" title="Permalink to this headline">¶</a></h2>
+<p>We even installed the RT-Mag on the embedded system, however, due to complications after the installation of the operating system, it was decided not to use this tool anymore.</p>
+<p>It was then decided to use the core offered by the Yocto Project as it is specific to the embedded computer model. Choosing to install the Ubuntu 15.04 system on one of the computers in order to analyze the differences between the two operating systems and perform tests.</p>
+<p>However, the Ubuntu system, despite being a stable version and adapted to the system in question, presented unresolved errors in the installation process, making it impossible to install the system on an SD card.</p>
+<div class="section" id="references">
+<h3>References<a class="headerlink" href="#references" title="Permalink to this headline">¶</a></h3>
+<blockquote>
+<div><ul class="simple">
+<li><p>PITA, H. C. Desenvolvimento de sistema de comunicação multiplataforma para veículos aéreos de asa fixa. Faculdade de Tecnologia, Universidade de Brasília, 2018.</p></li>
+<li><p>ROCHA, E. M. C. Desenvolvimento de um sistema com veículos aéreos não-tripulados autônomos. Faculdade de Tecnologia, Universidade de Brasília, 2017.</p></li>
+<li><p>Phanuel Hieber. Yocto Project on the Gumstix Overo Board. Technische Universität München.</p></li>
+<li><p><a class="reference external" href="http://www.gipsa-lab.fr/projet/RT-MaG/">RT-MaG Project</a> - gipsa-lab.fr</p></li>
+<li><p><a class="reference external" href="https://www.yoctoproject.org/">Yocto Project</a> - yoctoproject.org</p></li>
+</ul>
+</div></blockquote>
+</div>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="2.3-SO_install.html" class="btn btn-neutral float-right" title="Installing the Operating System" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="2.1-embedded_hardware.html" class="btn btn-neutral float-left" title="Embedded Computer" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2019, Gabriel Araujo
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

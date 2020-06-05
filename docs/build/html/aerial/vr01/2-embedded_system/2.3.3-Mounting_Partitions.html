@@ -1,0 +1,304 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en,pt-BR" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en,pt-BR" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Mounting the Partitions &mdash; CoopRobo 1.0.0 documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="../../../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../../../" src="../../../_static/documentation_options.js"></script>
+        <script src="../../../_static/jquery.js"></script>
+        <script src="../../../_static/underscore.js"></script>
+        <script src="../../../_static/doctools.js"></script>
+        <script src="../../../_static/language_data.js"></script>
+        <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    
+    <script type="text/javascript" src="../../../_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="../../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" />
+    <link rel="next" title="Getting started with Gumstix Overo" href="2.4-connect_gumstix.html" />
+    <link rel="prev" title="Partitioning the SD Card" href="2.3.2-Partitioning_SD.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../../../index.html" class="icon icon-home"> CoopRobo
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Robots</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="../../../aerial.html">Aerial Robots</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="../../vr01.html">VR-01</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="../1-autopilot/1.0-pilot.html">Autopilot</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../1-autopilot/1.1-config_pilot.html">Autopilot Configuration</a></li>
+<li class="toctree-l3 current"><a class="reference internal" href="2.0-embedded_system.html">Embedded System</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="2.1-embedded_hardware.html">Embedded Computer</a></li>
+<li class="toctree-l4"><a class="reference internal" href="2.2-embedded_software.html">Operational System</a></li>
+<li class="toctree-l4 current"><a class="reference internal" href="2.3-SO_install.html">Installing the Operating System</a></li>
+<li class="toctree-l4"><a class="reference internal" href="2.4-connect_gumstix.html">Getting started with Gumstix Overo</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../3-gumstix/3.0-intro.html">Using the embedded computer</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../vr01.html#references">References</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../mobile.html">Mobile Robots</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../manipulators.html">Manipulators</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../docs-ref.html">Documentation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../camera.html">Camera</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../index.html">CoopRobo</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="../../../aerial.html">Aerial Robots</a> &raquo;</li>
+        
+          <li><a href="../../vr01.html">VR-01</a> &raquo;</li>
+        
+          <li><a href="2.0-embedded_system.html">Embedded System</a> &raquo;</li>
+        
+          <li><a href="2.3-SO_install.html">Installing the Operating System</a> &raquo;</li>
+        
+      <li>Mounting the Partitions</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../../../_sources/aerial/vr01/2-embedded_system/2.3.3-Mounting_Partitions.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="mounting-the-partitions">
+<h1>Mounting the Partitions<a class="headerlink" href="#mounting-the-partitions" title="Permalink to this headline">¶</a></h1>
+<p>The procedure for mounting a memory partition is an activity of the operating system to ensure that the transfer of information will be done correctly, basically the connected device is read in its entirety to identify the files stored in it and where new information can be written to without overlapping data.</p>
+<p>To do this, open the terminal and enter the commands below:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span># Comando para montar a partição boot
+$ sudo mount −t vfat /dev/&lt;mmcblk0p&gt;1/  media/&lt;UserName&gt;/boot
+
+# Comando para montar a partição rootfs
+$ sudo mount -t ext4 /dev/&lt;mmcblk0p&gt;2/  media/&lt;UserName&gt;/rootfs
+</pre></div>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The two names in &lt;&gt; must be changed. About <em>UserName</em> should be changed to the login name of the machine in use and about <em>mmcblk0p</em> should be changed to the name of the file that the system automatically creates when it recognizes the card for the first time and that file will be present in /dev with name similar to <em>mmcblk0p</em>. To display the media devices connected to your computer, run the command <code class="docutils literal notranslate"><span class="pre">df</span> <span class="pre">-hT</span></code>.</p>
+</div>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p><strong>Alternatively</strong>, it is possible to carry out the process of assembling the microSD card partitions following the <strong>procedure 8</strong> of the topic <a class="reference external" href="SD_card.html#procedimentos">Procedures - Partitioning the SD Card</a>. The expected result is the same.</p>
+</div>
+<div class="section" id="copy-and-extraction-files">
+<h2>Copy and Extraction Files<a class="headerlink" href="#copy-and-extraction-files" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="copy">
+<h3>Copy<a class="headerlink" href="#copy" title="Permalink to this headline">¶</a></h3>
+<p>Two files named MLO and u-boot.img must be copied to the boot partition of the memory card. For this, the following commands must be executed inside the folder that contains the images or correctly specifying the location of the files. We recommend that you enter the images folder, as it is possible to write the image more efficiently.</p>
+<p>The folder containing the image files is located in <code class="docutils literal notranslate"><span class="pre">/yocto/build/tmp/deploy/images/overo</span></code> and can be accessed by the command:</p>
+<blockquote>
+<div><div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ cd /yocto/build/tmp/deploy/images/overo
+</pre></div>
+</div>
+</div></blockquote>
+<p>After these commands, the terminal will be like the image below:</p>
+<div class="figure align-center">
+<img alt="../../../_images/caminho.png" src="../../../_images/caminho.png" />
+</div>
+<p>After the previous steps, enter the following commands:</p>
+<blockquote>
+<div><div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ sudo cp MLO /media/&lt;UserName&gt;/boot/
+$ sudo cp u-boot.img /media/&lt;UserName&gt;/boot
+</pre></div>
+</div>
+</div></blockquote>
+</div>
+<div class="section" id="extraction">
+<h3>Extraction<a class="headerlink" href="#extraction" title="Permalink to this headline">¶</a></h3>
+<p>With the terminal still in the folder <code class="docutils literal notranslate"><span class="pre">/yocto/build/tmp/deploy/images/overo</span></code>, the same where the file copy procedure was performed, enter the following command to extract the system directory:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ sudo tar -xjvf gumstix-console-image-overo.tar.bz2 -C /media/&lt;UserName&gt;/rootfs
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="result-on-the-memory-card">
+<h2>Result on the Memory Card<a class="headerlink" href="#result-on-the-memory-card" title="Permalink to this headline">¶</a></h2>
+<p>Boot partition:</p>
+<div class="figure align-center">
+<img alt="../../../_images/boot.png" src="../../../_images/boot.png" />
+</div>
+<p>Rootfs partition:</p>
+<div class="figure align-center">
+<img alt="../../../_images/rootfs.png" src="../../../_images/rootfs.png" />
+</div>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>Remember to unmount the partitions before removing the SD card.</p>
+</div>
+<div class="section" id="references">
+<h3>References<a class="headerlink" href="#references" title="Permalink to this headline">¶</a></h3>
+<blockquote>
+<div><ul class="simple">
+<li><p><a class="reference external" href="https://www.gumstix.com/support/getting-started/create-bootable-microsd-card">Create Bootable MicroSD Card</a> - gumstix.com</p></li>
+<li><p>PITA, H. C. Desenvolvimento de sistema de comunicação multiplataforma para veículos aéreos de asa fixa. Faculdade de Tecnologia, Universidade de Brasília, 2018.</p></li>
+</ul>
+</div></blockquote>
+</div>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="2.4-connect_gumstix.html" class="btn btn-neutral float-right" title="Getting started with Gumstix Overo" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="2.3.2-Partitioning_SD.html" class="btn btn-neutral float-left" title="Partitioning the SD Card" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2019, Gabriel Araujo
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

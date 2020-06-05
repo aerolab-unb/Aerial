@@ -1,0 +1,425 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en,pt-BR" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en,pt-BR" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Getting started with Gumstix Overo &mdash; CoopRobo 1.0.0 documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="../../../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../../../" src="../../../_static/documentation_options.js"></script>
+        <script src="../../../_static/jquery.js"></script>
+        <script src="../../../_static/underscore.js"></script>
+        <script src="../../../_static/doctools.js"></script>
+        <script src="../../../_static/language_data.js"></script>
+        <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    
+    <script type="text/javascript" src="../../../_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="../../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" />
+    <link rel="next" title="Using the embedded computer" href="../3-gumstix/3.0-intro.html" />
+    <link rel="prev" title="Mounting the Partitions" href="2.3.3-Mounting_Partitions.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../../../index.html" class="icon icon-home"> CoopRobo
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Robots</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="../../../aerial.html">Aerial Robots</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="../../vr01.html">VR-01</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="../1-autopilot/1.0-pilot.html">Autopilot</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../1-autopilot/1.1-config_pilot.html">Autopilot Configuration</a></li>
+<li class="toctree-l3 current"><a class="reference internal" href="2.0-embedded_system.html">Embedded System</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="2.1-embedded_hardware.html">Embedded Computer</a></li>
+<li class="toctree-l4"><a class="reference internal" href="2.2-embedded_software.html">Operational System</a></li>
+<li class="toctree-l4"><a class="reference internal" href="2.3-SO_install.html">Installing the Operating System</a></li>
+<li class="toctree-l4 current"><a class="current reference internal" href="#">Getting started with Gumstix Overo</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../3-gumstix/3.0-intro.html">Using the embedded computer</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../vr01.html#references">References</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../mobile.html">Mobile Robots</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../manipulators.html">Manipulators</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../docs-ref.html">Documentation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../camera.html">Camera</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../index.html">CoopRobo</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="../../../aerial.html">Aerial Robots</a> &raquo;</li>
+        
+          <li><a href="../../vr01.html">VR-01</a> &raquo;</li>
+        
+          <li><a href="2.0-embedded_system.html">Embedded System</a> &raquo;</li>
+        
+      <li>Getting started with Gumstix Overo</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../../../_sources/aerial/vr01/2-embedded_system/2.4-connect_gumstix.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="getting-started-with-gumstix-overo">
+<h1>Getting started with Gumstix Overo<a class="headerlink" href="#getting-started-with-gumstix-overo" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="mounting-gumstix-com-on-the-tobi-expansion-board">
+<h2>Mounting Gumstix COM on the Tobi Expansion Board<a class="headerlink" href="#mounting-gumstix-com-on-the-tobi-expansion-board" title="Permalink to this headline">¶</a></h2>
+<p>The configuration of Gumstix Overo computers consists of a module computer and an expansion board. The Overo module connects to a Tobi expansion board via the two 70-pin AVX connectors located on the bottom of the COM. Place the Tobi board on a flat, anti-aesthetic surface, align the COM with the white outline on the board above the connectors and gently press the COM until it snaps into place.</p>
+<blockquote>
+<div><div class="figure align-center">
+<img alt="../../../_images/overo_front.png" src="../../../_images/overo_front.png" />
+</div>
+<div class="figure align-center">
+<img alt="../../../_images/gs_tobi.jpg" src="../../../_images/gs_tobi.jpg" />
+</div>
+</div></blockquote>
+<p>To use the camera, the camera board must be connected to the top of the Overo COM via a ribbon cable.</p>
+</div>
+<div class="section" id="overo-connections">
+<h2>Overo Connections<a class="headerlink" href="#overo-connections" title="Permalink to this headline">¶</a></h2>
+<blockquote>
+<div><div class="figure align-center">
+<img alt="../../../_images/Overo_connection.png" src="../../../_images/Overo_connection.png" />
+</div>
+</div></blockquote>
+<p>The Tobi expansion card comes with a USB Host port and a USB On-the-Go (OTG). The USB Host port is used exclusively to connect peripherals to the system, while the USB OTG port can be used to connect peripherals via USB OTG cable or to connect the Gumstix system as a peripheral to a separate host system.</p>
+<p>The USB Host port uses a current of 500 mA and accepts a <strong>High-speed</strong> (HS)signaling rate at 480 Mbit/s, while the USB OTG port has a current of 100 mA and supports three different signaling rates, <strong>Low Speed</strong> (LS) at 1.5 Mbit/s, <strong>Full Speed</strong> (FS) at 12 Mbit/s and <strong>High Speed</strong> (HS) at 480 Mbit/s.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Many USB peripherals use a signaling rate of <strong>Full-Speed</strong> (FS) and do not work on the USB Host port, which is only <strong>High Speed</strong> (HS). If you are having trouble connecting USB peripherals directly to the Gumstix system, connecting the peripherals first to a powered USB hub and then connecting the powered hub to the Gumstix system will usually solve the problem.</p>
+</div>
+<p>For connecting more peripherals, in addition to the number of USB ports available on the Tobi expansion card, we recommend using a USB hub. The <strong>powered USB hub</strong> must be connected to the USB Host port and a <strong>non-powered USB hub</strong> must be connected to the USB OTG port with a USB On-the-Go cable.</p>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>The video <a class="reference external" href="https://www.youtube.com/watch?v=FxxEBn8Z_PA">Connecting Gumstix Tobi Expansion Board to Video Monitor</a> demonstrates how to connect an Overo COM to a monitor and some peripherals via the Tobi board.</p>
+</div>
+</div>
+<div class="section" id="connecting-to-overo">
+<h2>Connecting to Overo<a class="headerlink" href="#connecting-to-overo" title="Permalink to this headline">¶</a></h2>
+<p>First, insert your microSD card with the operating system image in the card slot at the top of Overo COM. Make sure it fits securely in place.</p>
+<p>The Overo computer can be accessed by connecting it to another Linux or Windows computer, or even be connected directly to a DVI monitor and connected to various peripherals, such as mouse, keyboard, monitor, sound output, among others, through the Tobi expansion board.</p>
+<p>In this work, we will choose to connect it to a Linux computer and establish a serious connection via the USB Console port for simplicity.</p>
+</div>
+<div class="section" id="establishing-a-serial-connection-via-console">
+<h2>Establishing a serial connection via console<a class="headerlink" href="#establishing-a-serial-connection-via-console" title="Permalink to this headline">¶</a></h2>
+<p>To connect the embedded computer to the host computer, connect a USB cable to the computer and to the USB console of the Tobi expansion board. Once this is done, a green light should come on indicating the correct connection. Then check which serial communication port Gumstix COM is connected to, in Windows this can be checked by accessing <strong>Device Manager</strong> and then <strong>Ports (COM and LPT)</strong>. On Linux, just run the command:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ dmesg | grep tty
+</pre></div>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The <code class="docutils literal notranslate"><span class="pre">dmesg</span></code> command is a command that prints the core messages which, in most cases, are messages from the device drivers. When we add `` grep tty``we are performing a search on the outputs of the `` dmesg`` function for the term <code class="docutils literal notranslate"><span class="pre">tty</span></code> and restricting its output to those messages that contain this term.</p>
+</div>
+<p>The Gumstix card should be the last entry to appear. For example:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>user@Ubuntu:~$ dmesg | grep tty
+[    0.000000] printk: console [tty0] enabled
+[ 4214.120990] usb 2-1: FTDI USB Serial Device converter now attached to **ttyUSB0**
+</pre></div>
+</div>
+<p>Then it will be necessary to run a program to emulate the terminal, we recommend the Screen program for Linux OS. If you have not yet installed it, just run the command line <code class="docutils literal notranslate"><span class="pre">sudo</span> <span class="pre">apt-get</span> <span class="pre">install</span> <span class="pre">screen</span></code>. Or in the case of the Windows OS, PuTTY is recommended. These programs emulate terminals and perform only the task of printing the characters received through the serial port, or USB in this case, and sending the characters typed through that same port.</p>
+<p>To start communication by terminal with Gumstix Overo, just run the following command line:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ sudo screen /dev/&lt;USB Device Name&gt; 115200
+</pre></div>
+</div>
+<p>In the case of the command line in the example presented above, the term <code class="docutils literal notranslate"><span class="pre">ttyUSB0</span></code> was the port found when using the command <code class="docutils literal notranslate"><span class="pre">dmesg</span></code> and &quot;115200&quot; is the communication speed in <em>baud</em>. At this point, communication between gumstix and the computer must be established and as soon as the gumstix is turned on, the characters must begin to be printed on the computer screen.</p>
+</div>
+<div class="section" id="booting-the-overo-com">
+<h2>Booting the Overo COM<a class="headerlink" href="#booting-the-overo-com" title="Permalink to this headline">¶</a></h2>
+<p>Once connected to the console, Overo COM will be ready to be turned on. To boot the system, simply connect the 5 Volt power supply to your expansion card. The LED indicators on the COM should light up in blue and green. The boot process will be displayed on your host machine's terminal.</p>
+<p>However, before turning it on, it is important to comment that the manufacturer recommends cleaning variables from flash memory whenever starting a new version of the operating system on the embedded computer for the first time. To do this, simply interrupt the boot process by pressing any key before it starts at the moment when the message &quot;<strong>Hit any key to stop autoboot</strong>&quot; and a countdown on the screen appears. The typical startup process will be similar to the following:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">reading</span> <span class="n">u</span><span class="o">-</span><span class="n">boot</span><span class="o">.</span><span class="n">img</span>
+<span class="n">reading</span> <span class="n">u</span><span class="o">-</span><span class="n">boot</span><span class="o">.</span><span class="n">img</span>
+
+
+<span class="n">U</span><span class="o">-</span><span class="n">Boot</span> <span class="mf">2012.04</span><span class="o">.</span><span class="mi">01</span> <span class="p">(</span><span class="n">Jul</span> <span class="mi">19</span> <span class="mi">2012</span> <span class="o">-</span> <span class="mi">17</span><span class="p">:</span><span class="mi">31</span><span class="p">:</span><span class="mi">34</span><span class="p">)</span>
+
+<span class="n">OMAP36XX</span><span class="o">/</span><span class="mi">37</span><span class="n">XX</span><span class="o">-</span><span class="n">GP</span> <span class="n">ES1</span><span class="o">.</span><span class="mi">2</span><span class="p">,</span> <span class="n">CPU</span><span class="o">-</span><span class="n">OPP2</span><span class="p">,</span> <span class="n">L3</span><span class="o">-</span><span class="mi">165</span><span class="n">MHz</span><span class="p">,</span> <span class="n">Max</span> <span class="n">CPU</span> <span class="n">Clock</span> <span class="mi">1</span> <span class="n">Ghz</span>
+<span class="n">Gumstix</span> <span class="n">Overo</span> <span class="n">board</span> <span class="o">+</span> <span class="n">LPDDR</span><span class="o">/</span><span class="n">NAND</span>
+<span class="n">I2C</span><span class="p">:</span>   <span class="n">ready</span>
+<span class="n">DRAM</span><span class="p">:</span>  <span class="mi">512</span> <span class="n">MiB</span>
+<span class="n">NAND</span><span class="p">:</span>  <span class="mi">512</span> <span class="n">MiB</span>
+<span class="n">MMC</span><span class="p">:</span>   <span class="n">OMAP</span> <span class="n">SD</span><span class="o">/</span><span class="n">MMC</span><span class="p">:</span> <span class="mi">0</span>
+<span class="n">In</span><span class="p">:</span>    <span class="n">serial</span>
+<span class="n">Out</span><span class="p">:</span>   <span class="n">serial</span>
+<span class="n">Err</span><span class="p">:</span>   <span class="n">serial</span>
+<span class="n">Board</span> <span class="n">revision</span><span class="p">:</span> <span class="mi">1</span>
+<span class="n">Direct</span> <span class="n">connection</span> <span class="n">on</span> <span class="n">mmc2</span>
+<span class="n">timed</span> <span class="n">out</span> <span class="ow">in</span> <span class="n">wait_for_pin</span><span class="p">:</span> <span class="n">I2C_STAT</span><span class="o">=</span><span class="mi">1000</span>
+<span class="n">I2C</span> <span class="n">read</span><span class="p">:</span> <span class="n">I</span><span class="o">/</span><span class="n">O</span> <span class="n">error</span>
+<span class="n">Unrecognized</span> <span class="n">expansion</span> <span class="n">board</span>
+<span class="n">Die</span> <span class="n">ID</span> <span class="c1">#2d3800229ff8000001683b060a00b012</span>
+<span class="n">Net</span><span class="p">:</span>   <span class="n">smc911x</span><span class="o">-</span><span class="mi">0</span>
+<span class="n">Hit</span> <span class="nb">any</span> <span class="n">key</span> <span class="n">to</span> <span class="n">stop</span> <span class="n">autoboot</span><span class="p">:</span>  <span class="mi">0</span>
+<span class="n">Overo</span> <span class="c1">#</span>
+</pre></div>
+</div>
+<p>Once the system boot is interrupted, just execute the command <code class="docutils literal notranslate"><span class="pre">nand</span> <span class="pre">erase</span> <span class="pre">240000</span> <span class="pre">20000</span></code> to clear the saved variables and <code class="docutils literal notranslate"><span class="pre">reset</span></code> to restart the boot process, as shown below:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># nand erase 240000 20000</span>
+<span class="c1"># reset</span>
+</pre></div>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>If the blue and green LEDs on the COM do not light up and nothing appears on your terminal, try pressing the reset button on the expansion card until you see a boot process. If the problem persists, the image may not have been installed successfully. It is recommended that you try to install again or use a different image.</p>
+</div>
+<p>The following figure illustrates this procedure. The characters are printed quickly and the time count is only 1 second for the cores of the Yocto project, so it is necessary to be attentive to interrupt the process.</p>
+<p>Once this is done, the boot process should start and several messages will appear on the screen. It is important to check, the first time the operating system is started, that no error message appears and, if all goes well, a password will be required at the end of the process; if the embedded computer has reached this point, everything is probably in order. The password to access the Yocto system is &quot;<strong>root</strong>&quot; and for the Ubuntu gumstix system, if necessary, the password is the same as the user.</p>
+</div>
+<div class="section" id="saving-the-os-image-to-flash-memory">
+<h2>Saving the OS image to flash memory<a class="headerlink" href="#saving-the-os-image-to-flash-memory" title="Permalink to this headline">¶</a></h2>
+<p>The Gumstix Overo WaterSTORM COM has a non-volatile internal memory of 1 GB of the Flash type, enough memory to store the operating system. Although the most recommended is to continue using the SD card because it has more memory and is easily transferred between devices, having the operating system saved in the flash memory of the embedded computer can be useful.</p>
+<p>The manufacturer's website describes four different ways to perform this procedure. The way that presented the best result was the last of the options explained and it is summarized to install in the flash memory everything that was installed in the memory card added to the core binary through a script provided in its website. The desired script is available in <a class="reference external" href="https://www.gumstix.com/support/faq/write-images-flash#flash-with-uboot">Flashing with U-Boot - Write Images to Flash</a>, however, the entire process will be described in detail below.</p>
+<ol class="arabic simple">
+<li><p>With the bootable SD card connected to your host computer, access the <strong>/boot</strong> directory on the ** rootfs ** partition. For example, if <strong>rootfs</strong> is mounted on <strong>/media/&lt;User_Name&gt;/rootfs/</strong>:</p></li>
+</ol>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ cd /media/&lt;User_Name&gt;/rootfs/boot
+</pre></div>
+</div>
+<ol class="arabic simple" start="2">
+<li><p>We must store in the <strong>boot</strong> folder of the <strong>rootfs</strong> partition the new <strong>MLO</strong>, <strong>u-boot.img</strong> and <strong>core binary</strong>. Note that these <em>bootloaders</em> that will be added to the <strong>boot</strong> folder are not the same as those in the <strong>boot</strong> partition, as these new <em>bootloaders</em> must be specific to operate from flash memory. These new files can be obtained with the following commands:</p></li>
+</ol>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ sudo wget https://s3-us-west-2.amazonaws.com/gumstix-yocto/2015-02-25/overo/master/MLO
+$ sudo wget https://s3-us-west-2.amazonaws.com/gumstix-yocto/2015-02-25/overo/master/u-boot.img
+$ sudo wget https://s3-us-west-2.amazonaws.com/gumstix-yocto/2015-02-25/overo/master/gumstix-console-image-overo.ubi -O rootfs.ubi
+</pre></div>
+</div>
+<ol class="arabic simple" start="3">
+<li><p>Create a script to save the files in the flash memory with the name <em>flash-all.cmd</em>. To do this, simply execute the command:</p></li>
+</ol>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ sudo nano flash-all.cmd
+</pre></div>
+</div>
+<p>Copy and paste the script:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>nand erase.chip
+
+# switch to 1-bit ECC and write MLO
+load mmc 0:2 ${loadaddr} /boot/MLO
+nandecc hw
+nand write ${loadaddr} 0x0 ${filesize}
+nand write ${loadaddr} 0x20000 ${filesize}
+nand write ${loadaddr} 0x40000 ${filesize}
+nand write ${loadaddr} 0x60000 ${filesize}
+
+# switch back to BCH8 and write u-boot
+nandecc sw bch8
+load mmc 0:2 ${loadaddr} /boot/u-boot.img
+nand write ${loadaddr} u-boot ${filesize}
+
+# write the kernel (if uImage...otherwise skip)
+load mmc 0:2 ${loadaddr} /boot/uImage
+nand write ${loadaddr} linux ${filesize}
+
+# write the filesystem
+load mmc 0:2 ${loadaddr} /boot/rootfs.ubi
+nand write ${loadaddr} rootfs ${filesize}
+</pre></div>
+</div>
+<p>Then confirm the file name (<strong>Ctrl+O</strong>) and exit the text editor (<strong>Ctrl+X</strong>).</p>
+<div class="figure align-center">
+<img alt="../../../_images/flash-all.png" src="../../../_images/flash-all.png" />
+</div>
+<ol class="arabic simple" start="4">
+<li><p>To make the script executable and add it to the boot partition of the bootable SD card, simply run the following command line (assuming the boot partition is mounted on /media/&lt;User_Name&gt;/boot):</p></li>
+</ol>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>Remember to edit the filenames in the script to match the filenames that will be added next.</p>
+</div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ mkimage -A arm -O linux -T script -C none -a 0 -e 0 -n &quot;flash-all&quot; -d flash-all.cmd /media/&lt;User_Name&gt;/boot/flash-all.scr
+</pre></div>
+</div>
+<div class="figure align-center">
+<img alt="../../../_images/flashSD.png" src="../../../_images/flashSD.png" />
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>If the command <code class="docutils literal notranslate"><span class="pre">mkimage</span></code> is not found, just run the command <code class="docutils literal notranslate"><span class="pre">sudo</span> <span class="pre">apt</span> <span class="pre">install</span> <span class="pre">u-boot-tools</span></code> to install the tool package on your computer. The command <code class="docutils literal notranslate"><span class="pre">mkimage</span></code> is a command used to make images for use by <strong>u-boot</strong>. Command options and explanations are easily obtained by typing <code class="docutils literal notranslate"><span class="pre">man</span> <span class="pre">mkimage</span></code> in the Linux terminal.</p>
+</div>
+<ol class="arabic simple" start="5">
+<li><p>Unmount the SD card and insert it into your embedded computer, start the system and wait for u-boot to load. Stop the startup process when you see &quot;<strong>Hit any key to stop autoboot</strong>&quot; and enter the command:</p></li>
+</ol>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># mmc rescan 0; load mmc 0 ${loadaddr} flash-all.scr; source ${loadaddr}</span>
+</pre></div>
+</div>
+<p>This command line will execute the script passing the bootloaders, the core binary and the root files of the operating system to the flash memory of the embedded system and the messages shown in the figure below should be printed.</p>
+<div class="figure align-center">
+<img alt="../../../_images/flasing.png" src="../../../_images/flasing.png" />
+</div>
+<p>Remove the SD card and restart your system. If everything went well, your system should start up normally.</p>
+<div class="section" id="references">
+<h3>References<a class="headerlink" href="#references" title="Permalink to this headline">¶</a></h3>
+<blockquote>
+<div><ul class="simple">
+<li><p>PITA, H. C. Desenvolvimento de sistema de comunicação multiplataforma para veículos aéreos de asa fixa. Faculdade de Tecnologia, Universidade de Brasília, 2018.</p></li>
+<li><p><a class="reference external" href="https://www.gumstix.com/support/getting-started/boot-system">4. Boot Your System</a> - gumstix.com</p></li>
+<li><p><a class="reference external" href="https://www.gumstix.com/support/faq/write-images-flash">Write Images to Flash</a> - gumstix.com</p></li>
+</ul>
+</div></blockquote>
+</div>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../3-gumstix/3.0-intro.html" class="btn btn-neutral float-right" title="Using the embedded computer" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="2.3.3-Mounting_Partitions.html" class="btn btn-neutral float-left" title="Mounting the Partitions" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2019, Gabriel Araujo
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>
