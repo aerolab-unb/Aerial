@@ -42,12 +42,12 @@ Each aircraft has two main components that are worth mentioning. One of them is 
 
 .. toctree::
    :maxdepth: 2
-   :caption: Utilizando o computador embarcado
+   :caption: Using the embedded computer
 
    vr01/3-gumstix/3.0-intro
 
 References
------------
+----------
 
 * ROCHA, E. M. C. Desenvolvimento de um sistema com veículos aéreos não-tripulados autônomos. Faculdade de Tecnologia, Universidade de Brasília, 2017.
 
