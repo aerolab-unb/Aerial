@@ -1,0 +1,253 @@
+Ambientando-se ao Linux
+=======================
+
+Realizados os procedimentos apresentados na seção anterior de forma correta, o computador embarcado operará com um sistema operacional Linux muito semelhante ao que estamos habituados em computadores regulares. Logo, podemos realizar alguns procedimentos simples para que possamos explorar e nos habituar um pouco o ambiente ao qual vamos trabalhar. O que será demostrado nessa etapa são procedimentos, comandos e informações padrão dos sistemas Linux executados no computador embarcado Gumstix Overo WaterStorm.
+
+.. Tip::
+    Caso o leitor já esteja habituado ao ambiente de trabalho Linux recomenda-se pular para a próxima seção.
+
+Linhas de Comandos
+~~~~~~~~~~~~~~~~~~
+
+Começaremos o processo de ambientação apresentando linhas de comando básicas que vão ajuda-lo a utilizar o sistema operacional sem grandes problemas. Vale ressaltar que não há necessidade de nenhum conhecimento especial para utilizar os comandos do Linux, já que o terminal é um programa como qualquer outro. 
+
+.. Tip:: 
+    Para obter mais detalhes sobre quaisquer comandos listados aqui basta executar o comando seguido de ``--help`` ou precedido de ``man`` . 
+    
+    O comando ``--help`` imprimi uma breve descrição dos comandos seguidos de instruções de uso, por exemplo:
+    ::
+
+        uname --help
+        
+    Para reduzir a quantidade de conteúdo impresso pode se usar ``less``, por exemplo:
+    ::
+
+        ls --help | less
+    
+    Enquanto o comando ``man`` apresenta o manual de instruções do comando solicitado, por exemplo:
+
+    ::
+
+        man cd
+    
+    Os comandos principais são simples, as setas para **cima e baixo** sobem e descem a página, respectivamente, assim como as teclas de setas para **esquerda e direita** fazem a movimentação para leitura dos textos, o **Enter** também faz a página descer. A tecla "**h**" mostra o *help* do comando ``man``, mostrando todas as teclas e atalhos utilizados. E a tecla "**q**" sai da navegação do manual.
+
+1. **Comando** ``cat``
+::
+
+    cat [OPÇÃO] [ARQUIVO]
+
+Seu nome é uma derivação da palavra *concatenate* (**concatenar**) e permite que você crie, una e exiba arquivos no formato padrão de tela ou em outro arquivo, entre outras coisas. 
+
+Se a opção não for especificada, o comando ``cat`` lê o conteúdo presente no arquivo indicado e o imprime na tela. Por exemplo, ao executar o comando ``cat /etc/issue`` no terminal do Overo, é impresso o ramo e a versão do sistema operacional utilizado. 
+
+.. figure:: /img/Aerial/comand-cat.png
+	:align: center
+
+.. Note::
+    Caso deseje conhecer mais funcionalidades, acesse `Comando Cat Linux - hostinger.com.br`_. 
+
+.. _Comando Cat Linux - hostinger.com.br: https://www.hostinger.com.br/tutoriais/comando-cat-linux/#:~:text=O%20comando%20cat%20do%20Linux,outro%20arquivo%2C%20entre%20outras%20coisas.
+
+.. https://en.wikipedia.org/wiki/Cat_(Unix)
+
+2. **Comando** ``uname`` 
+::
+
+    uname [OPÇÃO]
+
+O comando ``uname``, nome derivado do termo "Unix Name", apresenta informações detalhadas sobre o seu sistema Linux, como o nome da máquina, do sistema operacional, do kernel e assim por diante. 
+
+Por exemplo, a opção ``-a`` solicita a impressão de todas as informações disponíveis pelo programa.
+
+.. figure:: /img/Aerial/comand-uname.png
+	:align: center
+
+3. **Comando** ``echo`` 
+::
+
+    echo [OPÇÃO] [STRING]
+
+O comando ``echo`` é um comando utilizado para exibir mensagens na tela ou em um arquivo. Ao utilizar o comando seguido de uma *string*, o texto da *string* é impresso na tela do terminal. Por exemplo:
+::
+
+    root@overo:~# echo "Aerolab"
+    Aerolab
+    root@overo:~# echo Aerolab
+    Aerolab
+
+
+4. **Comando** ``clear`` 
+::
+
+    clear [OPÇÃO]
+
+Utilize o comando ``clear`` para limpar o conteúdo da tela de seu terminal. O comando não necessita de parâmetros, ele utiliza variáveis do ambiente de trabalho atual para determinar como limpar a tela. 
+
+.. figure:: /img/Aerial/comand-clear.png
+    :align: center
+
+
+
+5. **Comando** ``pwd`` 
+::
+
+    pwd [OPÇÃO]
+
+O comando pwd é usado para encontrar o caminho para o diretório atual (da pasta) em que você está. O comando vai retornar um caminho completo, que é basicamente um caminho que começa com uma barra inclinada (/). Por exemplo:
+
+::
+
+    root@overo:~# pwd
+    /home/root
+
+6. **Comando** ``ls`` 
+::
+
+    ls [OPÇÃO] [ARQUIVO]
+
+Seu nome deriva das primeiras consoantes da palavra inglesa *list*. O comando ``ls`` é usado para listar o conteúdo dentro de um diretório. Por padrão, esse comando vai mostrar apenas os conteúdos do diretório atual em que você estiver. Seu nome deriva das primeiras consoantes da palavra inglesa *list*.
+
+Ao utilizar o comando ``ls`` sem especificar nenhuma opção ou diretório, o terminal irá imprimir o conteúdo do diretório atual. Porém, caso deseje ver o conteúdo de outros diretórios, digite **ls**, e então, o caminho do diretório. Por exemplo, escreva ``ls /home/username/Documents`` para ver os conteúdos de **Documents**.
+
+Uma opção muito util do comando ``ls`` é a opção ``ls -la`` que além de listar todos os arquivos e pastas no diretório atual também imprime algumas informações úteis sobre cada um deles.
+
+.. figure:: /img/Aerial/comand-ls.png
+	:align: center
+
+A figura apresenta um exemplo de saída do comando ``ls -la``, nele podemos ver que para cada arquivo é impresso uma linha com várias colunas de informação. Explicar o que cada coluna significa se faz desnecessário, entretanto é importante saber o que as primeiras letras significam, pois muitas vezes essa é a causa de alguns problemas.
+
+AS 10 primeiras colunas que são compostas por "-" e letras variadas indicam as o tipo do arquivo e as permissões dos usuários quanto aqueles arquivos. Na figura, a primeira coluna, que é sempre indicada pela letra "d", mostrando que o arquivo é um diretório, se o arquivo fosse um programa ou um arquivo de texto regular este seria indicado por um "-". As noves letras seguintes podem ser separadas em grupos de 3 indicando as permissões do dono, grupo e outros, respectivamente. As letras "r", "w" e "x" indicam leitura, escrita e execução, respectivamente. Se analisarmos, portanto, os dados da pasta "usr" veremos que o dono da pasta possui permissão para ler, escrever e executar, porém seu grupo e outros usuários terão permissão apenas para ler e executar.
+
+7. **Comando** ``cd`` 
+::
+
+    cd [OPÇÃO] [DIRETÓRIO]
+
+Seu nome é um acrônimo da expressão inglesa "*change directory*" ("mudar diretório") e sua finalidade é, como sugere seu nome, mudar o diretório atual de trabalho (isto é, o diretório em que se está) para uma outra especificada. Por exemplo, caso você esteja em /home/user e quer ir para Documents, um subdiretório do usuario. Para fazer isso, simplesmente digite ``cd Documents``.
+
+.. figure:: /img/Aerial/comand-cd.png
+	:align: center
+
+Além disso, existem alguns atalhos que podem ser utilizados para navegar rapidamente. São alguns deles:
+::
+
+    cd ..   #(com dois pontos seguidos) move para um diretório acima (anterior).
+
+    cd      #move diretamente para a pasta *home*.
+
+    cd-     #(com um hífen) - move para os diretórios anteriores.
+
+.. Note::
+    O terminal do Linux é sensível a tipos de caracteres. Por isso, você precisa digitar o nome do diretório exatamente como ele é escrito (usando letras minúsculas ou maiúsculas).  
+
+8. **Comando** ``cp`` 
+::
+
+    cp [OPÇÃO] ORIGEM DIRETÓRIO
+    
+Este comando é usado para copiar arquivos ou diretórios para um diretório específico. 
+
+Por exemplo, o comando ``cp Documento.txt /home/username/Documentos`` irá criar uma cópia de **Documento.txt** no diretório **Documentos**, caso este documento exista. Já o comando ``cp -R /home/user/projeto /home/user/novo_projeto`` irá copiar o diretório **projeto**, com todos seus arquivos, subdiretórios e arquivos dos subdiretórios para o diretório **novo_projeto**.
+
+9. **Comando** ``mv`` 
+::
+
+    mv [OPÇÃO] ORIGEM DESTINO
+
+O nome do comando ``mv`` deriva das primeiras consoantes da palavra inglesa *move* (mover) e seu uso habitual é mover arquivos, ainda que ele possa também ser usado para renomear arquivos. Ou seja, este comando copia e altera o caminho do arquivo original para o caminho desejado e, desse modo, apaga o arquivo original (sendo possível ainda renomear e mudar o diretório de um arquivo simultaneamente).
+
+O comando rm é usado para apagar um diretório e todos os conteúdos que estiverem lá dentro. Se você só quer deletar o diretório – como uma alternativa ao rdmir – use rm -r.
+A sintaxe neste comando é similar ao comando ``cp``. Você precisa digitar ``mv``, o nome do arquivo e o diretório de destino. Por exemplo: ``mv file.txt /home/username/Documents``.  
+
+Já para renomear arquivos, o argumento a ser usado é ``mv nomeantigo.ext nomenovo.ext``, sendo "**nomeantigo.ext**" o arquivo original e "**nomenovo.ext**" o novo arquivo. 
+
+10. **Comando** ``mkdir`` 
+::
+
+    mkdir [OPÇÃO] DIRETÓRIO
+
+O comando ``mkdir`` cria um novo diretório, se ele já não existir. Por exemplo, executar ``mkdir Test`` irá criar um novo diretório chamado **Test**. Seu nome deriva do termo inglês "*Make Directory*", que poderia ser traduzido como "**Criar diretorio**".
+
+11. **Comando** ``rmdir`` 
+::
+
+    rmdir [OPÇÃO] DIRETÓRIO
+
+O comando ``rmdir`` tem a função de apagar (deletar) um diretório e sua sintaxe é similar à do comando ``mkdir``. Porém, este comando só permite que sejam apagados diretórios vazios, sem conteúdo. Seu nome vem do termo em inglês *Remore Directory* (**Remover Diretório**).
+
+12. **Comando** ``rm`` 
+::
+
+    rm [OPÇÃO] [ARQUIVO]
+
+O comando rm é usado para apagar um arquivo específico ou diretório com todos os conteúdos que estiverem lá dentro. Por exemplo, executar o comando ``rm /home/user/Documentos/texto.txt`` irá apagar o arquivo *texto.txt*.
+
+Caso você deseje deletar um diretório específico (como uma alternativa ao rdmir) use ``rm -r [DIRETÓRIO]``.
+
+13. **Comando** ``chmod`` 
+
+::
+
+    chmod [OPÇÃO] MODO[,MODO ARQUIVO    #ou
+    chmod [OPÇÃO] MODO-OCTAL ARQUIVO    #ou
+    chmod [OPÇÃO] --reference=ARQREF ARQUIVO.
+
+
+O ``chmod`` (abreviação de *change mode*, em português **alterar modo**) é um comando que pode alterar permissões de acesso de objetos do sistema (arquivos e diretórios) e sinalizações (flags) de modo especial. Os sinalizadores (flags) são uma maneira de definir opções e passar argumentos para os comandos que você executa.
+
+Usualmente, o comando ``chmod`` é usado na forma:
+
+::
+
+    chmod <OPÇÃO> <PERMISSÕES> <NOME DO ARQUIVO>
+
+Se nenhuma opção for especificada, o ``chmod`` modifica as permissões do arquivo especificado pelo nome do arquivo para as permissões especificadas. Há duas maneiras de representar as permissões possíveis: com símbolos (caracteres alfanuméricos) ou com números octais (os dígitos de 0 a 7).
+
+.. Tip::
+    Como esse comando é relativamente complicado, você obter mais informações em `Linux chmod Command`_.
+
+.. _Linux chmod Command: https://www.computerhope.com/unix/uchmod.htm
+
+.. https://pt.wikipedia.org/wiki/Chmod
+
+
+14. **Comando** ``sudo`` 
+
+O comando ``sudo`` permite que usuários comuns executem tarefas que exigem permissões de outro usuário, em geral o super usuário, para executar tarefas específicas dentro do sistema de maneira segura e controlável pelo administrador. Porém, não é muito aconselhável usá-lo diariamente porque pode ser que um erro aconteça se você fizer algo de errado. O nome é uma forma abreviada de se referir a *Substitute User Do* (**fazer substituição do usuário**) ou *Super User Do* (**fazer como super usuário**).
+
+Geralmente, o comando ``sudo`` é executado na forma:
+
+::
+
+    sudo [-u usuário] <comando>
+
+Onde <comando> é o comando que deseja executar. A opção [-u usuário] serve para especificar qual usuário deve ser utilizado para executar o comando, se omitida, o comando ``sudo`` assume o usuário root e pede a senha de login para confirmar.
+
+Explorando os Arquivos do Sistema
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Passadas essas informações e estes comandos básicos, já somos capazes de explorar os arquivos do sistema. Portanto permita-nos migrar para o primeiro diretório do sistema executando "cd .." duas vezes. E em seguida executar o comando "ls -la" para que possamos visualizar as pastas do sistema. Se tudo for executado como explicado devemos obter algo como mostrado na figura a seguir.
+
+.. figure:: /img/Aerial/explore-ls.png
+	:align: center
+
+Dos vários diretórios presentes na figura destacam-se os diretórios "**/bin**", "**/boot**", "**/dev**", "**/lib**" e "**/sys**".
+
+O diretório "**/bin**" é aonde ficam armazenados os binários dos comandos essenciais do Linux, como os comandos apresentados anteriormente, logo caso se faça necessário acrescentar ao microprocessador mais algum software que se faça necessário ele deve ser adicionado a esta pasta para que possa ser encontrado pelo sistema operacional quando requisitado.
+
+O diretório "**/boot**" já foi utilizado neste trabalho e é o local aonde devem ser armazenados os bootloaders e outros programas que fazem parte da inicialização do sistema.
+
+O diretório "**/dev**" é o diretório onde ficam armazenados os arquivos de dispositivos do sistema. Arquivo de dispositivo é uma maneira que o sistema Linux utiliza para gerar uma interface de comunicação com drivers de dispositivos. Ele será muito utilizado mais para a frente durante a comunicação serial, por exemplo.
+
+O diretório "**/lib**" é o diretório que contém as bibliotecas essenciais para os binários contidos no diretório "/bin", assim caso seja necessário instalação de um novo software provavelmente também precisaremos adicionar alguma biblioteca a este diretório.
+
+Por último, o diretório "**/sys**" é o diretório que contém informações de dispositivos e drivers. Está pasta será muito utilizado caso seja necessário utilizar funções como *general purpose input/output* (**GPIO**), **I2C** e *direct memory access* (**DMA**).
+
+
+Referências
+-----------
+
+   	* PITA, H. C. Desenvolvimento de sistema de comunicação multiplataforma para veículos aéreos de asa fixa. Faculdade de Tecnologia, Universidade de Brasília, 2018.
+
+    
