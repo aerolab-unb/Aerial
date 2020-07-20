@@ -28,21 +28,21 @@ We will begin the process of setting featuring basic command lines that will hel
     Os comandos principais são simples, as setas para **cima e baixo** sobem e descem a página, respectivamente, assim como as teclas de setas para **esquerda e direita** fazem a movimentação para leitura dos textos, o **Enter** também faz a página descer. A tecla "**h**" mostra o *help* do comando ``man``, mostrando todas as teclas e atalhos utilizados. E a tecla "**q**" sai da navegação do manual.
 
 .. Tip:: 
-    For more details on any commands listed here, simply execute the command followed by `` --help`` or preceded by `` man``.
+    For more details on any commands listed here, simply execute the command followed by ``--help`` or preceded by ``man``.
     
-     The `` --help`` command prints a brief description of the commands followed by instructions for use, for example:
+     The ``--help`` command prints a brief description of the commands followed by instructions for use, for example:
     
     ::
 
         uname --help
 
-    To reduce the amount of printed content can use `` less``, for example:
+    To reduce the amount of printed content can use ``less``, for example:
 
     ::
 
         ls --help | less
     
-    While the `` man`` command displays the instruction manual for the requested command, for example:
+    While the ``man`` command displays the instruction manual for the requested command, for example:
 
     ::
 
@@ -61,7 +61,7 @@ Its name is a derivation of the word *concatenate* and allows you to create, mer
 
 .. Se a opção não for especificada, o comando ``cat`` lê o conteúdo presente no arquivo indicado e o imprime na tela. Por exemplo, ao executar o comando ``cat /etc/issue`` no terminal do Overo, é impresso o ramo e a versão do sistema operacional utilizado. 
 
-If the option is not specified, the ``cat`` command reads the content present in the indicated file and prints it on the screen. For example, when executing the command `` cat / etc / issue`` in the Overo terminal, the branch and the version of the operating system used are printed.
+If the option is not specified, the ``cat`` command reads the content present in the indicated file and prints it on the screen. For example, when executing the command ``cat/etc/issue`` in the Overo terminal, the branch and the version of the operating system used are printed.
 
 .. figure:: /img/Aerial/comand-cat.png
 	:align: center
@@ -167,7 +167,7 @@ The first 10 columns that are composed of "**-**" and varied letters indicate th
 
 .. Seu nome é um acrônimo da expressão inglesa "*change directory*" (mudar diretório) e sua finalidade é, como sugere seu nome, mudar do diretório atual de trabalho, o diretório em que se está, para um outro diretorio. Por exemplo, caso você esteja em **/home/user** e queira ir para **Documents**, um subdiretório do usuario, basta digitar ``cd Documents``.
 
-Its name is an acronym of the English expression "change directory" and its purpose is, as your name suggests, to change from the current working directory, the directory you are in, to another directory. For example, if you are in **/home/user** and want to go to **Documents**, a user subdirectory, just type `` cd Documents``.
+Its name is an acronym of the English expression "change directory" and its purpose is, as your name suggests, to change from the current working directory, the directory you are in, to another directory. For example, if you are in **/home/user** and want to go to **Documents**, a user subdirectory, just type ``cd Documents``.
 
 .. figure:: /img/Aerial/comand-cd.png
 	:align: center
