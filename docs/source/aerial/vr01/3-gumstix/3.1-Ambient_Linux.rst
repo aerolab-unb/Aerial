@@ -201,35 +201,48 @@ This command is used to copy files or directories to a specific directory. For e
 
     mv <HOME DIRECTORY> <DESTINATION DIRECTORY>
 
-O nome do comando ``mv`` deriva das primeiras consoantes da palavra inglesa *move* (mover) e seu uso habitual é mover arquivos, ainda que ele possa também ser usado para renomear arquivos. Ou seja, este comando copia e altera o caminho do arquivo original para o caminho desejado e, desse modo, apaga o arquivo original (sendo possível ainda renomear e mudar o diretório de um arquivo simultaneamente).
+.. O nome do comando ``mv`` deriva das primeiras consoantes da palavra inglesa *move* (mover) e seu uso habitual é mover arquivos, ainda que ele possa também ser usado para renomear arquivos. Ou seja, este comando copia e altera o caminho do arquivo original para o caminho desejado e, desse modo, apaga o arquivo original (sendo possível ainda renomear e mudar o diretório de um arquivo simultaneamente).
 
-O comando rm é usado para apagar um diretório e todos os conteúdos que estiverem lá dentro. Se você só quer deletar o diretório – como uma alternativa ao rdmir – use rm -r.
-A sintaxe neste comando é similar ao comando ``cp``. Você precisa digitar ``mv``, o nome do arquivo e o diretório de destino. Por exemplo: ``mv file.txt /home/username/Documents``.  
+The name of the command ``mv`` is derived from the first consonants of the English word "move" and its usual use is to move files, although it can also be used to rename files. That is, this command copies and changes the path of the original file to the desired path and, in this way, deletes the original file (it is also possible to rename and change the directory of a file simultaneously).
 
-Já para renomear arquivos, o argumento a ser usado é ``mv nomeantigo.ext nomenovo.ext``, sendo "**nomeantigo.ext**" o arquivo original e "**nomenovo.ext**" o novo arquivo. 
+.. A sintaxe neste comando é similar ao comando ``cp``. Você precisa digitar ``mv``, o nome do arquivo e o diretório de destino. Por exemplo: ``mv file.txt /home/username/Documents``.  
+
+The syntax in this command is similar to the ``cp`` command. You need to type ``mv``, the file name and the destination directory. For example: ``mv file.txt /home/username/Documents``.
+
+.. Já para renomear arquivos, o argumento a ser usado é ``mv nomeantigo.ext nomenovo.ext``, sendo "**nomeantigo.ext**" o arquivo original e "**nomenovo.ext**" o novo arquivo. 
+
+As for renaming files, the argument to be used is ``mv Old_Name.txt Old_Name.txt``, with "**Old_Name.txt**" being the original file and "**New_Name.txt**" being the new file.
 
 10. ``mkdir`` **comand**
 ::
 
     mkdir [OPTION] DIRECTORY
 
-O comando ``mkdir`` cria um novo diretório, se ele já não existir. Por exemplo, executar ``mkdir Test`` irá criar um novo diretório chamado **Test**. Seu nome deriva do termo inglês "*Make Directory*", que poderia ser traduzido como "**Criar diretorio**".
+.. O comando ``mkdir`` cria um novo diretório, se ele já não existir. Por exemplo, executar ``mkdir Test`` irá criar um novo diretório chamado **Test**. Seu nome deriva do termo inglês "*Make Directory*", que poderia ser traduzido como "**Criar diretorio**".
+
+The ``mkdir`` command creates a new directory, if it doesn't already exist. For example, execute ``mkdir Test`` will create a new directory called **Test**. Its name derives from the English term "Make Directory".
 
 11. ``rmdir`` **comand**
 ::
 
     rmdir [OPTION] DIRECTORY
 
-O comando ``rmdir`` tem a função de apagar (deletar) um diretório e sua sintaxe é similar à do comando ``mkdir``. Porém, este comando só permite que sejam apagados diretórios vazios, sem conteúdo. Seu nome vem do termo em inglês *Remore Directory* (**Remover Diretório**).
+.. O comando ``rmdir`` tem a função de apagar (deletar) um diretório e sua sintaxe é similar à do comando ``mkdir``. Porém, este comando só permite que sejam apagados diretórios vazios, sem conteúdo. Seu nome vem do termo em inglês *Remore Directory* (**Remover Diretório**).
+
+The command ``rmdir`` has the function of deleting a directory and its syntax is similar to that of the command ``mkdir``. However, this command only allows empty directories without content to be deleted. Its name comes from the English term "Remore Directory".
 
 12. ``rm`` **comand**
 ::
 
     rm [OPTION] [FILE]
 
-O comando rm é usado para apagar um arquivo específico ou diretório com todos os conteúdos que estiverem lá dentro. Por exemplo, executar o comando ``rm /home/user/Documentos/texto.txt`` irá apagar o arquivo *texto.txt*.
+.. O comando rm é usado para apagar um arquivo específico ou diretório com todos os conteúdos que estiverem lá dentro. Por exemplo, executar o comando ``rm /home/user/Documentos/texto.txt`` irá apagar o arquivo *texto.txt*.
 
-Caso você deseje deletar um diretório específico (como uma alternativa ao rdmir) use ``rm -r [DIRETÓRIO]``.
+The rm command is used to delete a specific file or directory with all the contents inside. For example, running the command ``rm /home/user/Documents/text.txt`` will delete the file *text.txt*.
+
+.. Caso você deseje deletar um diretório específico (como uma alternativa ao rdmir) use ``rm -r [DIRETÓRIO]``.
+
+If you want to delete a specific directory (as an alternative to rdmir) use ``rm -r [DIRECTORY]``.
 
 13. ``chmod`` **comand**
 
