@@ -248,59 +248,67 @@ If you want to delete a specific directory (as an alternative to rdmir) use ``rm
 
 ::
 
-    chmod [OPÇÃO] MODO[,MODO ARQUIVO    #ou
-    chmod [OPÇÃO] MODO-OCTAL ARQUIVO    #ou
-    chmod [OPÇÃO] --reference=ARQREF ARQUIVO.
+    chmod [OPTION] MODE[,MODE FILE    #or
+    chmod [OPTION] MODE-OCTAL FILE    #or
+    chmod [OPTION] --reference=ARQREF FILE.
 
 
-O ``chmod`` (abreviação de *change mode*, em português **alterar modo**) é um comando que pode alterar permissões de acesso de objetos do sistema (arquivos e diretórios) e sinalizações (flags) de modo especial. Os sinalizadores (flags) são uma maneira de definir opções e passar argumentos para os comandos que você executa.
+.. O ``chmod`` (abreviação de *change mode*, em português **alterar modo**) é um comando que pode alterar permissões de acesso de objetos do sistema (arquivos e diretórios) e sinalizações (flags) de modo especial. Os sinalizadores (flags) são uma maneira de definir opções e passar argumentos para os comandos que você executa.
 
-Usualmente, o comando ``chmod`` é usado na forma:
+The ``chmod`` (short for "change mode") is a command that can change access permissions for system objects (files and directories) and flagging in a special way. The flags are a way to set options and pass arguments to commands that you run.
 
-::
+.. Usualmente, o comando ``chmod`` é usado na forma:
 
-    chmod <OPÇÃO> <PERMISSÕES> <NOME DO ARQUIVO>
-
-Se nenhuma opção for especificada, o ``chmod`` modifica as permissões do arquivo especificado pelo nome do arquivo para as permissões especificadas. Há duas maneiras de representar as permissões possíveis: com símbolos (caracteres alfanuméricos) ou com números octais (os dígitos de 0 a 7).
-
-O comando ``chmod`` permite configurar permissões de duas maneiras: simbolicamente e numericamente. Aqui iremos nos ater a explicar apenas o método simbólico.
-
-Como visto anteriormente, os caracteres **r, w e x** representam três tipos de permissões: leitura, gravação e execução, respectivamente. Porém, para especificar o grupo de usuarios ao conceder ou remover uma permissão, o comando utiliza mais alguns simbolos. Para visualizar de forma mais clara, imagine que tais símbolos se encontram em duas listas, e a combinação deles gera a permissão:
-
-**Grupos de usuários:**
-::
-
-    u: usuário dono do arquivo
-    g: grupo de usuários do dono do arquivo
-    O (letra 'o' maiúscula): todos os outros usuários
-    a: todos os tipos de usuário (dono, grupo e outros)
-
-**Tipo de permissão:**
-::
-
-    r: se refere às permissões de leitura
-    w: se refere às permissões de escritura
-    x: se refere às permissões de execução
-
-**Para poder combinar os símbolos destas duas listas, usam-se os operadores:**
-::
-
-    + : adiciona permissão
-    - : remove permissão
-    = : define permissão
-
-Para mostrar como as combinações podem ser feitas, oberve os exemplos abaixo:
+Usually, the command ``chmod`` is used in the form:
 
 ::
 
-    chmod u+w teste.exe     # adiciona permissão de gravação no arquivo para um usuário
+    chmod <OPTION> <PERMISSIONS> <FILE NAME>
 
-    chmod g+rw teste.exe     # adiciona permissão de leitura e gravação ao seu grupo
+.. Se nenhuma opção for especificada, o ``chmod`` modifica as permissões do arquivo para as permissões especificadas. Há duas maneiras de representar as permissões possíveis: com símbolos (caracteres alfanuméricos) ou com números octais (os dígitos de 0 a 7). Aqui iremos nos ater a explicar apenas o método simbólico.
 
-    chmod g=rwx teste.exe     # adiciona todas as permissões disponíveis para o grupo
+If none option is specified, ``chmod`` command modifies the file's permissions to the specified permissions. There are two ways to represent the possible permissions: with symbols (alphanumeric characters) or with octal numbers (the digits 0 to 7). Here we will stick to just explain the symbolic method.
+
+.. Como visto anteriormente, os caracteres **r, w e x** representam três tipos de permissões: leitura, gravação e execução, respectivamente. Porém, para especificar o grupo de usuarios ao conceder ou remover uma permissão, o comando utiliza mais alguns simbolos. Para visualizar de forma mais clara, imagine que tais símbolos se encontram em duas listas, e a combinação deles gera a permissão:
+
+As seen earlier, the characters **r, w and x** represent three types of permissions: read, write and execute, respectively. However, to specify the user group when granting or removing a permission, the command uses a few more symbols. To visualize it more clearly, imagine that these symbols are in two lists, and the combination of them generates the permission:
+
+**User Group:**
+::
+
+    u: user owner of the file
+    g: file owner user group
+    O (capital letter 'o'): all other users
+    a: all types of user (owner, group and others)
+
+**Permission type:**
+::
+
+    r: refers to read permissions
+    w: refers to writing permissions
+    x: refers to execution permissions
+
+**In order to be able to combine the symbols of these two lists, operators are used:**
+::
+
+    + : adds permission
+    - : removes permission
+    = : defines permission
+
+.. Para mostrar como as combinações podem ser feitas, oberve os exemplos abaixo:
+
+To show how combinations can be made, note the examples below:
+
+::
+
+    chmod u+w teste.exe     # adds write permission to the file for a user
+
+    chmod g+rw teste.exe    # adds read and write permission to your group
+
+    chmod g=rwx teste.exe   # adds all available permissions to the group
 
 .. Tip::
-    Como esse comando é relativamente complicado, você obter mais informações em `Linux chmod Command`_.
+    Since this command is relatively complicated, more information can be obtained from `Linux chmod Command`_.
 
 .. _Linux chmod Command: https://www.computerhope.com/unix/uchmod.htm
 
@@ -308,18 +316,23 @@ Para mostrar como as combinações podem ser feitas, oberve os exemplos abaixo:
 
 14. ``sudo`` **comand**
 
-O comando ``sudo`` permite que usuários comuns executem tarefas que exigem permissões de outro usuário, em geral o super usuário, para executar tarefas específicas dentro do sistema de maneira segura e controlável pelo administrador. Porém, não é muito aconselhável usá-lo diariamente porque pode ser que um erro aconteça se você fizer algo de errado. O nome é uma forma abreviada de se referir a *Substitute User Do* (**fazer substituição do usuário**) ou *Super User Do* (**fazer como super usuário**).
+.. O comando ``sudo`` permite que usuários comuns executem tarefas que exigem permissões de outro usuário, em geral o super usuário, para executar tarefas específicas dentro do sistema de maneira segura e controlável pelo administrador. Porém, não é muito aconselhável usá-lo diariamente porque pode ser que um erro aconteça se você fizer algo de errado. O nome é uma forma abreviada de se referir a *Substitute User Do* (**fazer substituição do usuário**) ou *Super User Do* (**fazer como super usuário**).
 
-Geralmente, o comando ``sudo`` é executado na forma:
+The ``sudo`` command allows ordinary users to perform tasks that require permissions from another user, usually the super user, to perform specific tasks within the system in a safe and controllable manner by the administrator. However, it is not very advisable to use it on a daily basis because it may be an error if you do something wrong. The name is an abbreviated way of referring to "Substitute User Do" or "Super User Do".
 
+.. Geralmente, o comando ``sudo`` é executado na forma:
+
+Generally, the command `` sudo`` is executed in the form:
 ::
 
-    sudo [-u usuário] <comando>
+    sudo [-u user] <command>
 
-Onde <comando> é o comando que deseja executar. A opção [-u usuário] serve para especificar qual usuário deve ser utilizado para executar o comando, se omitida, o comando ``sudo`` assume o usuário root e pede a senha de login para confirmar.
+.. Onde <comando> é o comando que deseja executar. A opção [-u usuário] serve para especificar qual usuário deve ser utilizado para executar o comando, se omitida, o comando ``sudo`` assume o usuário root e pede a senha de login para confirmar.
 
-Explorando os Arquivos do Sistema
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Where <command> is the command you want to execute. The [-u user] option is used to specify which user should be used to execute the command, if omitted, the command ``sudo`` assumes the root user and asks for the login password to confirm.
+
+Exploring the System Files
+~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Passadas essas informações e estes comandos básicos, já somos capazes de explorar os arquivos do sistema. Portanto permita-nos migrar para o primeiro diretório do sistema executando "cd .." duas vezes. E em seguida executar o comando "ls -la" para que possamos visualizar as pastas do sistema. Se tudo for executado como explicado devemos obter algo como mostrado na figura a seguir.
 
