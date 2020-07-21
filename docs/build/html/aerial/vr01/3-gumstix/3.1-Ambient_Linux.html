@@ -297,38 +297,68 @@
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">mv</span> <span class="o">&lt;</span><span class="n">HOME</span> <span class="n">DIRECTORY</span><span class="o">&gt;</span> <span class="o">&lt;</span><span class="n">DESTINATION</span> <span class="n">DIRECTORY</span><span class="o">&gt;</span>
 </pre></div>
 </div>
-<p>O nome do comando <code class="docutils literal notranslate"><span class="pre">mv</span></code> deriva das primeiras consoantes da palavra inglesa <em>move</em> (mover) e seu uso habitual é mover arquivos, ainda que ele possa também ser usado para renomear arquivos. Ou seja, este comando copia e altera o caminho do arquivo original para o caminho desejado e, desse modo, apaga o arquivo original (sendo possível ainda renomear e mudar o diretório de um arquivo simultaneamente).</p>
-<p>O comando rm é usado para apagar um diretório e todos os conteúdos que estiverem lá dentro. Se você só quer deletar o diretório – como uma alternativa ao rdmir – use rm -r.
-A sintaxe neste comando é similar ao comando <code class="docutils literal notranslate"><span class="pre">cp</span></code>. Você precisa digitar <code class="docutils literal notranslate"><span class="pre">mv</span></code>, o nome do arquivo e o diretório de destino. Por exemplo: <code class="docutils literal notranslate"><span class="pre">mv</span> <span class="pre">file.txt</span> <span class="pre">/home/username/Documents</span></code>.</p>
-<p>Já para renomear arquivos, o argumento a ser usado é <code class="docutils literal notranslate"><span class="pre">mv</span> <span class="pre">nomeantigo.ext</span> <span class="pre">nomenovo.ext</span></code>, sendo &quot;<strong>nomeantigo.ext</strong>&quot; o arquivo original e &quot;<strong>nomenovo.ext</strong>&quot; o novo arquivo.</p>
+<p>The name of the command <code class="docutils literal notranslate"><span class="pre">mv</span></code> is derived from the first consonants of the English word &quot;move&quot; and its usual use is to move files, although it can also be used to rename files. That is, this command copies and changes the path of the original file to the desired path and, in this way, deletes the original file (it is also possible to rename and change the directory of a file simultaneously).</p>
+<p>The syntax in this command is similar to the <code class="docutils literal notranslate"><span class="pre">cp</span></code> command. You need to type <code class="docutils literal notranslate"><span class="pre">mv</span></code>, the file name and the destination directory. For example: <code class="docutils literal notranslate"><span class="pre">mv</span> <span class="pre">file.txt</span> <span class="pre">/home/username/Documents</span></code>.</p>
+<p>As for renaming files, the argument to be used is <code class="docutils literal notranslate"><span class="pre">mv</span> <span class="pre">Old_Name.txt</span> <span class="pre">Old_Name.txt</span></code>, with &quot;<strong>Old_Name.txt</strong>&quot; being the original file and &quot;<strong>New_Name.txt</strong>&quot; being the new file.</p>
 <p>10. <code class="docutils literal notranslate"><span class="pre">mkdir</span></code> <strong>comand</strong></p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">mkdir</span> <span class="p">[</span><span class="n">OPTION</span><span class="p">]</span> <span class="n">DIRECTORY</span>
 </pre></div>
 </div>
-<p>O comando <code class="docutils literal notranslate"><span class="pre">mkdir</span></code> cria um novo diretório, se ele já não existir. Por exemplo, executar <code class="docutils literal notranslate"><span class="pre">mkdir</span> <span class="pre">Test</span></code> irá criar um novo diretório chamado <strong>Test</strong>. Seu nome deriva do termo inglês &quot;<em>Make Directory</em>&quot;, que poderia ser traduzido como &quot;<strong>Criar diretorio</strong>&quot;.</p>
+<p>The <code class="docutils literal notranslate"><span class="pre">mkdir</span></code> command creates a new directory, if it doesn't already exist. For example, execute <code class="docutils literal notranslate"><span class="pre">mkdir</span> <span class="pre">Test</span></code> will create a new directory called <strong>Test</strong>. Its name derives from the English term &quot;Make Directory&quot;.</p>
 <p>11. <code class="docutils literal notranslate"><span class="pre">rmdir</span></code> <strong>comand</strong></p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">rmdir</span> <span class="p">[</span><span class="n">OPTION</span><span class="p">]</span> <span class="n">DIRECTORY</span>
 </pre></div>
 </div>
-<p>O comando <code class="docutils literal notranslate"><span class="pre">rmdir</span></code> tem a função de apagar (deletar) um diretório e sua sintaxe é similar à do comando <code class="docutils literal notranslate"><span class="pre">mkdir</span></code>. Porém, este comando só permite que sejam apagados diretórios vazios, sem conteúdo. Seu nome vem do termo em inglês <em>Remore Directory</em> (<strong>Remover Diretório</strong>).</p>
+<p>The command <code class="docutils literal notranslate"><span class="pre">rmdir</span></code> has the function of deleting a directory and its syntax is similar to that of the command <code class="docutils literal notranslate"><span class="pre">mkdir</span></code>. However, this command only allows empty directories without content to be deleted. Its name comes from the English term &quot;Remore Directory&quot;.</p>
 <p>12. <code class="docutils literal notranslate"><span class="pre">rm</span></code> <strong>comand</strong></p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">rm</span> <span class="p">[</span><span class="n">OPTION</span><span class="p">]</span> <span class="p">[</span><span class="n">FILE</span><span class="p">]</span>
 </pre></div>
 </div>
-<p>O comando rm é usado para apagar um arquivo específico ou diretório com todos os conteúdos que estiverem lá dentro. Por exemplo, executar o comando <code class="docutils literal notranslate"><span class="pre">rm</span> <span class="pre">/home/user/Documentos/texto.txt</span></code> irá apagar o arquivo <em>texto.txt</em>.</p>
-<p>Caso você deseje deletar um diretório específico (como uma alternativa ao rdmir) use <code class="docutils literal notranslate"><span class="pre">rm</span> <span class="pre">-r</span> <span class="pre">[DIRETÓRIO]</span></code>.</p>
+<p>The rm command is used to delete a specific file or directory with all the contents inside. For example, running the command <code class="docutils literal notranslate"><span class="pre">rm</span> <span class="pre">/home/user/Documents/text.txt</span></code> will delete the file <em>text.txt</em>.</p>
+<p>If you want to delete a specific directory (as an alternative to rdmir) use <code class="docutils literal notranslate"><span class="pre">rm</span> <span class="pre">-r</span> <span class="pre">[DIRECTORY]</span></code>.</p>
 <ol class="arabic simple" start="13">
 <li><p><code class="docutils literal notranslate"><span class="pre">chmod</span></code> <strong>comand</strong></p></li>
 </ol>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">chmod</span> <span class="p">[</span><span class="n">OPTION</span><span class="p">]</span> <span class="n">MODE</span> <span class="n">FILE</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">chmod</span> <span class="p">[</span><span class="n">OPÇÃO</span><span class="p">]</span> <span class="n">MODO</span><span class="p">[,</span><span class="n">MODO</span> <span class="n">ARQUIVO</span>    <span class="c1">#ou</span>
+<span class="n">chmod</span> <span class="p">[</span><span class="n">OPÇÃO</span><span class="p">]</span> <span class="n">MODO</span><span class="o">-</span><span class="n">OCTAL</span> <span class="n">ARQUIVO</span>    <span class="c1">#ou</span>
+<span class="n">chmod</span> <span class="p">[</span><span class="n">OPÇÃO</span><span class="p">]</span> <span class="o">--</span><span class="n">reference</span><span class="o">=</span><span class="n">ARQREF</span> <span class="n">ARQUIVO</span><span class="o">.</span>
 </pre></div>
 </div>
 <p>O <code class="docutils literal notranslate"><span class="pre">chmod</span></code> (abreviação de <em>change mode</em>, em português <strong>alterar modo</strong>) é um comando que pode alterar permissões de acesso de objetos do sistema (arquivos e diretórios) e sinalizações (flags) de modo especial. Os sinalizadores (flags) são uma maneira de definir opções e passar argumentos para os comandos que você executa.</p>
 <p>Usualmente, o comando <code class="docutils literal notranslate"><span class="pre">chmod</span></code> é usado na forma:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">chmod</span> <span class="o">&lt;</span><span class="n">OPTION</span><span class="o">&gt;</span> <span class="o">&lt;</span><span class="n">PERMISSIONS</span><span class="o">&gt;</span> <span class="o">&lt;</span><span class="n">FILE</span> <span class="n">NAME</span><span class="o">&gt;</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">chmod</span> <span class="o">&lt;</span><span class="n">OPÇÃO</span><span class="o">&gt;</span> <span class="o">&lt;</span><span class="n">PERMISSÕES</span><span class="o">&gt;</span> <span class="o">&lt;</span><span class="n">NOME</span> <span class="n">DO</span> <span class="n">ARQUIVO</span><span class="o">&gt;</span>
 </pre></div>
 </div>
 <p>Se nenhuma opção for especificada, o <code class="docutils literal notranslate"><span class="pre">chmod</span></code> modifica as permissões do arquivo especificado pelo nome do arquivo para as permissões especificadas. Há duas maneiras de representar as permissões possíveis: com símbolos (caracteres alfanuméricos) ou com números octais (os dígitos de 0 a 7).</p>
+<p>O comando <code class="docutils literal notranslate"><span class="pre">chmod</span></code> permite configurar permissões de duas maneiras: simbolicamente e numericamente. Aqui iremos nos ater a explicar apenas o método simbólico.</p>
+<p>Como visto anteriormente, os caracteres <strong>r, w e x</strong> representam três tipos de permissões: leitura, gravação e execução, respectivamente. Porém, para especificar o grupo de usuarios ao conceder ou remover uma permissão, o comando utiliza mais alguns simbolos. Para visualizar de forma mais clara, imagine que tais símbolos se encontram em duas listas, e a combinação deles gera a permissão:</p>
+<p><strong>Grupos de usuários:</strong></p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">u</span><span class="p">:</span> <span class="n">usuário</span> <span class="n">dono</span> <span class="n">do</span> <span class="n">arquivo</span>
+<span class="n">g</span><span class="p">:</span> <span class="n">grupo</span> <span class="n">de</span> <span class="n">usuários</span> <span class="n">do</span> <span class="n">dono</span> <span class="n">do</span> <span class="n">arquivo</span>
+<span class="n">O</span> <span class="p">(</span><span class="n">letra</span> <span class="s1">&#39;o&#39;</span> <span class="n">maiúscula</span><span class="p">):</span> <span class="n">todos</span> <span class="n">os</span> <span class="n">outros</span> <span class="n">usuários</span>
+<span class="n">a</span><span class="p">:</span> <span class="n">todos</span> <span class="n">os</span> <span class="n">tipos</span> <span class="n">de</span> <span class="n">usuário</span> <span class="p">(</span><span class="n">dono</span><span class="p">,</span> <span class="n">grupo</span> <span class="n">e</span> <span class="n">outros</span><span class="p">)</span>
+</pre></div>
+</div>
+<p><strong>Tipo de permissão:</strong></p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">r</span><span class="p">:</span> <span class="n">se</span> <span class="n">refere</span> <span class="n">às</span> <span class="n">permissões</span> <span class="n">de</span> <span class="n">leitura</span>
+<span class="n">w</span><span class="p">:</span> <span class="n">se</span> <span class="n">refere</span> <span class="n">às</span> <span class="n">permissões</span> <span class="n">de</span> <span class="n">escritura</span>
+<span class="n">x</span><span class="p">:</span> <span class="n">se</span> <span class="n">refere</span> <span class="n">às</span> <span class="n">permissões</span> <span class="n">de</span> <span class="n">execução</span>
+</pre></div>
+</div>
+<p><strong>Para poder combinar os símbolos destas duas listas, usam-se os operadores:</strong></p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">+</span> <span class="p">:</span> <span class="n">adiciona</span> <span class="n">permissão</span>
+<span class="o">-</span> <span class="p">:</span> <span class="n">remove</span> <span class="n">permissão</span>
+<span class="o">=</span> <span class="p">:</span> <span class="n">define</span> <span class="n">permissão</span>
+</pre></div>
+</div>
+<p>Para mostrar como as combinações podem ser feitas, oberve os exemplos abaixo:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">chmod</span> <span class="n">u</span><span class="o">+</span><span class="n">w</span> <span class="n">teste</span><span class="o">.</span><span class="n">exe</span>     <span class="c1"># adiciona permissão de gravação no arquivo para um usuário</span>
+
+<span class="n">chmod</span> <span class="n">g</span><span class="o">+</span><span class="n">rw</span> <span class="n">teste</span><span class="o">.</span><span class="n">exe</span>     <span class="c1"># adiciona permissão de leitura e gravação ao seu grupo</span>
+
+<span class="n">chmod</span> <span class="n">g</span><span class="o">=</span><span class="n">rwx</span> <span class="n">teste</span><span class="o">.</span><span class="n">exe</span>     <span class="c1"># adiciona todas as permissões disponíveis para o grupo</span>
+</pre></div>
+</div>
 <div class="admonition tip">
 <p class="admonition-title">Tip</p>
 <p>Como esse comando é relativamente complicado, você obter mais informações em <a class="reference external" href="https://www.computerhope.com/unix/uchmod.htm">Linux chmod Command</a>.</p>
