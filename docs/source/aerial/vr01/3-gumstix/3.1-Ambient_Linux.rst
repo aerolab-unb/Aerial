@@ -334,27 +334,45 @@ Where <command> is the command you want to execute. The [-u user] option is used
 Exploring the System Files
 ~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Passadas essas informações e estes comandos básicos, já somos capazes de explorar os arquivos do sistema. Portanto permita-nos migrar para o primeiro diretório do sistema executando "cd .." duas vezes. E em seguida executar o comando "ls -la" para que possamos visualizar as pastas do sistema. Se tudo for executado como explicado devemos obter algo como mostrado na figura a seguir.
+.. Passadas essas informações e estes comandos básicos, já somos capazes de explorar os arquivos do sistema. Portanto, vamos migrar para o primeiro diretório do sistema executando ``cd ..`` duas vezes. E em seguida executar o comando ``ls -la`` para que possamos visualizar as pastas do sistema. Se tudo for executado como explicado devemos obter algo como mostrado na figura a seguir.
+
+Once this information and basic commands are passed, we are able to explore the system files. Therefore, we will migrate to the first directory of the system by running ``cd ..`` twice. And then run the command ``ls -la`` so that we can view the system folders. If everything is done as explained we should get something as shown in the following figure.
 
 .. figure:: /img/Aerial/explore-ls.png
 	:align: center
 
-Dos vários diretórios presentes na figura destacam-se os diretórios "**/bin**", "**/boot**", "**/dev**", "**/lib**" e "**/sys**".
+.. Dos vários diretórios presentes na figura, destacam-se os diretórios "**/bin**", "**/boot**", "**/dev**", "**/lib**" e "**/sys**".
 
-O diretório "**/bin**" é aonde ficam armazenados os binários dos comandos essenciais do Linux, como os comandos apresentados anteriormente, logo caso se faça necessário acrescentar ao microprocessador mais algum software que se faça necessário ele deve ser adicionado a esta pasta para que possa ser encontrado pelo sistema operacional quando requisitado.
+Of the various directories present in the figure, the directories "**/bin**", "**/boot**", "**/dev**", "**/lib**" and "**stand out/sys**".
 
-O diretório "**/boot**" já foi utilizado neste trabalho e é o local aonde devem ser armazenados os bootloaders e outros programas que fazem parte da inicialização do sistema.
+.. O diretório "**/bin**" é aonde ficam armazenados os binários dos comandos essenciais do Linux, como os comandos apresentados anteriormente, logo caso se faça necessário acrescentar ao microprocessador mais algum software que se faça necessário ele deve ser adicionado a esta pasta para que possa ser encontrado pelo sistema operacional quando requisitado.
 
-O diretório "**/dev**" é o diretório onde ficam armazenados os arquivos de dispositivos do sistema. Arquivo de dispositivo é uma maneira que o sistema Linux utiliza para gerar uma interface de comunicação com drivers de dispositivos. Ele será muito utilizado mais para a frente durante a comunicação serial, por exemplo.
+The directory "**/bin**" is where the binaries of essential Linux commands are stored, such as the commands presented previously, so if it becomes necessary to add any more software to the microprocessor that is necessary, it must be added to this folder so that it can be found by the operating system when requested.
 
-O diretório "**/lib**" é o diretório que contém as bibliotecas essenciais para os binários contidos no diretório "/bin", assim caso seja necessário instalação de um novo software provavelmente também precisaremos adicionar alguma biblioteca a este diretório.
+.. O diretório "**/boot**" já foi utilizado neste trabalho e é o local aonde devem ser armazenados os bootloaders e outros programas que fazem parte da inicialização do sistema.
 
-Por último, o diretório "**/sys**" é o diretório que contém informações de dispositivos e drivers. Está pasta será muito utilizado caso seja necessário utilizar funções como *general purpose input/output* (**GPIO**), **I2C** e *direct memory access* (**DMA**).
+The directory "**/boot **" has already been used in this work and is the place where the bootloaders and other programs that are part of the system boot must be stored.
 
+.. O diretório "**/dev**" é o diretório onde ficam armazenados os arquivos de dispositivos do sistema. Arquivo de dispositivo é uma maneira que o sistema Linux utiliza para gerar uma interface de comunicação com drivers de dispositivos. Ele será muito utilizado mais para a frente durante a comunicação serial, por exemplo.
 
-Referências
------------
+The "**/dev **" directory is the directory where system device files are stored. Device file is a way that the Linux system uses to generate a communication interface with device drivers. It will be used a lot later on during serial communication, for example.
+
+.. O diretório "**/lib**" é o diretório que contém as bibliotecas essenciais para os binários contidos no diretório "/bin", assim caso seja necessário instalação de um novo software provavelmente também precisaremos adicionar alguma biblioteca a este diretório.
+
+The "**/lib**" directory is the directory that contains the essential libraries for the binaries contained in the "/bin" directory, so if new software installation is necessary, we will probably also need to add some library to this directory.
+
+.. Por último, o diretório "**/sys**" é o diretório que contém informações de dispositivos e drivers. Está pasta será muito utilizado caso seja necessário utilizar funções como *general purpose input/output* (**GPIO**), **I2C** e *direct memory access* (**DMA**).
+
+Finally, the "**/sys**" directory is the directory that contains device and driver information. This folder will be used a lot if it is necessary to use functions such as General Purpose Input/Output (**GPIO**), **I2C** and Direct Memory Access (**DMA**).
+
+References
+----------
 
    	* PITA, H. C. Desenvolvimento de sistema de comunicação multiplataforma para veículos aéreos de asa fixa. Faculdade de Tecnologia, Universidade de Brasília, 2018.
 
-    
+    * `Linux man pages online`_ - man7.org
+
+    * `30 Comandos Linux Que Todo Usuário Deve Conhecer`_ - hostinger.com.br
+
+.. _Linux man pages online: https://www.man7.org/linux/man-pages/index.html
+.. _30 Comandos Linux Que Todo Usuário Deve Conhecer: https://www.hostinger.com.br/tutoriais/comandos-linux
