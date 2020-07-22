@@ -319,79 +319,78 @@
 <ol class="arabic simple" start="13">
 <li><p><code class="docutils literal notranslate"><span class="pre">chmod</span></code> <strong>comand</strong></p></li>
 </ol>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">chmod</span> <span class="p">[</span><span class="n">OPÇÃO</span><span class="p">]</span> <span class="n">MODO</span><span class="p">[,</span><span class="n">MODO</span> <span class="n">ARQUIVO</span>    <span class="c1">#ou</span>
-<span class="n">chmod</span> <span class="p">[</span><span class="n">OPÇÃO</span><span class="p">]</span> <span class="n">MODO</span><span class="o">-</span><span class="n">OCTAL</span> <span class="n">ARQUIVO</span>    <span class="c1">#ou</span>
-<span class="n">chmod</span> <span class="p">[</span><span class="n">OPÇÃO</span><span class="p">]</span> <span class="o">--</span><span class="n">reference</span><span class="o">=</span><span class="n">ARQREF</span> <span class="n">ARQUIVO</span><span class="o">.</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">chmod</span> <span class="p">[</span><span class="n">OPTION</span><span class="p">]</span> <span class="n">MODE</span><span class="p">[,</span><span class="n">MODE</span> <span class="n">FILE</span>    <span class="c1">#or</span>
+<span class="n">chmod</span> <span class="p">[</span><span class="n">OPTION</span><span class="p">]</span> <span class="n">MODE</span><span class="o">-</span><span class="n">OCTAL</span> <span class="n">FILE</span>    <span class="c1">#or</span>
+<span class="n">chmod</span> <span class="p">[</span><span class="n">OPTION</span><span class="p">]</span> <span class="o">--</span><span class="n">reference</span><span class="o">=</span><span class="n">ARQREF</span> <span class="n">FILE</span><span class="o">.</span>
 </pre></div>
 </div>
-<p>O <code class="docutils literal notranslate"><span class="pre">chmod</span></code> (abreviação de <em>change mode</em>, em português <strong>alterar modo</strong>) é um comando que pode alterar permissões de acesso de objetos do sistema (arquivos e diretórios) e sinalizações (flags) de modo especial. Os sinalizadores (flags) são uma maneira de definir opções e passar argumentos para os comandos que você executa.</p>
-<p>Usualmente, o comando <code class="docutils literal notranslate"><span class="pre">chmod</span></code> é usado na forma:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">chmod</span> <span class="o">&lt;</span><span class="n">OPÇÃO</span><span class="o">&gt;</span> <span class="o">&lt;</span><span class="n">PERMISSÕES</span><span class="o">&gt;</span> <span class="o">&lt;</span><span class="n">NOME</span> <span class="n">DO</span> <span class="n">ARQUIVO</span><span class="o">&gt;</span>
+<p>The <code class="docutils literal notranslate"><span class="pre">chmod</span></code> (short for &quot;change mode&quot;) is a command that can change access permissions for system objects (files and directories) and flagging in a special way. The flags are a way to set options and pass arguments to commands that you run.</p>
+<p>Usually, the command <code class="docutils literal notranslate"><span class="pre">chmod</span></code> is used in the form:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">chmod</span> <span class="o">&lt;</span><span class="n">OPTION</span><span class="o">&gt;</span> <span class="o">&lt;</span><span class="n">PERMISSIONS</span><span class="o">&gt;</span> <span class="o">&lt;</span><span class="n">FILE</span> <span class="n">NAME</span><span class="o">&gt;</span>
 </pre></div>
 </div>
-<p>Se nenhuma opção for especificada, o <code class="docutils literal notranslate"><span class="pre">chmod</span></code> modifica as permissões do arquivo especificado pelo nome do arquivo para as permissões especificadas. Há duas maneiras de representar as permissões possíveis: com símbolos (caracteres alfanuméricos) ou com números octais (os dígitos de 0 a 7).</p>
-<p>O comando <code class="docutils literal notranslate"><span class="pre">chmod</span></code> permite configurar permissões de duas maneiras: simbolicamente e numericamente. Aqui iremos nos ater a explicar apenas o método simbólico.</p>
-<p>Como visto anteriormente, os caracteres <strong>r, w e x</strong> representam três tipos de permissões: leitura, gravação e execução, respectivamente. Porém, para especificar o grupo de usuarios ao conceder ou remover uma permissão, o comando utiliza mais alguns simbolos. Para visualizar de forma mais clara, imagine que tais símbolos se encontram em duas listas, e a combinação deles gera a permissão:</p>
-<p><strong>Grupos de usuários:</strong></p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">u</span><span class="p">:</span> <span class="n">usuário</span> <span class="n">dono</span> <span class="n">do</span> <span class="n">arquivo</span>
-<span class="n">g</span><span class="p">:</span> <span class="n">grupo</span> <span class="n">de</span> <span class="n">usuários</span> <span class="n">do</span> <span class="n">dono</span> <span class="n">do</span> <span class="n">arquivo</span>
-<span class="n">O</span> <span class="p">(</span><span class="n">letra</span> <span class="s1">&#39;o&#39;</span> <span class="n">maiúscula</span><span class="p">):</span> <span class="n">todos</span> <span class="n">os</span> <span class="n">outros</span> <span class="n">usuários</span>
-<span class="n">a</span><span class="p">:</span> <span class="n">todos</span> <span class="n">os</span> <span class="n">tipos</span> <span class="n">de</span> <span class="n">usuário</span> <span class="p">(</span><span class="n">dono</span><span class="p">,</span> <span class="n">grupo</span> <span class="n">e</span> <span class="n">outros</span><span class="p">)</span>
+<p>If none option is specified, <code class="docutils literal notranslate"><span class="pre">chmod</span></code> command modifies the file's permissions to the specified permissions. There are two ways to represent the possible permissions: with symbols (alphanumeric characters) or with octal numbers (the digits 0 to 7). Here we will stick to just explain the symbolic method.</p>
+<p>As seen earlier, the characters <strong>r, w and x</strong> represent three types of permissions: read, write and execute, respectively. However, to specify the user group when granting or removing a permission, the command uses a few more symbols. To visualize it more clearly, imagine that these symbols are in two lists, and the combination of them generates the permission:</p>
+<p><strong>User Group:</strong></p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">u</span><span class="p">:</span> <span class="n">user</span> <span class="n">owner</span> <span class="n">of</span> <span class="n">the</span> <span class="n">file</span>
+<span class="n">g</span><span class="p">:</span> <span class="n">file</span> <span class="n">owner</span> <span class="n">user</span> <span class="n">group</span>
+<span class="n">O</span> <span class="p">(</span><span class="n">capital</span> <span class="n">letter</span> <span class="s1">&#39;o&#39;</span><span class="p">):</span> <span class="nb">all</span> <span class="n">other</span> <span class="n">users</span>
+<span class="n">a</span><span class="p">:</span> <span class="nb">all</span> <span class="n">types</span> <span class="n">of</span> <span class="n">user</span> <span class="p">(</span><span class="n">owner</span><span class="p">,</span> <span class="n">group</span> <span class="ow">and</span> <span class="n">others</span><span class="p">)</span>
 </pre></div>
 </div>
-<p><strong>Tipo de permissão:</strong></p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">r</span><span class="p">:</span> <span class="n">se</span> <span class="n">refere</span> <span class="n">às</span> <span class="n">permissões</span> <span class="n">de</span> <span class="n">leitura</span>
-<span class="n">w</span><span class="p">:</span> <span class="n">se</span> <span class="n">refere</span> <span class="n">às</span> <span class="n">permissões</span> <span class="n">de</span> <span class="n">escritura</span>
-<span class="n">x</span><span class="p">:</span> <span class="n">se</span> <span class="n">refere</span> <span class="n">às</span> <span class="n">permissões</span> <span class="n">de</span> <span class="n">execução</span>
+<p><strong>Permission type:</strong></p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">r</span><span class="p">:</span> <span class="n">refers</span> <span class="n">to</span> <span class="n">read</span> <span class="n">permissions</span>
+<span class="n">w</span><span class="p">:</span> <span class="n">refers</span> <span class="n">to</span> <span class="n">writing</span> <span class="n">permissions</span>
+<span class="n">x</span><span class="p">:</span> <span class="n">refers</span> <span class="n">to</span> <span class="n">execution</span> <span class="n">permissions</span>
 </pre></div>
 </div>
-<p><strong>Para poder combinar os símbolos destas duas listas, usam-se os operadores:</strong></p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">+</span> <span class="p">:</span> <span class="n">adiciona</span> <span class="n">permissão</span>
-<span class="o">-</span> <span class="p">:</span> <span class="n">remove</span> <span class="n">permissão</span>
-<span class="o">=</span> <span class="p">:</span> <span class="n">define</span> <span class="n">permissão</span>
+<p><strong>In order to be able to combine the symbols of these two lists, operators are used:</strong></p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">+</span> <span class="p">:</span> <span class="n">adds</span> <span class="n">permission</span>
+<span class="o">-</span> <span class="p">:</span> <span class="n">removes</span> <span class="n">permission</span>
+<span class="o">=</span> <span class="p">:</span> <span class="n">defines</span> <span class="n">permission</span>
 </pre></div>
 </div>
-<p>Para mostrar como as combinações podem ser feitas, oberve os exemplos abaixo:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">chmod</span> <span class="n">u</span><span class="o">+</span><span class="n">w</span> <span class="n">teste</span><span class="o">.</span><span class="n">exe</span>     <span class="c1"># adiciona permissão de gravação no arquivo para um usuário</span>
+<p>To show how combinations can be made, note the examples below:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">chmod</span> <span class="n">u</span><span class="o">+</span><span class="n">w</span> <span class="n">teste</span><span class="o">.</span><span class="n">exe</span>     <span class="c1"># adds write permission to the file for a user</span>
 
-<span class="n">chmod</span> <span class="n">g</span><span class="o">+</span><span class="n">rw</span> <span class="n">teste</span><span class="o">.</span><span class="n">exe</span>     <span class="c1"># adiciona permissão de leitura e gravação ao seu grupo</span>
+<span class="n">chmod</span> <span class="n">g</span><span class="o">+</span><span class="n">rw</span> <span class="n">teste</span><span class="o">.</span><span class="n">exe</span>    <span class="c1"># adds read and write permission to your group</span>
 
-<span class="n">chmod</span> <span class="n">g</span><span class="o">=</span><span class="n">rwx</span> <span class="n">teste</span><span class="o">.</span><span class="n">exe</span>     <span class="c1"># adiciona todas as permissões disponíveis para o grupo</span>
+<span class="n">chmod</span> <span class="n">g</span><span class="o">=</span><span class="n">rwx</span> <span class="n">teste</span><span class="o">.</span><span class="n">exe</span>   <span class="c1"># adds all available permissions to the group</span>
 </pre></div>
 </div>
 <div class="admonition tip">
 <p class="admonition-title">Tip</p>
-<p>Como esse comando é relativamente complicado, você obter mais informações em <a class="reference external" href="https://www.computerhope.com/unix/uchmod.htm">Linux chmod Command</a>.</p>
+<p>Since this command is relatively complicated, more information can be obtained from <a class="reference external" href="https://www.computerhope.com/unix/uchmod.htm">Linux chmod Command</a>.</p>
 </div>
 <ol class="arabic simple" start="14">
 <li><p><code class="docutils literal notranslate"><span class="pre">sudo</span></code> <strong>comand</strong></p></li>
 </ol>
-<p>O comando <code class="docutils literal notranslate"><span class="pre">sudo</span></code> permite que usuários comuns executem tarefas que exigem permissões de outro usuário, em geral o super usuário, para executar tarefas específicas dentro do sistema de maneira segura e controlável pelo administrador. Porém, não é muito aconselhável usá-lo diariamente porque pode ser que um erro aconteça se você fizer algo de errado. O nome é uma forma abreviada de se referir a <em>Substitute User Do</em> (<strong>fazer substituição do usuário</strong>) ou <em>Super User Do</em> (<strong>fazer como super usuário</strong>).</p>
-<p>Geralmente, o comando <code class="docutils literal notranslate"><span class="pre">sudo</span></code> é executado na forma:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">sudo</span> <span class="p">[</span><span class="o">-</span><span class="n">u</span> <span class="n">usuário</span><span class="p">]</span> <span class="o">&lt;</span><span class="n">comando</span><span class="o">&gt;</span>
+<p>The <code class="docutils literal notranslate"><span class="pre">sudo</span></code> command allows ordinary users to perform tasks that require permissions from another user, usually the super user, to perform specific tasks within the system in a safe and controllable manner by the administrator. However, it is not very advisable to use it on a daily basis because it may be an error if you do something wrong. The name is an abbreviated way of referring to &quot;Substitute User Do&quot; or &quot;Super User Do&quot;.</p>
+<p>Generally, the command <code class="docutils literal notranslate"><span class="pre">sudo</span></code> is executed in the form:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">sudo</span> <span class="p">[</span><span class="o">-</span><span class="n">u</span> <span class="n">user</span><span class="p">]</span> <span class="o">&lt;</span><span class="n">command</span><span class="o">&gt;</span>
 </pre></div>
 </div>
-<p>Onde &lt;comando&gt; é o comando que deseja executar. A opção [-u usuário] serve para especificar qual usuário deve ser utilizado para executar o comando, se omitida, o comando <code class="docutils literal notranslate"><span class="pre">sudo</span></code> assume o usuário root e pede a senha de login para confirmar.</p>
+<p>Where &lt;command&gt; is the command you want to execute. The [-u user] option is used to specify which user should be used to execute the command, if omitted, the command <code class="docutils literal notranslate"><span class="pre">sudo</span></code> assumes the root user and asks for the login password to confirm.</p>
 </div>
-<div class="section" id="explorando-os-arquivos-do-sistema">
-<h2>Explorando os Arquivos do Sistema<a class="headerlink" href="#explorando-os-arquivos-do-sistema" title="Permalink to this headline">¶</a></h2>
-<p>Passadas essas informações e estes comandos básicos, já somos capazes de explorar os arquivos do sistema. Portanto permita-nos migrar para o primeiro diretório do sistema executando &quot;cd ..&quot; duas vezes. E em seguida executar o comando &quot;ls -la&quot; para que possamos visualizar as pastas do sistema. Se tudo for executado como explicado devemos obter algo como mostrado na figura a seguir.</p>
+<div class="section" id="exploring-the-system-files">
+<h2>Exploring the System Files<a class="headerlink" href="#exploring-the-system-files" title="Permalink to this headline">¶</a></h2>
+<p>Once this information and basic commands are passed, we are able to explore the system files. Therefore, we will migrate to the first directory of the system by running <code class="docutils literal notranslate"><span class="pre">cd</span> <span class="pre">..</span></code> twice. And then run the command <code class="docutils literal notranslate"><span class="pre">ls</span> <span class="pre">-la</span></code> so that we can view the system folders. If everything is done as explained we should get something as shown in the following figure.</p>
 <div class="figure align-center">
 <img alt="../../../_images/explore-ls.png" src="../../../_images/explore-ls.png" />
 </div>
-<p>Dos vários diretórios presentes na figura destacam-se os diretórios &quot;<strong>/bin</strong>&quot;, &quot;<strong>/boot</strong>&quot;, &quot;<strong>/dev</strong>&quot;, &quot;<strong>/lib</strong>&quot; e &quot;<strong>/sys</strong>&quot;.</p>
-<p>O diretório &quot;<strong>/bin</strong>&quot; é aonde ficam armazenados os binários dos comandos essenciais do Linux, como os comandos apresentados anteriormente, logo caso se faça necessário acrescentar ao microprocessador mais algum software que se faça necessário ele deve ser adicionado a esta pasta para que possa ser encontrado pelo sistema operacional quando requisitado.</p>
-<p>O diretório &quot;<strong>/boot</strong>&quot; já foi utilizado neste trabalho e é o local aonde devem ser armazenados os bootloaders e outros programas que fazem parte da inicialização do sistema.</p>
-<p>O diretório &quot;<strong>/dev</strong>&quot; é o diretório onde ficam armazenados os arquivos de dispositivos do sistema. Arquivo de dispositivo é uma maneira que o sistema Linux utiliza para gerar uma interface de comunicação com drivers de dispositivos. Ele será muito utilizado mais para a frente durante a comunicação serial, por exemplo.</p>
-<p>O diretório &quot;<strong>/lib</strong>&quot; é o diretório que contém as bibliotecas essenciais para os binários contidos no diretório &quot;/bin&quot;, assim caso seja necessário instalação de um novo software provavelmente também precisaremos adicionar alguma biblioteca a este diretório.</p>
-<p>Por último, o diretório &quot;<strong>/sys</strong>&quot; é o diretório que contém informações de dispositivos e drivers. Está pasta será muito utilizado caso seja necessário utilizar funções como <em>general purpose input/output</em> (<strong>GPIO</strong>), <strong>I2C</strong> e <em>direct memory access</em> (<strong>DMA</strong>).</p>
-<div class="section" id="referencias">
-<h3>Referências<a class="headerlink" href="#referencias" title="Permalink to this headline">¶</a></h3>
-<blockquote>
-<div><ul class="simple">
+<p>Of the various directories present in the figure, the directories &quot;<strong>/bin</strong>&quot;, &quot;<strong>/boot</strong>&quot;, &quot;<strong>/dev</strong>&quot;, &quot;<strong>/lib</strong>&quot; and &quot;<strong>stand out/sys</strong>&quot;.</p>
+<p>The directory &quot;<strong>/bin</strong>&quot; is where the binaries of essential Linux commands are stored, such as the commands presented previously, so if it becomes necessary to add any more software to the microprocessor that is necessary, it must be added to this folder so that it can be found by the operating system when requested.</p>
+<p>The directory &quot;<strong>/boot</strong>&quot; has already been used in this work and is the place where the bootloaders and other programs that are part of the system boot must be stored.</p>
+<p>The &quot;<strong>/dev</strong>&quot; directory is the directory where system device files are stored. Device file is a way that the Linux system uses to generate a communication interface with device drivers. It will be used a lot later on during serial communication, for example.</p>
+<p>The &quot;<strong>/lib</strong>&quot; directory is the directory that contains the essential libraries for the binaries contained in the &quot;/bin&quot; directory, so if new software installation is necessary, we will probably also need to add some library to this directory.</p>
+<p>Finally, the &quot;<strong>/sys</strong>&quot; directory is the directory that contains device and driver information. This folder will be used a lot if it is necessary to use functions such as General Purpose Input/Output (<strong>GPIO</strong>), <strong>I2C</strong> and Direct Memory Access (<strong>DMA</strong>).</p>
+<div class="section" id="references">
+<h3>References<a class="headerlink" href="#references" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
 <li><p>PITA, H. C. Desenvolvimento de sistema de comunicação multiplataforma para veículos aéreos de asa fixa. Faculdade de Tecnologia, Universidade de Brasília, 2018.</p></li>
+<li><p><a class="reference external" href="https://www.man7.org/linux/man-pages/index.html">Linux man pages online</a> - man7.org</p></li>
+<li><p><a class="reference external" href="https://www.hostinger.com.br/tutoriais/comandos-linux">30 Comandos Linux Que Todo Usuário Deve Conhecer</a> - hostinger.com.br</p></li>
 </ul>
-</div></blockquote>
 </div>
 </div>
 </div>
