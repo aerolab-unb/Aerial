@@ -135,7 +135,7 @@ We can now run the command ``make <code_name>`` to create an executable binary f
 
 .. O comando "make" é na verdade a simplificação de uma extensa linha de comando que chama um compilador **arm-poky-Linux-gnueabi-gcc** e dá a ele os parâmetros contidos na pasta SDK. Tudo isso graças ao comando "source" utilizado anteriormente.
 
-.. Notte:: 
+.. Note:: 
     The ``make`` command is actually a simplification of an extensive command line that calls a **arm-poky-Linux-gnueabi-gcc** compiler and gives it the parameters contained in the SDK folder. All this thanks to the "source" command previously used.
 
 .. Uma vez obtido o executável do código basta copiá-lo para uma das pastas do cartão de memória transferi-lo para o Overo e executá-lo. Lembre-se que o diretório principal é o diretório ``/home/root/``, então se o arquivo for colocado dentro deste diretório será bem fácil encontra-lo.
