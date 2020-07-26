@@ -1,34 +1,46 @@
-Registradores
-=============
+Registers
+=========
 
 .. Warning::
     Este tópico precisa ser testado e reeditado.
 
-Seguindo os procedimentos das seções anteriores somos capazes de iniciar o sistema e gerar programas a serem executados pelo sistema operacional. O próximo passo é, portanto, controlar os sinais que podem ser enviados a outros dispositivos pelo computador embarcado para estabelecer a comunicação entre os dispositivos.
+.. Seguindo os procedimentos das seções anteriores somos capazes de iniciar o sistema e gerar programas a serem executados pelo sistema operacional. O próximo passo é, portanto, controlar os sinais que podem ser enviados a outros dispositivos pelo computador embarcado para estabelecer a comunicação entre os dispositivos.
 
-A comunicação entre dispositivos é feita pela alteração dos níveis de tensão dos pinos do computador embarcado. Esses pinos estão, de uma maneira resumida, conectados a **espaços de memória do sistema** e quando alteramos o bit armazenado neste espaço de memória alteramos também o nível de tensão do pino, permitindo a codificação de uma mensagem e sua transmissão a outro dispositivo.
+Following the procedures of the previous sections we are able to start the system and generate programs to be executed by the operating system. The next step, therefore, is to control the signals that can be sent to other devices by the embedded computer to establish communication between the devices.
 
-Posteriormente, a comunicação entre dispositivos será mais bem discutida, mas neste momento o que mais nos importa são os "**espaços de memória**" citados no parágrafo anterior. Esses espaços de memória são na verdade circuitos digitais voláteis que são capazes de armazenar níveis de tensão, o acesso ao conteúdo desses espaços de memória é extremamente rápido e a estes espaços de memória é dado o nome de **registrador**. Os registradores estão no topo da hierarquia de memória, sendo assim o tipo de memória mais rápida de uma unidade central de processamento.
+.. A comunicação entre dispositivos é feita pela alteração dos níveis de tensão dos pinos do computador embarcado. Esses pinos estão, de uma maneira resumida, conectados a **espaços de memória do sistema** e quando alteramos o bit armazenado neste espaço de memória alteramos também o nível de tensão do pino, permitindo a codificação de uma mensagem e sua transmissão a outro dispositivo.
 
-Dessa forma, para que possamos implementar a comunicação entre dois dispositivos, um modem e o computador embarcado por exemplo, precisamos, primeiro, executar uma tarefa mais simples de alterar os níveis de tensão de um pino. Esse processo de alterar os níveis de tensão de um pino possui diversas aplicações que vão desde o simples controle de **ON/OFF** de um LED até comunicação serial entre dispositivos. Aos pinos com esse propósito é dado o nome de `General Purpose Input/Output`_ (**GPIO**).
+Communication between devices is done by changing the voltage levels of the embedded computer's pins. These pins are, in summary fashion, connected to **system memory space** and, when we change the bit stored in this memory space, also changed the pin voltage level, allowing the encoding of a message and its transmission to another device.
+
+.. Posteriormente, a comunicação entre dispositivos será mais discutida, mas neste momento o que mais nos importa são os "**espaços de memória**" citados no parágrafo anterior. Esses espaços de memória são na verdade circuitos digitais voláteis que são capazes de armazenar níveis de tensão, o acesso ao conteúdo desses espaços de memória é extremamente rápido e a estes espaços de memória é dado o nome de **registrador**. Os registradores estão no topo da hierarquia de memória, sendo assim o tipo de memória mais rápida de uma unidade central de processamento.
+
+Subsequently, the communication between devices will be more discussed, but at this moment what most matters to us are the **memory spaces**, mentioned in the previous paragraph. These memory spaces are actually volatile digital circuits that are capable os stoting voltage levels, the acess to the contents of these memory spaces is extremely fast and these memory spaces are called **register**. **Registers** are at the top of the memory hierarchy, making them the fastest type of memory in a central processing unit.
+
+.. Dessa forma, para que possamos implementar a comunicação entre dois dispositivos, um modem e o computador embarcado por exemplo, precisamos, primeiro, executar uma tarefa mais simples de alterar os níveis de tensão de um pino. Esse processo de alterar os níveis de tensão de um pino possui diversas aplicações que vão desde o simples controle de **ON/OFF** de um LED até comunicação serial entre dispositivos. Aos pinos com esse propósito é dado o nome de `General Purpose Input/Output`_ (**GPIO**).
+
+So, in order to implement communication between two devices, a modem and the embedded computer, for example, we first need to perform a simpler task of changing the voltage levels of a pin. This process of changing the voltage levels of a pin has several applications, ranging from simple ON / OFF control of an LED to serial communication between devices. Pins for this purpose are called `General Purpose Input/Output`_ (**GPIO**).
 
 .. _General Purpose Input/Output: https://en.wikipedia.org/wiki/General-purpose_input/output
 
-*General Purpose Input/Output* (**GPIO**) são, basicamente, pinos de  comunicação de entrada e saída de sinais digitais, de um circuito integrado ou placa de circuito eletrônico, sem finalidade pré-definida, podendo assim ter funções definidas pelo projetista ou usuário para prover uma interface entre outros dispositivos (periféricos, modens, microcontroladores, microprocessadores etc.).
+.. **General Purpose Input/Output** (**GPIO**) são, basicamente, pinos de  comunicação de entrada e saída de sinais digitais, de um circuito integrado ou placa de circuito eletrônico, sem finalidade pré-definida, podendo assim ter funções definidas pelo projetista ou usuário para prover uma interface entre outros dispositivos (periféricos, modens, microcontroladores, microprocessadores etc.).
 
-Como comentado anteriormente, estamos utilizando o computador embarcado Overo junto a uma placa de expansão Tobi. Uma das funções desta placa é fornecer acesso ao usuário aos pinos do computador embarcado, portanto os pinos do computador embarcado que podemos acessar fisicamente são os pinos da placa de expansão Tobi. Na figura abaixo podemos visualizar um diagrama que contém, de maneira resumida, quais funções ou pinos do computador embarcado estão conectadas a cada pino da placa de expansão Tobi. Observe que alguns desses pinos possuem mais de uma função.
+**General Purpose Input/Output** (**GPIO**) are, basically, communication pins for input and output of digital signals, of an integrated circuit or electronic circuit board, with no pre-defined purpose, thus being able to have functions defined by the designer or user to provide an interface between other devices (peripherals, modems, microcontrollers, microprocessors, etc.).
+
+.. Como comentado anteriormente, estamos utilizando o computador embarcado Overo junto a uma placa de expansão Tobi. Uma das funções desta placa é fornecer acesso ao usuário aos pinos do computador embarcado, portanto os pinos do computador embarcado que podemos acessar fisicamente são os pinos da placa de expansão Tobi. Na figura abaixo podemos visualizar um diagrama que contém, de maneira resumida, quais funções ou pinos do computador embarcado estão conectadas a cada pino da placa de expansão Tobi. Observe que alguns desses pinos possuem mais de uma função.
+
+As previously mentioned, we are using the Overo embedded computer next to a Tobi expansion board. One of the functions of Tobi board is to provide user access to the pins of the embedded computer, so the pins of the embedded computer that we can access physically are the pins of the Tobi expansion board. In the figure below we can see a diagram that contains, in summary form, which functions or pins of the embedded computer are connected to each pin of the Tobi expansion board. Note that some of these pins have more than one function.
 
 .. figure:: /img/Aerial/Pinos_Tobi.png
     :align: center
     
     
-    Diagrama dos pinos da placa de expansão Tobi.
+    Tobi expansion board pin diagram.
 
 
-Controle do GPIO via terminal
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+GPIO control via terminal
+~~~~~~~~~~~~~~~~~~~~~~~~~
 
-A maneira mais simples, porém menos eficiente de se controlar o GPIO está descrita no próprio site da fabricante, disponível em `Control Overo GPIO`_ . Lá eles indicam controlar o GPIO pelo próprio terminal do sistema Linux através de um sistema *sysfs*. O sistema *sysfs* é um sistema de “arquivos“ oferecidos pelo núcleo do Linux para o controle e comunicação com dispositivos e drivers através do terminal do Linux.
+A maneira mais simples, porém menos eficiente de se controlar o GPIO está descrita no próprio site da fabricante, disponível em `Control Overo GPIO`_. Lá eles indicam controlar o GPIO pelo próprio terminal do sistema Linux através de um sistema *sysfs*. O sistema *sysfs* é um sistema de “arquivos“ oferecidos pelo núcleo do Linux para o controle e comunicação com dispositivos e drivers através do terminal do Linux.
 
 .. _Control Overo GPIO: https://www.gumstix.com/support/faq/overo-gpio/#cross-compilation
 
@@ -36,8 +48,6 @@ Se, por exemplo, desejarmos controlar a saída do **GPIO10** através deste mét
 
 .. Tip::
     A função de configuração de interrupção também é acessível pelo terminal.
-
-.. Este processo pode ser feito tanto pelo terminal do usuário com o comando "echo", por exemplo "echo 10 > /sys/class/gpio/export" e também podemos fazer um programa que abra esse arquivo e escreve nela por nós. 
 
 Este processo pode ser feito tanto pelo terminal do usuário com o comando ``echo``, quanto por um programa que abra esse arquivo e escreve nela por nós. Por exemplo, para controlar o **GPIO146** através do terminal podemos executar os seguintes comandos (exemplo utilizado no site da Gumstix):
 
