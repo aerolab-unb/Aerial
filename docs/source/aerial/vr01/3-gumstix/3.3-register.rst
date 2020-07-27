@@ -126,7 +126,7 @@ Another approach, using the same method, is to use code similar to the code show
 
 .. Para testar o código, o pino 18 (pino do **GPIO** 10) foi conectado a um osciloscópio com o objetivo de medir o período da forma de onda. O resultado dessa medida pode ser visto na figura abaixo, nela podemos ver a amplitude da forma de onda de 1,96 V, frequência de 33,76 kHz e período de 29,62 microssegundos. Para a maioria das aplicações podemos utilizar esse método.
 
-To test the code, pin 18 (** GPIO ** pin 10) was connected to an oscilloscope in order to measure the period of the waveform. The result of this measurement can be seen in the figure below, in which we can see the amplitude of the wave form of 1.96 V, frequency of 33.76 kHz and period of 29.62 microseconds. For most applications we can use this method.
+To test the code, pin 18 (**GPIO** pin 10) was connected to an oscilloscope in order to measure the period of the waveform. The result of this measurement can be seen in the figure below, in which we can see the amplitude of the wave form of 1.96 V, frequency of 33.76 kHz and period of 29.62 microseconds. For most applications we can use this method.
 
 .. trocar esta imagem
 
@@ -142,7 +142,7 @@ Another way to control the GPIO is to write directly to the system registers. Al
 
 .. Para utilizar este método precisamos, primeiro, definir em quais registradores devemos escrever e o que devemos escrever neles. Essa informação só pode ser encontrada no :download:`Technical Reference Manual (TRM) <TRM_DM3730.pdf>` do processador DM3730, disponivel no site da `Texas Instruments`_.
 
-To use this method, we first need to define which registers to write to and what to write to. This information can only be found at: download: `Technical Reference Manual (TRM) <TRM_DM3730.pdf>` of the DM3730 processor, available on the `Texas Instruments`_ website.
+To use this method, we first need to define which registers to write to and what to write to. This information can only be found at :download:`Technical Reference Manual (TRM) <TRM_DM3730.pdf>` of the DM3730 processor, available on the `Texas Instruments`_ website.
 
 .. _Texas Instruments: https://www.ti.com/
 
@@ -205,7 +205,12 @@ However, to have access to the physical memory of the system, we need to ask the
 
 Let's assume that we want to map the physical memory space from **0x45000000** to **0x45001000** and for that we decided to use the ``mmap ()`` function. Therefore, we call the function as follows, for example, ``mmap(NULL,0x1000,PROT_WRITE || PROT_READ,MAP_SHARED,fd,0x45000000)``, by executing this the function will return a pointer that points to a virtual memory address addressed to the physical memory address **0x45000000**. Where, to access the physical memory of the device, "**fd**" is the **file descriptor** directed to "/dev/mem".
 
+<<<<<<< HEAD
 .. Com essas informações, temos tudo o que é necessário para implementar testes acerca deste modo de operação. A seguir temos um código que aplica o método descrito nesta seção para alternar o nível de tensão do pino "186". Esse código foi implementado para se realizar o mesmo teste da seção "Controle do GPIO via terminal".
+=======
+.. Note::
+    O código abaixo foi obtido no `Fórum de Discussões da Gumstix`_ e foram realizadas pequenas alterações para evitar o excesso de informação e facilitar sua compreensão.
+>>>>>>> 1b88f7ee1b8b2105684ab22d2ad81cfc56325e2b
 
 With this information, we have everything that is necessary to implement tests on this operating mode. Below is a code that applies the method described in this section to toggle the voltage level of pin **186**. This code was implemented to perform the same test as the section "GPIO control via terminal".
 
