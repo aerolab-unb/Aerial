@@ -201,14 +201,20 @@ However, to have access to the physical memory of the system, we need to ask the
 
 .. _mmap(2) — Linux manual page: https://man7.org/linux/man-pages/man2/mmap.2.html
 
-Vamos supor que queremos mapear o espaço de memória físico de "**0x45000000**" até "**0x45001000**" e para isso decidimos usar a função ``mmap()``. Portanto, chamamos a função da seguinte maneira, por exemplo, ``mmap(NULL,0x1000,PROT_WRITE || PROT_READ,MAP_SHARED,fd,0x45000000)``, executando isso a função irá retornar um ponteiro que aponta para um endereço de memória virtual endereçado no endereço de memória física "**0x45000000**". Em que, para ter acesso à memória física do dispositivo, "**fd**" é o *file descriptor* direcionado para "/dev/mem". 
+.. Vamos supor que queremos mapear o espaço de memória físico de "**0x45000000**" até "**0x45001000**" e para isso decidimos usar a função ``mmap()``. Portanto, chamamos a função da seguinte maneira, por exemplo, ``mmap(NULL,0x1000,PROT_WRITE || PROT_READ,MAP_SHARED,fd,0x45000000)``, executando isso a função irá retornar um ponteiro que aponta para um endereço de memória virtual endereçado no endereço de memória física "**0x45000000**". Em que, para ter acesso à memória física do dispositivo, "**fd**" é o *file descriptor* direcionado para "/dev/mem". 
 
-Com essas informações, temos tudo o que é necessário para implementar testes acerca deste modo de operação. A seguir temos um código que aplica o método descrito nesta seção para alternar o nível de tensão do pino "186". Esse código foi implementado para se realizar o mesmo teste da seção "Controle do GPIO via terminal".
+Let's assume that we want to map the physical memory space from **0x45000000** to **0x45001000** and for that we decided to use the ``mmap ()`` function. Therefore, we call the function as follows, for example, ``mmap(NULL,0x1000,PROT_WRITE || PROT_READ,MAP_SHARED,fd,0x45000000)``, by executing this the function will return a pointer that points to a virtual memory address addressed to the physical memory address **0x45000000**. Where, to access the physical memory of the device, "**fd**" is the **file descriptor** directed to "/dev/mem".
 
-..Note::
-    O código abaixo foi obtido no `Fórum de Discussões da Gumstix`_ e foram realizadas pequenas alterações para evitar o excesso de informação e facilitar sua compreensão.
+.. Com essas informações, temos tudo o que é necessário para implementar testes acerca deste modo de operação. A seguir temos um código que aplica o método descrito nesta seção para alternar o nível de tensão do pino "186". Esse código foi implementado para se realizar o mesmo teste da seção "Controle do GPIO via terminal".
 
-.. _Fórum de Discussões da Gumstix: http://gumstix.8.x6.nabble.com/Direct-register-access-control-of-GPIO-ARM-interface-on-Overo-Water-TOBI-SOLVED-td4965117.html
+With this information, we have everything that is necessary to implement tests on this operating mode. Below is a code that applies the method described in this section to toggle the voltage level of pin **186**. This code was implemented to perform the same test as the section "GPIO control via terminal".
+
+.. NoteO código abaixo foi obtido no `Fórum de Discussões da Gumstix`_ e foram realizadas pequenas alterações para evitar o excesso de informação e facilitar sua compreensão.
+
+.. Note::
+    The code below was obtained from the `Gumstix Discussion Forum`_ and minor changes were made to avoid excessive information and facilitate its understanding.
+
+.. _Gumstix Discussion Forum: http://gumstix.8.x6.nabble.com/Direct-register-access-control-of-GPIO-ARM-interface-on-Overo-Water-TOBI-SOLVED-td4965117.html
 
 .. Todos os códigos precisam ser testados no laboratório e bugs devem ser corrigidos
 .. Essa edição é temporaria
@@ -292,17 +298,21 @@ Com essas informações, temos tudo o que é necessário para implementar testes
     }
 
 
-:download:`Download do código 2 comentado <GPIO/t2-fusao.c>`
+:download:`Downloaded commented code 2 <GPIO/t2-fusao.c>`
 
-O código acima foi testado da mesma maneira que o código apresentado na seção anterior. Já na figura a seguir é possível ver o resultado deste teste. Observe que dessa vez o tempo obtido foi 720,3 nano segundos, ou seja, aproximadamente 42 vezes mais rápido que o resultado do outro método. Além disso, podemos observar que a forma de onda não é mais um sinal retangular exato, a presença de um efeito capacitivo retardando o processo é evidente, portanto, é possível que essa seja a velocidade máxima em que o sinal de um pino pode ser alterado.
+.. O código acima foi testado da mesma maneira que o código apresentado na seção anterior. Já na figura a seguir é possível ver o resultado deste teste. Observe que dessa vez o tempo obtido foi 720,3 nano segundos, ou seja, aproximadamente 42 vezes mais rápido que o resultado do outro método. Além disso, podemos observar que a forma de onda não é mais um sinal retangular exato, a presença de um efeito capacitivo retardando o processo é evidente, portanto, é possível que essa seja a velocidade máxima em que o sinal de um pino pode ser alterado.
+
+The code above was tested in the same way as the code presented in the previous section. In the following figure, you can see the result of this test. Note that the time obtained was 720.3 nanoseconds, that is, approximately 42 times faster than the result of the other method. Moreover, we can observe that the waveform is no longer an exact rectangular signal, the presence of a capacitive effect slowing the process is evident, therefore, it is possible that this is the maximum speed at which the signal of a pin can be changed .
 
 .. adicionar imagem
 
-Muito dificilmente alguma aplicação envolvendo GPIO não será satisfeita por algum dos métodos aqui apresentados.
+.. Muito dificilmente alguma aplicação envolvendo GPIO não será satisfeita por algum dos métodos aqui apresentados.
 
+Very hardly any application involving GPIO will not be satisfied by any of the methods presented here.
 
-Problemas de escrita em registradores
--------------------------------------
+Problems writing to registers
+-----------------------------
+
 .. verificar se este problema ocorre com qualquer registrador
 
 Para finalizar este último tópico é necessário destacar alguns problemas recentemente encontrados envolvendo escrita em registradores.
@@ -336,7 +346,7 @@ Dessa forma, foi possível apenas alterar o clock do bloco do **GPIO_1**, como p
 .. figure:: /img/Aerial/register-clock.png
     :align: center
 
-Não sabemos por quais motivos esses fenômenos estão ocorrendo com os blocos de 2 a 6, porém suspeitasse que alguns processos do sistema operacional estejam impedindo que o clock de tais blocos seja alterados, provavelmente por algum circuito interno ou operação depender de tais valores pré-definidos ou até por alguma restrição no consumo de energia. 
+Não sabemos por quais motivos esses fenômenos estão ocorrendo com os blocos de 2 a 6, porém suspeitasse que alguns processos do sistema operacional estejam impedindo que o clock de tais blocos seja alterados, provavelmente por algum circuito interno ou operação depende de tais valores pré-definidos ou até por alguma restrição no consumo de energia. 
 
 
 
@@ -348,7 +358,6 @@ Referências
 * TEXAS INSTRUMENTS. AM/DM37x Multimedia Device Technical Reference Manual. 12500 TI Blvd, Dallas, TX 75243, EUA, 2012. Version R. Disponível em: `ti.com`_.
 
 * Direct register access control of GPIO ARM interface on Overo Water +TOBI - `Gumstix Discussion Forum`_ 
-
 
 .. _Gumstix Discussion Forum: http://gumstix.8.x6.nabble.com/Direct-register-access-control-of-GPIO-ARM-interface-on-Overo-Water-TOBI-SOLVED-td4965117.html
 
