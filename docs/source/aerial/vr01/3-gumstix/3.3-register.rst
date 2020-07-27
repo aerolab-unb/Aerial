@@ -205,12 +205,7 @@ However, to have access to the physical memory of the system, we need to ask the
 
 Let's assume that we want to map the physical memory space from **0x45000000** to **0x45001000** and for that we decided to use the ``mmap ()`` function. Therefore, we call the function as follows, for example, ``mmap(NULL,0x1000,PROT_WRITE || PROT_READ,MAP_SHARED,fd,0x45000000)``, by executing this the function will return a pointer that points to a virtual memory address addressed to the physical memory address **0x45000000**. Where, to access the physical memory of the device, "**fd**" is the **file descriptor** directed to "/dev/mem".
 
-<<<<<<< HEAD
 .. Com essas informações, temos tudo o que é necessário para implementar testes acerca deste modo de operação. A seguir temos um código que aplica o método descrito nesta seção para alternar o nível de tensão do pino "186". Esse código foi implementado para se realizar o mesmo teste da seção "Controle do GPIO via terminal".
-=======
-.. Note::
-    O código abaixo foi obtido no `Fórum de Discussões da Gumstix`_ e foram realizadas pequenas alterações para evitar o excesso de informação e facilitar sua compreensão.
->>>>>>> 1b88f7ee1b8b2105684ab22d2ad81cfc56325e2b
 
 With this information, we have everything that is necessary to implement tests on this operating mode. Below is a code that applies the method described in this section to toggle the voltage level of pin **186**. This code was implemented to perform the same test as the section "GPIO control via terminal".
 
