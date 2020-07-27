@@ -181,8 +181,8 @@ A figura a seguir apresenta o resultado do teste dos códigos apresentados. Ness
 
 .. figura
 
-Referências
------------
+References
+----------
 
 * PITA, H. C. Desenvolvimento de sistema de comunicação multiplataforma para veículos aéreos de asa fixa. Faculdade de Tecnologia, Universidade de Brasília, 2018.
 * `Universal asynchronous receiver-transmitter`_ - wikipedia.org
