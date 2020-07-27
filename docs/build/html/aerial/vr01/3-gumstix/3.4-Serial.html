@@ -193,7 +193,7 @@
 </div>
 <p>Podemos analisar a situação da comunicação a nível de bit. Por exemplo, para uma comunicação UART do tipo &quot;8N1&quot; (8 bits de dados, 0 bits de paridade e 1 bit de parada) teremos o canal em estado <em>IDLE</em>, que significa &quot;não operando&quot;, representado pelo nível de tensão estático em alto. Logo, quando pretende-se iniciar a comunicação é enviado um pulso de nível baixo e em seguida são enviados os oito bits de dados que será acompanhado de um bit de parada em estado alto.</p>
 <p>É importante destacar que a função do bit de parada é realizar uma pausa na transmissão para algum processamento interno dos dispositivos, não é necessário, portanto, nenhum tempo adicional entre os dados transmitidos.</p>
-<p>Como essa é uma comunicação assíncrona, é essencial que a velocidade da comunicação seja pré-determinada. Essa velocidade é geralmente dada em Baud rate e, em nosso caso, 30 será essencialmente o tempo de duração de cada bit.</p>
+<p>Como essa é uma comunicação assíncrona, é essencial que a velocidade da comunicação seja pré-determinada. Essa velocidade é geralmente dada em Baud rate e, em nosso caso, 30 <span class="math notranslate nohighlight">\({\mu}s\)</span> será essencialmente o tempo de duração de cada bit.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>O termo &quot;Baud rate&quot; é utilizado como medida de velocidade de transmissão de dados entre dispositivos. Um baud é uma medida de velocidade de sinalização e representa o número de mudanças na linha de transmissão (seja em frequência, amplitude, fase etc...) ou eventos por segundo.</p>
