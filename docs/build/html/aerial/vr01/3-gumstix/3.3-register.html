@@ -395,16 +395,16 @@
 <div class="figure align-center">
 <img alt="../../../_images/GPIO_CTRL.png" src="../../../_images/GPIO_CTRL.png" />
 </div>
-<p>Porém, logo após a execução do comando é realizado um procedimento de leitura que garante que tudo foi escrito no registrador como o esperado. No entanto, o mesmo comando, executado instantes depois no modo de leitura, retorna um valor nulo no registrador. No caso o valor existente no registrador antes da modificação era nulo, porém o registrador sempre retorna ao valor anteriormente armazenado. Vale ressaltar que este problema não ocorre para o método de controle do GPIO via terminal, este método opera até que receba uma ordem de parada do usuário.</p>
-<p>O segundo problema encontrado ocorre quando tentamos alterar o valor dos registradores <strong>0x49052030</strong> e <strong>0x49054030</strong>, responsáveis por controlar o clock de todo o bloco do <strong>GPIO_3</strong> e do <strong>GPIO_4</strong>, respectivamente. Nesses registradores em específico, ao tentar executar o comando <code class="docutils literal notranslate"><span class="pre">devmem2</span></code> para alterar o clock de um determinado bloco de GPIO ou apenas realizar uma leitura, o sistema retorna o erro &quot;<em>bus error</em>&quot; como apresentado na figura abaixo, onde executamos o mesmo comando no registrador <strong>0x</strong>.</p>
+<p>However, immediately after executing the command, a reading procedure is performed that ensures that everything was written in the register as expected. Though, the same command, executed moments later in read mode, always returns to the previously stored value, the value existing in the register before the modification. It's worth mentioning that this problem doesn't occur for the GPIO control method via terminal, this method operates until it receives a stop order from the user.</p>
+<p>The second problem found occurs when we try to change the value of the registers <strong>0x49052030</strong> and <strong>0x49054030</strong>, responsible for controlling the clock of the entire block of <strong>GPIO_3</strong> and <strong>GPIO_4</strong>, respectively. In these specific registers, when trying to execute the command <code class="docutils literal notranslate"><span class="pre">devmem2</span></code> to change the clock of a given GPIO block or just perform a reading, the system returns the error &quot;<em>bus error</em>&quot; as shown in the figure below, where we execute the same command in register <strong>0x49054030</strong>.</p>
 <div class="figure align-center">
 <img alt="../../../_images/register-bus_erro.png" src="../../../_images/register-bus_erro.png" />
 </div>
-<p>Dessa forma, foi possível apenas alterar o clock do bloco do <strong>GPIO_1</strong>, como pode ser visto na imagem abaixo.</p>
+<p>Thus, it was only possible to change the <strong>GPIO_1</strong> block clock, as can be seen in the image below.</p>
 <div class="figure align-center">
 <img alt="../../../_images/register-clock.png" src="../../../_images/register-clock.png" />
 </div>
-<p>Não sabemos por quais motivos esses fenômenos estão ocorrendo com os blocos de 2 a 6, porém suspeitasse que alguns processos do sistema operacional estejam impedindo que o clock de tais blocos seja alterados, provavelmente por algum circuito interno ou operação depende de tais valores pré-definidos ou até por alguma restrição no consumo de energia.</p>
+<p>We do not know why these phenomena are occurring with blocks 2 to 6, but suspect that some processes of the operating system are preventing the clock of such blocks from being changed, probably by some internal circuit or operation depends on such pre-defined values or even some restriction on energy consumption.</p>
 </div>
 <div class="section" id="references">
 <h3>References<a class="headerlink" href="#references" title="Permalink to this headline">¶</a></h3>
