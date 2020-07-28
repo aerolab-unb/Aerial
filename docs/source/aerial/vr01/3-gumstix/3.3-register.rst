@@ -366,7 +366,7 @@ Thus, it was only possible to change the **GPIO_1** block clock, as can be seen 
 
 We do not know why these phenomena are occurring with blocks 2 to 6, but suspect that some processes of the operating system are preventing the clock of such blocks from being changed, probably by some internal circuit or operation depends on such pre-defined values or even some restriction on energy consumption.
 
-
+ 
 References
 ----------
 
