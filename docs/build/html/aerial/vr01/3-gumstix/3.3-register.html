@@ -189,9 +189,9 @@
 <p>So, in order to implement communication between two devices, a modem and the embedded computer, for example, we first need to perform a simpler task of changing the voltage levels of a pin. This process of changing the voltage levels of a pin has several applications, ranging from simple ON / OFF control of an LED to serial communication between devices. Pins for this purpose are called <a class="reference external" href="https://en.wikipedia.org/wiki/General-purpose_input/output">General Purpose Input/Output</a> (<strong>GPIO</strong>).</p>
 <p><strong>General Purpose Input/Output</strong> (<strong>GPIO</strong>) are, basically, communication pins for input and output of digital signals, of an integrated circuit or electronic circuit board, with no pre-defined purpose, thus being able to have functions defined by the designer or user to provide an interface between other devices (peripherals, modems, microcontrollers, microprocessors, etc.).</p>
 <p>As previously mentioned, we are using the Overo embedded computer next to a Tobi expansion board. One of the functions of Tobi board is to provide user access to the pins of the embedded computer, so the pins of the embedded computer that we can access physically are the pins of the Tobi expansion board. In the figure below we can see a diagram that contains, in summary form, which functions or pins of the embedded computer are connected to each pin of the Tobi expansion board. Note that some of these pins have more than one function.</p>
-<div class="figure align-center" id="id1">
+<div class="figure align-center" id="id2">
 <img alt="../../../_images/Pinos_Tobi.png" src="../../../_images/Pinos_Tobi.png" />
-<p class="caption"><span class="caption-text">Tobi expansion board pin diagram.</span><a class="headerlink" href="#id1" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-text">Tobi expansion board pin diagram.</span><a class="headerlink" href="#id2" title="Permalink to this image">¶</a></p>
 </div>
 <div class="section" id="gpio-control-via-terminal">
 <h2>GPIO control via terminal<a class="headerlink" href="#gpio-control-via-terminal" title="Permalink to this headline">¶</a></h2>
@@ -269,9 +269,9 @@
 <p>Another way to control the GPIO is to write directly to the system registers. Although the procedure is a little more complex, this is actually the most common and recommended way to perform this procedure, offering much faster results.</p>
 <p>To use this method, we first need to define which registers to write to and what to write to. This information can only be found at <a class="reference download internal" download="" href="../../../_downloads/478aee14d85d8b9ee0d031e35242bb99/TRM_DM3730.pdf"><code class="xref download docutils literal notranslate"><span class="pre">Technical</span> <span class="pre">Reference</span> <span class="pre">Manual</span> <span class="pre">(TRM)</span></code></a> of the DM3730 processor, available on the <a class="reference external" href="https://www.ti.com/">Texas Instruments</a> website.</p>
 <p>As explained in section <strong>25</strong> of the DM3730 processor TRM, starting on page 3477, the control interface combines six GPIO banks. Each GPIO module provides 32 pins, totaling 192 pins that can be used as input and/or output. In our case, only some of these 192 pins are physically accessible, as can be seen in the figure shown below. Each GPIO bank has 26 registers distributed from a base address, each register having a length of 32 bits or 4 bytes.</p>
-<div class="figure align-center" id="id2">
+<div class="figure align-center" id="id3">
 <img alt="../../../_images/interface-gpio.png" src="../../../_images/interface-gpio.png" />
-<p class="caption"><span class="caption-text">Diagram of the GPIO interface.</span><a class="headerlink" href="#id2" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-text">Diagram of the GPIO interface.</span><a class="headerlink" href="#id3" title="Permalink to this image">¶</a></p>
 </div>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
@@ -293,11 +293,11 @@
 <p class="admonition-title">Note</p>
 <p>Details on how this function works and its parameters can be found at <a class="reference external" href="https://man7.org/linux/man-pages/man2/mmap.2.html">mmap(2) — Linux manual page</a>.</p>
 </div>
-<p>Vamos supor que queremos mapear o espaço de memória físico de &quot;<strong>0x45000000</strong>&quot; até &quot;<strong>0x45001000</strong>&quot; e para isso decidimos usar a função <code class="docutils literal notranslate"><span class="pre">mmap()</span></code>. Portanto, chamamos a função da seguinte maneira, por exemplo, <code class="docutils literal notranslate"><span class="pre">mmap(NULL,0x1000,PROT_WRITE</span> <span class="pre">||</span> <span class="pre">PROT_READ,MAP_SHARED,fd,0x45000000)</span></code>, executando isso a função irá retornar um ponteiro que aponta para um endereço de memória virtual endereçado no endereço de memória física &quot;<strong>0x45000000</strong>&quot;. Em que, para ter acesso à memória física do dispositivo, &quot;<strong>fd</strong>&quot; é o <em>file descriptor</em> direcionado para &quot;/dev/mem&quot;.</p>
-<p>Com essas informações, temos tudo o que é necessário para implementar testes acerca deste modo de operação. A seguir temos um código que aplica o método descrito nesta seção para alternar o nível de tensão do pino &quot;186&quot;. Esse código foi implementado para se realizar o mesmo teste da seção &quot;Controle do GPIO via terminal&quot;.</p>
+<p>Let's assume that we want to map the physical memory space from <strong>0x45000000</strong> to <strong>0x45001000</strong> and for that we decided to use the <code class="docutils literal notranslate"><span class="pre">mmap</span> <span class="pre">()</span></code> function. Therefore, we call the function as follows, for example, <code class="docutils literal notranslate"><span class="pre">mmap(NULL,0x1000,PROT_WRITE</span> <span class="pre">||</span> <span class="pre">PROT_READ,MAP_SHARED,fd,0x45000000)</span></code>, by executing this the function will return a pointer that points to a virtual memory address addressed to the physical memory address <strong>0x45000000</strong>. Where, to access the physical memory of the device, &quot;<strong>fd</strong>&quot; is the <strong>file descriptor</strong> directed to &quot;/dev/mem&quot;.</p>
+<p>With this information, we have everything that is necessary to implement tests on this operating mode. Below is a code that applies the method described in this section to toggle the voltage level of pin <strong>186</strong>. This code was implemented to perform the same test as the section &quot;GPIO control via terminal&quot;.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>O código abaixo foi obtido no <a class="reference external" href="http://gumstix.8.x6.nabble.com/Direct-register-access-control-of-GPIO-ARM-interface-on-Overo-Water-TOBI-SOLVED-td4965117.html">Fórum de Discussões da Gumstix</a> e foram realizadas pequenas alterações para evitar o excesso de informação e facilitar sua compreensão.</p>
+<p>The code below was obtained from the <a class="reference external" href="http://gumstix.8.x6.nabble.com/Direct-register-access-control-of-GPIO-ARM-interface-on-Overo-Water-TOBI-SOLVED-td4965117.html">Gumstix Discussion Forum</a> and minor changes were made to avoid excessive information and facilitate its understanding.</p>
 </div>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">//</span> <span class="n">Local</span> <span class="n">includes</span> <span class="n">definition</span>
 <span class="c1">#include &lt;stdio.h&gt;    // for lprint instruction</span>
@@ -376,22 +376,22 @@
 <span class="p">}</span>
 </pre></div>
 </div>
-<p><a class="reference download internal" download="" href="../../../_downloads/b99690df20e7c56a3d7f1eb3eb9f091b/t2-fusao.c"><code class="xref download docutils literal notranslate"><span class="pre">Download</span> <span class="pre">do</span> <span class="pre">código</span> <span class="pre">2</span> <span class="pre">comentado</span></code></a></p>
-<p>O código acima foi testado da mesma maneira que o código apresentado na seção anterior. Já na figura a seguir é possível ver o resultado deste teste. Observe que dessa vez o tempo obtido foi 720,3 nano segundos, ou seja, aproximadamente 42 vezes mais rápido que o resultado do outro método. Além disso, podemos observar que a forma de onda não é mais um sinal retangular exato, a presença de um efeito capacitivo retardando o processo é evidente, portanto, é possível que essa seja a velocidade máxima em que o sinal de um pino pode ser alterado.</p>
-<p>Muito dificilmente alguma aplicação envolvendo GPIO não será satisfeita por algum dos métodos aqui apresentados.</p>
-<div class="section" id="problemas-de-escrita-em-registradores">
-<h3>Problemas de escrita em registradores<a class="headerlink" href="#problemas-de-escrita-em-registradores" title="Permalink to this headline">¶</a></h3>
-<p>Para finalizar este último tópico é necessário destacar alguns problemas recentemente encontrados envolvendo escrita em registradores.</p>
-<p>O primeiro problema encontrado ocorre sempre que tentamos alterar o valor dos registradores &quot;<strong>0x49050030</strong>&quot;, &quot;<strong>0x49056030</strong>&quot; e &quot;<strong>0x49058030</strong>&quot;, responsáveis por controlar o clock de todo o bloco do &quot;<strong>GPIO_2</strong>&quot;, &quot;<strong>GPIO_5</strong>&quot; e &quot;<strong>GPIO_6</strong>&quot;, respectivamente.</p>
+<p><a class="reference download internal" download="" href="../../../_downloads/b99690df20e7c56a3d7f1eb3eb9f091b/t2-fusao.c"><code class="xref download docutils literal notranslate"><span class="pre">Downloaded</span> <span class="pre">commented</span> <span class="pre">code</span> <span class="pre">2</span></code></a></p>
+<p>The code above was tested in the same way as the code presented in the previous section. In the following figure, you can see the result of this test. Note that the time obtained was 720.3 nanoseconds, that is, approximately 42 times faster than the result of the other method. Moreover, we can observe that the waveform is no longer an exact rectangular signal, the presence of a capacitive effect slowing the process is evident, therefore, it is possible that this is the maximum speed at which the signal of a pin can be changed .</p>
+<p>Very hardly any application involving GPIO will not be satisfied by any of the methods presented here.</p>
+<div class="section" id="problems-writing-to-registers">
+<h3>Problems writing to registers<a class="headerlink" href="#problems-writing-to-registers" title="Permalink to this headline">¶</a></h3>
+<p>To conclude this last topic, it is necessary to highlight some recently encountered problems involving writing in registers.</p>
+<p>The first problem encountered occurs whenever we try to change the value of registers &quot;<strong>0x49050030</strong>&quot;, &quot;<strong>0x49056030</strong>&quot; and &quot;<strong>0x49058030</strong>&quot;, responsible for controlling the clock of the entire block of &quot;<strong>GPIO_2</strong>&quot;,&quot;<strong>GPIO_5</strong>&quot; and &quot;<strong>GPIO_6</strong>&quot;, respectively.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p><code class="docutils literal notranslate"><span class="pre">devmem2</span></code> é um comando que executa um programa simples para ler ou escrever em qualquer espaço de memoria. Mais informações podem ser encontradas em <a class="reference external" href="http://manpages.ubuntu.com/manpages/focal/man1/devmem2.1.html#name">devmem2 - Ubuntu Manual</a>.</p>
+<p><code class="docutils literal notranslate"><span class="pre">devmem2</span></code> is a command that executes a simple program to read or write in any memory space. More information can be found in <a class="reference external" href="http://manpages.ubuntu.com/manpages/focal/man1/devmem2.1.html#name">devmem2 - Ubuntu Manual</a>.</p>
 </div>
-<p>O que ocorre é que instantes após a alteração do valor do registrador, seu valor retorna ao que possuía antes de ser alterado. Como o teste desta seção apresentou frequência muito alta ele não foi interrompido por este efeito, porém o fenômeno ocorre inclusive quando alteramos valores dos registradores por comandos do terminal, como o <code class="docutils literal notranslate"><span class="pre">devmem2</span></code>. Esse problema está exemplificado na figura abaixo, onde executamos o comando <code class="docutils literal notranslate"><span class="pre">devmem2</span> <span class="pre">0x49058030</span> <span class="pre">w</span> <span class="pre">0x2</span></code> para modificar o registrador <strong>0x49058030</strong> que é o registrador que controla o clock de todo o bloco do <strong>GPIO6</strong>.</p>
+<p>What happens is that moments after changing the value of the register, its returns the value it had before being changed. As the test in this section had a very high frequency, it was not interrupted by this effect, but the phenomenon occurs even when we change values of the registers by terminal commands, such as <code class="docutils literal notranslate"><span class="pre">devmem2</span></code>. This problem is exemplified in the figure below, where we execute the command <code class="docutils literal notranslate"><span class="pre">devmem2</span> <span class="pre">0x49058030</span> <span class="pre">w</span> <span class="pre">0x2</span></code> to modify the register <strong>0x49058030</strong> which is the register that controls the clock of the entire <strong>GPIO_6</strong> block.</p>
 <div class="figure align-center">
 <img alt="../../../_images/register-erro.png" src="../../../_images/register-erro.png" />
 </div>
-<p>Tal modificação deveria realizar uma redução na velocidade do clock dividindo-o por 2, como indicado no Technical Reference Manual (TRM) do processador DM3730, na tabela 25-29, página 3528, onde é explicado que o <strong>GPIO_CTRL</strong> pode ter seu clock dividido por certos valores pré-cadastrados, como apresentado na figura a seguir.</p>
+<p>Such modification should reduce the clock speed by dividing it by 2, as indicated in the Technical Reference Manual (TRM) of the DM3730 processor, in table 25-29, page 3528, where it is explained that the <strong>GPIO_CTRL</strong> may have its clock divided by certain pre-registered values, as shown in the following figure.</p>
 <div class="figure align-center">
 <img alt="../../../_images/GPIO_CTRL.png" src="../../../_images/GPIO_CTRL.png" />
 </div>
@@ -404,10 +404,10 @@
 <div class="figure align-center">
 <img alt="../../../_images/register-clock.png" src="../../../_images/register-clock.png" />
 </div>
-<p>Não sabemos por quais motivos esses fenômenos estão ocorrendo com os blocos de 2 a 6, porém suspeitasse que alguns processos do sistema operacional estejam impedindo que o clock de tais blocos seja alterados, provavelmente por algum circuito interno ou operação depender de tais valores pré-definidos ou até por alguma restrição no consumo de energia.</p>
+<p>Não sabemos por quais motivos esses fenômenos estão ocorrendo com os blocos de 2 a 6, porém suspeitasse que alguns processos do sistema operacional estejam impedindo que o clock de tais blocos seja alterados, provavelmente por algum circuito interno ou operação depende de tais valores pré-definidos ou até por alguma restrição no consumo de energia.</p>
 </div>
-<div class="section" id="referencias">
-<h3>Referências<a class="headerlink" href="#referencias" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="references">
+<h3>References<a class="headerlink" href="#references" title="Permalink to this headline">¶</a></h3>
 <ul class="simple">
 <li><p>PITA, H. C. Desenvolvimento de sistema de comunicação multiplataforma para veículos aéreos de asa fixa. Faculdade de Tecnologia, Universidade de Brasília, 2018.</p></li>
 <li><p>TEXAS INSTRUMENTS. AM/DM37x Multimedia Device Technical Reference Manual. 12500 TI Blvd, Dallas, TX 75243, EUA, 2012. Version R. Disponível em: <a class="reference external" href="http://www.ti.com/">ti.com</a>.</p></li>
