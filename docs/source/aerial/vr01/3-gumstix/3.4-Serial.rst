@@ -1,18 +1,26 @@
 Comunicação Serial
 ==================
 
-A principal característica da comunicação serial é o processo de enviar dados um bit de cada vez, de forma sequencial, através de um canal de comunicação ou barramento. Diferente da comunicação paralela, em que todos os bits de cada símbolo são enviados juntos. 
+.. A principal característica da comunicação serial é o processo de enviar dados um bit de cada vez, de forma sequencial, através de um canal de comunicação ou barramento. Diferente da comunicação paralela, em que todos os bits de cada símbolo são enviados juntos. 
 
-Com a finalidade de possibilitar a conversão, transmissão e recepção de dados de forma serial, sendo estes originalmente dispostos de maneira paralela, surge o formato **UART**, acrônimo de *Universal Asynchrounous Receiver/Transmiter* ou Receptor/Transmissor Universal Assíncrono.
+The main characteristic of serial communication is the process of sending data one bit at a time, sequentially, through a communication channel or bus. Unlike parallel communication, where all bits of each symbol are sent together.
 
-O termo "Universal" refere-se a característica do formato dos dados e velocidade serem configuráveis, enquanto "Assíncrono" diz respeito a forma de comunicação em série ocorre, em que as interfaces dos pontos de extremidade que comunicam não estão continuamente sincronizadas por um sinal de clock comum.
+.. Com a finalidade de possibilitar a conversão, transmissão e recepção de dados de forma serial, sendo estes originalmente dispostos de maneira paralela, surge o formato **UART**, acrônimo de *Universal Asynchrounous Receiver/Transmiter* ou Receptor/Transmissor Universal Assíncrono.
+
+In order to enable the conversion, transmission and reception of data in a serial way, which were originally arranged in parallel, the **UART** format emerges, an acronym for Universal Asynchrounous Receiver/Transmiter.
+
+.. O termo "Universal" refere-se a característica do formato dos dados e velocidade serem configuráveis, enquanto "Assíncrono" diz respeito a forma de comunicação em série ocorre, em que os dispositivos não estão continuamente sincronizadas por um sinal de clock comum.
+
+The term "Universal" refers to the characteristic of the data format and speed being configurable, while "Asynchronous" refers to the way in which serial communication occurs, in which the devices are not continuously synchronized by a common clock signal.
 
 .. Note::
-    Mais detalhes sobre a comunicação UART podem ser vistos em `Introduction to UART Communication - microcontrollerslab.com`_.
+    More details on UART communication can be seen in `Introduction to UART Communication - microcontrollerslab.com`_.
 
 .. _Introduction to UART Communication - microcontrollerslab.com: https://microcontrollerslab.com/uart-communication-working-applications/
 
-No caso do Overo, temos três sistemas de Comunicação **UART** implementados por hardware à nossa disposição. O que faz desnecessário qualquer implementação manual através de software utilizando GPIO.
+.. No caso do Overo, temos três sistemas de Comunicação **UART** implementados por hardware à nossa disposição. O que faz desnecessário qualquer implementação manual através de software utilizando GPIO.
+
+In the case of Overo, we have three Communication Systems **UART** implemented by hardware at our disposal. What makes any manual implementation through software using GPIO unnecessary.
 
 Agora vamos entender como funciona o protocolo de comunicação UART. Essa comunicação funciona através da conexão do transmissor (**TX**) de um dispositivo com o receptor (**RX**) de outro dispositivo, no caso, apenas o **TX** realiza alterações no nível de tensão da linha, sendo assim, a comunicação é, para cada conexão, uma via de mão única. Logo, para realizar uma comunicação de mão dupla iremos utilizar duas conexões, uma será a ligação de **RX** do dispositivo 1 com o **TX** do dispositivo 2 e a outra ligação será o oposto, **RX** do dispositivo 2 com **TX** do dispositivo 1, similar a imagem abaixo.
 
@@ -185,11 +193,17 @@ References
 ----------
 
 * PITA, H. C. Desenvolvimento de sistema de comunicação multiplataforma para veículos aéreos de asa fixa. Faculdade de Tecnologia, Universidade de Brasília, 2018.
+
 * `Universal asynchronous receiver-transmitter`_ - wikipedia.org
+
 * `Asynchronous serial communication`_ - wikipedia.org 
+
 * `Como funcionam as UARTs`_ - newtoncbraga.com.br
+
 * `UART Basics`_ - ece353.engr.wisc.edu
+
 * `termios.h(0p) - Linux manual page`_ - man7.org
+
 * `cfsetspeed(3) - Linux man page`_ - linux.die.net
 
 .. _Universal asynchronous receiver-transmitter: https://en.wikipedia.org/wiki/Universal_asynchronous_receiver-transmitter
