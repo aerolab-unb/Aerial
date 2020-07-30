@@ -42,7 +42,7 @@ It's important to note that the function of the stop bit is to pause the transmi
 As this is an asynchronous communication, it is essential that the speed of the communication is predetermined. This speed is usually given in Baud rate, a unit of measurement for the number of signal units sent per second.
 
 
-.. 30 O QUE????????? :math:`{\mu}s` ???
+.. :math:`{\mu}s`
 
 .. Note O termo "Baud rate" é utilizado como medida de velocidade de transmissão de dados entre dispositivos. Um baud é uma medida de velocidade de sinalização e representa o número de mudanças na linha de transmissão (seja em frequência, amplitude, fase etc...) ou eventos por segundo.
 
@@ -86,24 +86,40 @@ To understand, in detail, what needs to be done and which registers will be chan
 UART configuration
 ~~~~~~~~~~~~~~~~~~
 
-Como já comentado anteriormente, o computador embarcado possui um hardware específico para comunicação UART, ou seja, não é necessário realizar uma implementação manual, para utilizar a comunicação UART basta escrever em alguns registradores para enviar a mensagem.
+.. Como já comentado anteriormente, o computador embarcado possui um hardware específico para comunicação UART, ou seja, não é necessário realizar uma implementação manual, para utilizar a comunicação UART basta escrever em alguns registradores para enviar a mensagem.
 
-Na verdade, em nosso caso é ainda mais simples pois o sistema operacional instalado já traz configurado drivers para a aplicação da comunicação serial. Portanto, não é necessário acessar a memória física do dispositivo, precisamos apenas escrever no driver o que deve ser transmitido.
+As previously mentioned, the embedded computer has specific hardware for UART communication, in other words, it's not necessary to perform a manual implementation to use UART communication, just write in some registers to send the message. 
 
-Os drivers de comunicação serial são arquivos do tipo caractere com nome "**ttyOx**", em que "**x**" é um número exclusivo para cada uma das UARTs. Esses drivers estão localizados em "**/dev**" e funcionam como comunicação em terminal.
+.. Na verdade, em nosso caso é ainda mais simples pois o sistema operacional instalado já traz configurado drivers para a aplicação da comunicação serial. Portanto, não é necessário acessar a memória física do dispositivo, precisamos apenas escrever no driver o que deve ser transmitido.
 
-Por exemplo, o driver "**ttyO2**" é o driver de comunicação serial da porta "**USB Console**" a mesma que conectamos ao computador, ou seja, ao escrever nessa porta escreveremos no computador conectado à Gumstix e ao ler essa porta estaremos lendo o computador. Em outras palavras, escrever ou ler nesse driver terá o mesmo resultado final de chamar, respectivamente, a função ``printf()`` ou ``scanf()``, quando um computador estiver conectado a essa porta com o terminal aberto.
+In fact, in our case it is even simpler because the installed operating system already has configured drivers for the application of serial communication. Therefore, it isn't necessary to access the physical memory of the device, we just need to write in the driver what should be transmitted.
 
-A configuração das portas seriais pode ser feita de duas maneiras, por linhas de comando no terminal Linux ou por um código que altere as configurações do hardware. A mais simples e, novamente, mais limitada ou menos eficiente é a configuração por meio de linhas de comando, a configuração por esse modo costuma ser usada apenas quando feita por um usuário humano em tempo real.
+.. Os drivers de comunicação serial são arquivos do tipo caractere com nome "**ttyOx**", em que "**x**" é um número exclusivo para cada uma das UARTs. Esses drivers estão localizados em "**/dev**" e funcionam como comunicação em terminal.
 
-Para realizar a configuração por meio do terminal Linux devemos utilizar o comando ``stty``, já que esse comando possui uma enorme quantidade de parâmetros que permite estabelecer a comunicação serial da forma desejada.
+The serial communication drivers are files of type character, named "**ttyOx**", where "**x**" represents the unique number of each UART. These drivers are located in "**/dev**" and function as a communication terminal.
+
+.. Por exemplo, o driver "**ttyO2**" é o driver de comunicação serial da porta "**USB Console**" a mesma que conectamos ao computador, ou seja, ao escrever nessa porta escreveremos no computador conectado à Gumstix e ao ler essa porta estaremos lendo o computador. Em outras palavras, escrever ou ler nesse driver terá o mesmo resultado final de chamar, respectivamente, a função ``printf()`` ou ``scanf()``, quando um computador estiver conectado a essa porta com o terminal aberto.
+
+For example, the "**ttyO2**" driver is the serial communication driver for the **USB Console** port, the same one we connect to the computer, that is, when writing to this port we will write on the computer connected to Gumstix and when reading this port we will be reading the computer. In other words, writing or reading in this driver will have the same final result of calling, respectively, the function ``printf ()`` or ``scanf ()``, when a computer is connected to that port with the terminal open.
+
+.. A configuração das portas seriais pode ser feita de duas maneiras, por linhas de comando no terminal Linux ou por um código que altere as configurações do hardware. A mais simples e, novamente, mais limitada ou menos eficiente é a configuração por meio de linhas de comando, a configuração por esse modo costuma ser usada apenas quando feita por um usuário humano em tempo real.
+
+The configuration of the serial ports can be done in two ways, by command lines in the Linux terminal or by a code that changes the hardware settings. The simplest and, again, the most limited or least efficient is the configuration through command lines, the configuration in this way is usually used only when done by a human user in real time.
+
+.. Para realizar a configuração por meio do terminal Linux devemos utilizar o comando ``stty``, já que esse comando possui uma enorme quantidade de parâmetros que permite estabelecer a comunicação serial da forma desejada.
+
+To perform the configuration through the Linux terminal, we must use the command ``stty``, since this command has a huge number of parameters that allows to establish serial communication in the desired way.
 
 .. Note::
-    Para visualizar todos os parâmetros do comando ``stty`` basta executar ``stty --help`` no terminal.
+    To view all parameters of the ``stty`` command, just run ``stty --help`` in the terminal.
 
-Se, por exemplo, for executada a linha de comando ``stty -F /dev/ttyO0 -a`` serão impressas todas as configurações da comunicação serial **UART1** do dispositivo. Para imprimir apenas as principais configurações, deve-se suprimir o ``-a``, a última opção do comando. Caso a alteração da velocidade seja desejável, ela pode ser alterada simplesmente acrescentando a velocidade desejada ao final da linha de comando.
+.. Se, por exemplo, for executada a linha de comando ``stty -F /dev/ttyO0 -a`` serão impressas todas as configurações da comunicação serial **UART1** do dispositivo. Para imprimir apenas as principais configurações, deve-se suprimir o ``-a``, a última opção do comando. Caso a alteração da velocidade seja desejável, ela pode ser alterada simplesmente acrescentando a velocidade desejada ao final da linha de comando.
 
-A figura abaixo apresenta um exemplo de configuração da UART1 por meio do terminal de comandos Linux.
+If, for example, the command line ``stty -F / dev / ttyO0 -a`` is executed, all the serial communication settings **UART1** of the device will be printed. To print only the main settings, you must delete the ``-a``, the last option of the command. If changing the speed is desirable, it can be changed simply by adding the desired speed to the end of the command line.
+
+.. A figura abaixo apresenta um exemplo de configuração da UART1 por meio do terminal de comandos Linux.
+
+The figure below shows an example of configuring UART1 using the Linux command terminal.
 
 .. imagem
 
