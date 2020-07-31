@@ -1,5 +1,5 @@
-Comunicação Serial
-==================
+Serial Communication
+====================
 
 .. A principal característica da comunicação serial é o processo de enviar dados um bit de cada vez, de forma sequencial, através de um canal de comunicação ou barramento. Diferente da comunicação paralela, em que todos os bits de cada símbolo são enviados juntos. 
 
@@ -121,7 +121,8 @@ If, for example, the command line ``stty -F / dev / ttyO0 -a`` is executed, all 
 
 The figure below shows an example of configuring UART1 using the Linux command terminal.
 
-.. imagem
+.. figure:: /img/Aerial/config_uart1.png
+    :align: center
 
 .. A outra maneira de configurar a comunicação serial feita por esses drivers sem alterar manualmente o conteúdo do endereço físico da memória é com o auxílio da biblioteca "**termios.h**". Essa biblioteca possui uma ampla variedade de funções que configuram a comunicação serial com base nos parâmetros de uma estrutura "**termios**", também definida nesta biblioteca.
 
@@ -130,9 +131,10 @@ The other way to configure the serial communication made by these drivers withou
 .. Note::
     More information about the **termios.h library** can be found at `termios.h - Linux manual page`_.
 
-.. _termios.h — Linux manual page: https://man7.org/linux/man-pages/man0/termios.h.0p.html
+.. _termios.h - Linux manual page: https://man7.org/linux/man-pages/man0/termios.h.0p.html
 
-.. São dois os parâmetros da comunicação UART, além dos mencionados anteriormente, que se destacam, o número mínimo de bits que se espera ler em cada tentativa de leitura e o tempo máximo de espera por um novo caractere após a transmissão do último caractere e após o número mínimo de caracteres ser atingido.
+
+.. São dois os parâmetros da comufile:///home/lucas/Aerial/docs/build/html/aerial/vr01/3-gumstix/3.4-Serial.html#uart-configurationnicação UART, além dos mencionados anteriormente, que se destacam, o número mínimo de bits que se espera ler em cada tentativa de leitura e o tempo máximo de espera por um novo caractere após a transmissão do último caractere e após o número mínimo de caracteres ser atingido.
 
 There are two parameters of UART communication, in addition to those mentioned above, which stand out, the minimum number of bits that are expected to be read at each reading attempt and the maximum time to wait for a new character after the transmission of the last character and after the minimum number of characters to be reached.
 
@@ -172,6 +174,11 @@ Below is the code used to configure the serial communication of Overo computers.
 
 :download:`Download commented code <UART/config_UART.c>`
 
+The following figure shows an example of UART1 configuration using the configuration code above.
+
+.. figure:: /img/Aerial/config_uart1.png
+    :align: center
+
 .. Com a finalidade simplificar a configuração do UART dentro de um outro código, foram efetuadas algumas modificações no código anterior para converte-lo em uma função para configuração de comunicação serial, como pode ser visto abaixo:
 
 .. Note::
@@ -210,24 +217,24 @@ Once the configuration was made, the following code was also implemented in orde
         int UART1 = configUART1();  // call the UART configuration function
         char dis[2], out[100], string[100];
 
-        printf("Que dispositivo eu sou?");
+        printf("What device am I?");
         scanf("%c", &dis[0]);
         dis[1] = 0;
         string[0] = 0;
-        strcat(string, "Ola! Essa e uma mensagem do dispositivo ");
+        strcat(string, "Hello! This is a message from the device");
         strcat(string, dis);
 
         // testa UART
         write(UART1, string, strlen(string));
         sleep(1);
         read(UART1, out, 100);
-        printf("Mensagem lida pelo dispositivo %s: %s\n", dis, out);
+        printf("Message read by the device %s: %s\n", dis, out);
         close(UART1);
         return 0;
     }
     
     
-:download:`Download do código completo <UART/comun_UART.c>`
+:download:`Download the complete code <UART/comun_UART.c>`
 
 .. Como os dois dispositivos são idênticos, será necessário conectar o pino 10 de um dispositivo com o pino 9 do outro dispositivo e vice-versa. Utilizando esse código como base é possível enviar qualquer mensagem de até 100 caracteres de um dispositivo ao outro.
 
