@@ -123,18 +123,26 @@ The figure below shows an example of configuring UART1 using the Linux command t
 
 .. imagem
 
-A outra maneira de configurar a comunicação serial feita por esses drivers sem alterar manualmente o conteúdo do endereço físico da memória é com o auxílio da biblioteca "**termios.h**". Essa biblioteca possui uma ampla variedade de funções que configuram a comunicação serial com base nos parâmetros de uma estrutura "**termios**", também definida nesta biblioteca.
+.. A outra maneira de configurar a comunicação serial feita por esses drivers sem alterar manualmente o conteúdo do endereço físico da memória é com o auxílio da biblioteca "**termios.h**". Essa biblioteca possui uma ampla variedade de funções que configuram a comunicação serial com base nos parâmetros de uma estrutura "**termios**", também definida nesta biblioteca.
+
+The other way to configure the serial communication made by these drivers without manually changing the contents of the physical address of the memory is with the aid of the "**termios.h**" library. This library has a wide variety of functions that configure serial communication based on the parameters of a "**termios**" structure, also defined in this library.
 
 .. Note::
-    Mais informações sobre a biblioteca "**termios.h**" podem ser encontrados em `termios.h — Linux manual page`_.
+    More information about the **termios.h library** can be found at `termios.h - Linux manual page`_.
 
 .. _termios.h — Linux manual page: https://man7.org/linux/man-pages/man0/termios.h.0p.html
 
-São dois os parâmetros da comunicação UART, além dos mencionados anteriormente, que se destacam, sendo eles o número mínimo de bits que se espera ler em cada tentativa de leitura e o tempo máximo de espera por um novo caractere após a transmissão do último caractere após o número mínimo de caracteres ser atingido.
+.. São dois os parâmetros da comunicação UART, além dos mencionados anteriormente, que se destacam, o número mínimo de bits que se espera ler em cada tentativa de leitura e o tempo máximo de espera por um novo caractere após a transmissão do último caractere e após o número mínimo de caracteres ser atingido.
 
-O número mínimo de bits que se espera ser lido e o tempo máximo de espera pelo próximo bit em décimos de segundo podem ser configurados com os seguintes comandos ``termios.c_cc[VMIN] =`` e ``termios.c_cc[VTIME] =``, em que ``termios`` é o nome de sua estrutura. Para a configuração de velocidade recomenda-se usar a função ``cfsetspeed()``.Já a função ``cfmakeraw()`` configura, além de outros parâmetros, o funcionamento sem bit de paridade e com 8 bits de dados. Após realizados os ajustes na estrutura é necessário ainda executar a função ``cfsetattr()`` para que as alterações sejam feitas na UART.
+There are two parameters of UART communication, in addition to those mentioned above, which stand out, the minimum number of bits that are expected to be read at each reading attempt and the maximum time to wait for a new character after the transmission of the last character and after the minimum number of characters to be reached.
 
-Abaixo encontra-se o código utilizado para configurar a comunicação serial dos computadores Overo. Observe que nessa função de configuração não foi utilizada a flag "O_NONBLOCK" na função "open()" e foi definido como 1 o número mínimo de caracteres a serem retornados após uma tentativa de leitura, portanto caso o código seja executado e nenhuma informação seja enviada para este canal o processador aguardará eternamente por esse caractere. A contagem de tempo, definida como 0,1 segundo, só inicia após o número mínimo de caracteres ser atingido.
+.. O número mínimo de bits que se espera ser lido e o tempo máximo de espera pelo próximo bit em décimos de segundo podem ser configurados com os seguintes comandos ``termios.c_cc[VMIN] =`` e ``termios.c_cc[VTIME] =``, em que ``termios`` é o nome de sua estrutura. Para a configuração de velocidade recomenda-se usar a função ``cfsetspeed()``.Já a função ``cfmakeraw()`` configura, além de outros parâmetros, o funcionamento sem bit de paridade e com 8 bits de dados. Após realizados os ajustes na estrutura é necessário ainda executar a função ``cfsetattr()`` para que as alterações sejam feitas na UART.
+
+The minimum number of bits expected to be read and the maximum wait time for the next bit in tenths of a second can be configured with the following commands ``termios.c_cc [VMIN] =`` and ``termios.c_cc [VTIME] =``, where ``termios`` is the name of its structure. For the speed setting, it is recommended to use the function ``cfsetspeed ()``, while the function ``cfmakeraw ()`` configures, in addition to other parameters, the operation without parity bit and with 8 data bits. After making the adjustments to the structure, it is still necessary to execute the function ``cfsetattr ()`` for the changes to be made in the UART.
+
+.. Abaixo encontra-se o código utilizado para configurar a comunicação serial dos computadores Overo. Observe que nessa função de configuração não foi utilizada a flag "O_NONBLOCK" na função "open()" e foi definido como 1 o número mínimo de caracteres a serem retornados após uma tentativa de leitura, portanto caso o código seja executado e nenhuma informação seja enviada para este canal o processador aguardará eternamente por esse caractere. A contagem de tempo, definida como 0,1 segundo, só inicia após o número mínimo de caracteres ser atingido.
+
+Below is the code used to configure the serial communication of Overo computers. Note that in this configuration function the "O_NONBLOCK" flag was not used in the "open ()" function and the minimum number of characters to be returned after an attempt to read was set to 1, so if the code is executed and no information is entered sent to this channel the processor will wait forever for that character. The time count, set to 0.1 second, does not start until the minimum number of characters has been reached.
 
 ::
 
@@ -162,10 +170,12 @@ Abaixo encontra-se o código utilizado para configurar a comunicação serial do
 
     }
 
-:download:`Download do código comentado <UART/config_UART.c>`
+:download:`Download commented code <UART/config_UART.c>`
+
+.. Com a finalidade simplificar a configuração do UART dentro de um outro código, foram efetuadas algumas modificações no código anterior para converte-lo em uma função para configuração de comunicação serial, como pode ser visto abaixo:
 
 .. Note::
-    Com a finalidade simplificar a configuração do UART dentro de um outro código, foram efetuadas algumas modificações no código anterior para converte-lo em uma função para configuração de comunicação serial, como pode ser visto abaixo:
+    In order to simplify the configuration of the UART within another code, some modifications were made to the previous code to convert it into a function for configuring serial communication, as shown below:
 
     ::
 
@@ -188,7 +198,9 @@ Abaixo encontra-se o código utilizado para configurar a comunicação serial do
             return UART1;
         }
 
-Uma vez feita a configuração, foi implementado também o código a seguir com a finalidade de testar a comunicação entre dois computadores. No teste, um dispositivo envia uma mensagem para o outro dispositivo que responde com uma mensagem semelhante para o primeiro dispositivo, em seguida ambos os dispositivos imprimem a mensagem recebida.
+.. Uma vez feita a configuração, foi implementado também o código a seguir com a finalidade de testar a comunicação entre dois computadores. No teste, um dispositivo envia uma mensagem para o outro dispositivo que responde com uma mensagem semelhante para o primeiro dispositivo, em seguida ambos os dispositivos imprimem a mensagem recebida.
+
+Once the configuration was made, the following code was also implemented in order to test the communication between two computers. In the test, one device sends a message to the other device that responds with a similar message to the first device, then both devices print the received message.
 
 :: 
 
@@ -217,10 +229,13 @@ Uma vez feita a configuração, foi implementado também o código a seguir com 
     
 :download:`Download do código completo <UART/comun_UART.c>`
 
-Como os dois dispositivos são idênticos, será necessário conectar o pino 10 de um dispositivo com o pino 9 do outro dispositivo e vice-versa. Utilizando esse código como base é possível enviar qualquer mensagem de até 100 caracteres de um dispositivo ao outro.
+.. Como os dois dispositivos são idênticos, será necessário conectar o pino 10 de um dispositivo com o pino 9 do outro dispositivo e vice-versa. Utilizando esse código como base é possível enviar qualquer mensagem de até 100 caracteres de um dispositivo ao outro.
 
-A figura a seguir apresenta o resultado do teste dos códigos apresentados. Nessa figura podemos ver dois terminais do Linux, cada um vinculado a um computador embarcado, e ambos chamam a mesma função, logo em seguida vemos a mensagem lida por cada um dos dispositivos.
+Since the two devices are identical, it will be necessary to connect pin 10 of one device with pin 9 of the other device and vice versa. Using this code as a basis it is possible to send any message of up to 100 characters from one device to the other.
 
+.. A figura a seguir apresenta o resultado do teste dos códigos apresentados. Nessa figura podemos ver dois terminais do Linux, cada um vinculado a um computador embarcado, e ambos chamam a mesma função, logo em seguida vemos a mensagem lida por cada um dos dispositivos.
+
+The following figure shows the result of testing the codes presented. In this figure we can see two Linux terminals, each linked to an embedded computer, and both call the same function, right after that we see the message read by each of the devices.
 .. figura
 
 References
