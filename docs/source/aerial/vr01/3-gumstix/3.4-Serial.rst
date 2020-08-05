@@ -243,7 +243,9 @@ Since the two devices are identical, it will be necessary to connect pin 10 of o
 .. A figura a seguir apresenta o resultado do teste dos códigos apresentados. Nessa figura podemos ver dois terminais do Linux, cada um vinculado a um computador embarcado, e ambos chamam a mesma função, logo em seguida vemos a mensagem lida por cada um dos dispositivos.
 
 The following figure shows the result of testing the codes presented. In this figure we can see two Linux terminals, each linked to an embedded computer, and both call the same function, right after that we see the message read by each of the devices.
-.. figura
+
+.. figure:: /img/Aerial/UART_com.png
+    :align: center
 
 References
 ----------
